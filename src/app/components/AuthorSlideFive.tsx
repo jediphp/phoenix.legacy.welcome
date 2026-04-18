@@ -34,7 +34,7 @@ const COLUMNS = [
 
 export function AuthorSlideFive() {
   return (
-    <div className="relative w-full h-screen flex flex-col items-center justify-center overflow-hidden font-sans snap-start py-8 sm:py-12 lg:py-16 px-4 sm:px-8 lg:px-12 2xl:px-24">
+    <div className="relative w-full min-h-[100svh] flex flex-col items-center justify-center overflow-hidden font-sans snap-start py-8 sm:py-12 lg:py-16 px-4 sm:px-8 lg:px-12 2xl:px-24">
       {/* Background is removed so that the global presentation mouse glow can shine through from beneath */}
       
       {/* Noise filter */}

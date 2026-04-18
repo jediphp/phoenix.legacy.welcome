@@ -5,7 +5,7 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 
 export function AuthorSlideOne() {
   return (
-    <div className="relative w-full h-screen flex flex-col items-center justify-center overflow-hidden font-sans snap-start">
+    <div className="relative w-full min-h-[100svh] flex flex-col items-center justify-center overflow-hidden font-sans snap-start">
       
       {/* Background Image - Atmospheric Historical Visual */}
       <div className="absolute inset-0 z-0 pointer-events-none">

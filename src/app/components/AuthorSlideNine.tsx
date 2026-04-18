@@ -35,10 +35,10 @@ export function AuthorSlideNine() {
   const isInView = useInView(sceneRef, { once: true, margin: '-50px' });
 
   return (
-    <div className="relative w-full h-[100vh] flex flex-col overflow-hidden font-sans snap-start bg-[#090807]">
+    <div className="relative w-full min-h-[100svh] flex flex-col overflow-hidden font-sans snap-start bg-[#090807]">
 
       {/* Noise filter */}
-      <svg className="absolute inset-0 pointer-events-none opacity-[0.03] mix-blend-overlay w-full h-[100vh] z-0">
+      <svg className="absolute inset-0 pointer-events-none opacity-[0.03] mix-blend-overlay w-full h-full z-0">
         <filter id="noise_slide_9">
           <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves={3} stitchTiles="stitch" />
         </filter>
@@ -53,7 +53,7 @@ export function AuthorSlideNine() {
         transition={{ duration: 2.5, ease: "easeOut" }}
       />
 
-      <div className="relative z-20 w-full max-w-[90vw] mx-auto flex flex-col h-[100vh] min-h-0 pt-[8vh] pb-[5vh]" ref={sceneRef}>
+      <div className="relative z-20 w-full max-w-[90vw] mx-auto flex flex-col min-h-[100svh] pt-[8vh] pb-[5vh]" ref={sceneRef}>
 
         {/* ── Header ── */}
         <motion.div
