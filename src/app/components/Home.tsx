@@ -1,6 +1,8 @@
+'use client';
+
 import { motion, useMotionValue, useSpring, useTransform } from 'motion/react';
-import { useState } from 'react';
-import { useNavigate } from 'react-router';
+import { useState, type MouseEvent } from 'react';
+import { useRouter } from 'next/navigation';
 import { ArrowRight } from 'lucide-react';
 import LogoVertical from '../../imports/LogoVertical';
 
@@ -19,14 +21,14 @@ function Zone({
 }) {
   const isHovered = hoveredZone === type;
   const isOtherHovered = hoveredZone !== null && hoveredZone !== type;
-  const navigate = useNavigate();
+  const router = useRouter();
 
   return (
     <div 
       className="flex-1 relative flex flex-col justify-center items-center px-4 sm:px-8 lg:px-16 cursor-pointer group z-20"
       onMouseEnter={() => setHoveredZone(type)}
       onMouseLeave={() => setHoveredZone(null)}
-      onClick={() => navigate(`/${type}`)}
+      onClick={() => router.push(`/${type}`)}
     >
       {/* Мягкий фон при наведении */}
       <div 
@@ -94,7 +96,7 @@ export function Home() {
   const smoothX = useSpring(mouseX, { damping: 50, stiffness: 200 });
   const smoothY = useSpring(mouseY, { damping: 50, stiffness: 200 });
 
-  const handleMouseMove = (e: React.MouseEvent) => {
+  const handleMouseMove = (e: MouseEvent) => {
     mouseX.set(e.clientX / window.innerWidth);
     mouseY.set(e.clientY / window.innerHeight);
   };

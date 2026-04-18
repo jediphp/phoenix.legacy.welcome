@@ -1,5 +1,8 @@
+'use client';
+
 import { motion, useMotionValue, useSpring, useTransform } from 'motion/react';
-import { useNavigate, useParams } from 'react-router';
+import { type MouseEvent } from 'react';
+import { useRouter } from 'next/navigation';
 import { ArrowLeft } from 'lucide-react';
 import { AuthorSlideOne } from './AuthorSlideOne';
 import { AuthorSlideTwo } from './AuthorSlideTwo';
@@ -26,9 +29,8 @@ import { OrgSlideEight as OrgUsageEight } from './OrgSlideEight';
 import { OrgSlideNine as OrgPilotNine } from './OrgSlideNine';
 import { OrgSlideTen as OrgClosingTen } from './OrgSlideTen';
 
-export function PresentationFlow() {
-  const { type } = useParams<{ type: string }>();
-  const navigate = useNavigate();
+export function PresentationFlow({ type }: { type: 'author' | 'org' }) {
+  const router = useRouter();
 
   const isAuthor = type === 'author';
 
@@ -38,7 +40,7 @@ export function PresentationFlow() {
   const smoothX = useSpring(mouseX, { damping: 50, stiffness: 200 });
   const smoothY = useSpring(mouseY, { damping: 50, stiffness: 200 });
 
-  const handleMouseMove = (e: React.MouseEvent) => {
+  const handleMouseMove = (e: MouseEvent) => {
     mouseX.set(e.clientX / window.innerWidth);
     mouseY.set(e.clientY / window.innerHeight);
   };
@@ -66,7 +68,7 @@ export function PresentationFlow() {
       {/* Fixed back-navigation header */}
       <header className="fixed top-0 w-full z-50 flex justify-start p-8 sm:p-12 pointer-events-none">
         <button
-          onClick={() => navigate('/')}
+          onClick={() => router.push('/')}
           className="group flex items-center gap-3 text-sm text-[#A39B92] hover:text-white transition-colors duration-300 cursor-pointer pointer-events-auto backdrop-blur-md bg-[#070605]/30 rounded-full pr-4 shadow-[0_0_15px_rgba(0,0,0,0.5)]"
         >
           <div className="p-2 rounded-full border border-white/10 group-hover:bg-white/5 transition-colors">
