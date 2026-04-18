@@ -179,33 +179,3 @@
     line-height: 1.5;
   }
 }
-
-@layer components {
-  .author-flow > [class*='snap-start'] {
-    min-height: 100svh;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-  }
-
-  @media (max-height: 900px) {
-    .author-flow > [class*='snap-start'] {
-      min-height: auto;
-    }
-  }
-
-  .author-flow [class*='text-[6px]'],
-  .author-flow [class*='text-[7px]'] {
-    font-size: clamp(0.5rem, 0.45rem + 0.2vw, 0.7rem) !important;
-  }
-
-  .author-flow [class*='text-[8px]'],
-  .author-flow [class*='text-[9px]'],
-  .author-flow [class*='text-[10px]'] {
-    font-size: clamp(0.625rem, 0.56rem + 0.22vw, 0.85rem) !important;
-  }
-
-  .author-flow [class*='text-[11px]'],
-  .author-flow [class*='text-xs'] {
-    font-size: clamp(0.72rem, 0.68rem + 0.16vw, 0.95rem);
-  }
-}
