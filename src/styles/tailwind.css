@@ -1,5 +1,6 @@
-@import 'tailwindcss' source(none);
-@source '../**/*.{js,ts,jsx,tsx}';
-@source '../../app/**/*.{js,ts,jsx,tsx}';
+@import 'tailwindcss';
+
+/* Все TS/JS в проекте — чтобы утилиты не «пропадали» при смене путей/сборки */
+@source '../../**/*.{js,ts,jsx,tsx}';
 
 @import 'tw-animate-css';

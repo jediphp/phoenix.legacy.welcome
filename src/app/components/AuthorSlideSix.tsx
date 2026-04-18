@@ -2,6 +2,7 @@ import { motion, useInView } from 'motion/react';
 import { useRef } from 'react';
 import { ArrowDown, MessageSquare, Users, ShieldAlert, CheckCircle, BrainCircuit } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import { SlideEyebrow } from './SlideEyebrow';
 
 const SIGNALS = [
   {
@@ -65,6 +66,8 @@ export function AuthorSlideSix() {
         <rect width="100%" height="100%" filter="url(#noise_slide_6)" />
       </svg>
 
+      <SlideEyebrow toneClassName="border-[#905E26]/30 text-[#A39B92] bg-[#905E26]/5">Индекс соответствия</SlideEyebrow>
+
       <div ref={sceneRef} className="relative z-20 w-full max-w-[90vw] mx-auto flex flex-col min-h-[100svh] pt-[8vh] pb-[5vh]">
         
         {/* Top Header */}
@@ -74,10 +77,7 @@ export function AuthorSlideSix() {
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
           className="w-full flex-shrink-0 mb-[4vh] text-left z-30"
         >
-          <span className="inline-block px-[1vw] py-[0.5vh] rounded-full text-[clamp(10px,1.2vh,14px)] tracking-[0.25em] uppercase border border-[#905E26]/30 text-[#A39B92] bg-[#905E26]/5 mb-[2vh]">
-            Индекс соответствия
-          </span>
-          <h2 className="text-[clamp(2rem,4vh,4.5rem)] font-light leading-[1.1] text-[#EAEADF] tracking-tight mb-[2vh]">
+          <h2 className="pr-36 text-[clamp(1.65rem,3.4vh,3.25rem)] sm:pr-44 font-light leading-[1.1] text-[#EAEADF] tracking-tight mb-[2vh] lg:pr-52">
             Лайка недостаточно
           </h2>
           <p className="text-[clamp(14px,1.8vh,22px)] text-[#8A837A] font-light leading-relaxed max-w-[50vw]">

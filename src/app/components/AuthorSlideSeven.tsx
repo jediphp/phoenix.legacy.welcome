@@ -2,6 +2,7 @@ import { motion, useInView } from 'motion/react';
 import { useRef, useState, useEffect } from 'react';
 import { ArrowDown, MessageSquare, Layers, Zap, BarChart3 } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import { SlideEyebrow } from './SlideEyebrow';
 
 const FEEDBACK_TYPES = [
   {
@@ -98,6 +99,8 @@ export function AuthorSlideSeven() {
       {/* Subtle gold glow behind scene */}
       <div className="absolute inset-0 pointer-events-none z-0 bg-[radial-gradient(ellipse_60%_60%_at_65%_55%,rgba(144,94,38,0.08)_0%,transparent_70%)]" />
 
+      <SlideEyebrow toneClassName="border-[#905E26]/30 text-[#A39B92] bg-[#905E26]/5">Инструмент роста</SlideEyebrow>
+
       <div className="relative z-20 w-full max-w-[1500px] 2xl:max-w-[2300px] mx-auto flex flex-col h-full min-h-0 pt-[6vh] sm:pt-[5vh] pb-[3vh]">
 
         {/* ── Top: Label + Title ── */}
@@ -108,10 +111,7 @@ export function AuthorSlideSeven() {
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
           className="flex-shrink-0 mb-5 sm:mb-7 2xl:mb-12"
         >
-          <span className="inline-block px-3 py-1 rounded-full text-[9px] sm:text-[10px] 2xl:text-xs tracking-[0.2em] sm:tracking-[0.3em] uppercase border border-[#905E26]/30 text-[#A39B92] bg-[#905E26]/5 mb-3 sm:mb-4 2xl:mb-6">
-            Инструмент роста
-          </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-[2.4rem] 2xl:text-[3.8rem] font-light leading-[1.15] text-[#EAEADF] tracking-tight max-w-3xl 2xl:max-w-5xl text-balance">
+          <h2 className="pr-36 text-xl sm:pr-44 sm:text-2xl lg:pr-52 lg:text-[clamp(1.35rem,2.6vw,2.1rem)] 2xl:text-[2.85rem] font-light leading-[1.15] text-[#EAEADF] tracking-tight max-w-3xl 2xl:max-w-5xl text-balance">
             Оценка здесь нужна не только для ранжирования,{' '}
             <span className="text-[#D5A86B]">но и для роста</span>
           </h2>

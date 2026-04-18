@@ -2,6 +2,7 @@ import { motion, useInView } from 'motion/react';
 import { useRef } from 'react';
 import { ArrowDown, BookOpen, Handshake, Award, Layers } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import { SlideEyebrow } from './SlideEyebrow';
 
 const MONETIZATION_SCENARIOS = [
   {
@@ -53,6 +54,10 @@ export function AuthorSlideTen() {
       <div className="absolute top-[-10%] right-[-5%] w-[55vw] h-[55vw] max-w-[700px] max-h-[700px] pointer-events-none z-0 rounded-full bg-[radial-gradient(circle,rgba(213,168,107,0.06)_0%,transparent_65%)] blur-[60px] mix-blend-screen" />
       <div className="absolute bottom-[-5%] left-[10%] w-[40vw] h-[40vw] max-w-[500px] max-h-[500px] pointer-events-none z-0 rounded-full bg-[radial-gradient(circle,rgba(144,94,38,0.05)_0%,transparent_70%)] blur-[50px] mix-blend-screen" />
 
+      <SlideEyebrow toneClassName="border-[#D5A86B]/30 text-[#D5A86B] bg-[#D5A86B]/5">
+        Профессиональные возможности
+      </SlideEyebrow>
+
       <div
         ref={sceneRef}
         className="relative z-20 w-full max-w-[1500px] 2xl:max-w-[2400px] mx-auto flex flex-col h-full min-h-0 pt-[2vh] lg:pt-[4vh]"
@@ -65,10 +70,7 @@ export function AuthorSlideTen() {
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
           className="flex-shrink-0 mb-[4vh] lg:mb-[5vh]"
         >
-          <span className="inline-block px-3 py-1 rounded-full text-[9px] sm:text-[10px] 2xl:text-xs tracking-[0.25em] uppercase border border-[#D5A86B]/30 text-[#D5A86B] bg-[#D5A86B]/5 mb-[2vh] sm:mb-[3vh]">
-            Профессиональные возможности
-          </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-[clamp(2.2rem,3.5vw,3.2rem)] 2xl:text-[4rem] font-light leading-[1.1] text-[#EAEADF] tracking-tight text-balance max-w-3xl 2xl:max-w-5xl">
+          <h2 className="pr-36 text-2xl sm:pr-44 sm:text-3xl lg:pr-52 lg:text-[clamp(1.85rem,3vw,2.75rem)] 2xl:text-[3.25rem] font-light leading-[1.12] text-[#EAEADF] tracking-tight text-balance max-w-3xl 2xl:max-w-5xl">
             Платформа открывает{' '}
             <span className="text-[#A39B92]">сценарии роста за пределами разовых публикаций</span>
           </h2>

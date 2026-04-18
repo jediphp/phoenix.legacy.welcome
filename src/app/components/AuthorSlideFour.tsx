@@ -12,7 +12,7 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 
 export function AuthorSlideFour() {
   return (
-    <div className="relative w-full min-h-[100svh] flex flex-col items-center justify-center overflow-hidden font-sans snap-start py-8 sm:py-16 px-4 sm:px-8">
+    <div className="relative flex min-h-[100svh] w-full flex-col items-center justify-center overflow-hidden px-5 font-sans snap-start py-10 sm:px-8 sm:py-12 lg:px-12 lg:py-14 xl:px-16">
       
       {/* Background with deep graphite and subtle spot light */}
       <div className="absolute inset-0 z-0 pointer-events-none">
@@ -28,20 +28,20 @@ export function AuthorSlideFour() {
         <rect width="100%" height="100%" filter="url(#noise_slide_4)" />
       </svg>
 
-      <div className="relative z-20 w-full max-w-7xl 2xl:max-w-[1800px] mx-auto flex flex-col items-center justify-center h-full min-h-0">
+      <div className="relative z-20 mx-auto flex min-h-0 w-full max-w-[min(96vw,92rem)] flex-1 flex-col items-center justify-center gap-2 sm:gap-3 lg:gap-4">
         
-        {/* Top Text Block */}
+        {/* Top Text Block — шире по горизонтали и компактнее по вертикали */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-          className="text-center max-w-4xl 2xl:max-w-5xl flex-shrink-0 mb-6 sm:mb-10 2xl:mb-14"
+          className="w-full max-w-[min(92vw,80rem)] flex-shrink-0 text-center"
         >
-          <h2 className="text-[9px] sm:text-[10px] 2xl:text-xs tracking-[0.2em] sm:tracking-[0.3em] uppercase text-[#A39B92] mb-3 sm:mb-4 2xl:mb-6 font-light drop-shadow-md">
+          <h2 className="mb-2 text-[9px] font-light uppercase tracking-[0.2em] text-[#A39B92] drop-shadow-md sm:mb-2.5 sm:text-[10px] sm:tracking-[0.3em] 2xl:text-xs">
             Здесь важен не только результат, но и его основание
           </h2>
-          <p className="text-base sm:text-lg lg:text-xl 2xl:text-2xl 2xl:leading-[1.7] font-light leading-relaxed text-[#EAEADF] text-balance mb-0 max-w-3xl 2xl:max-w-4xl mx-auto px-4">
+          <p className="mx-auto w-full max-w-[min(90vw,76rem)] text-balance px-1 text-sm font-light leading-snug text-[#EAEADF] sm:px-2 sm:text-base sm:leading-normal lg:text-lg 2xl:text-xl">
             На платформе работа существует не как случайная картинка в ленте, а как результат, у которого есть источник, исторический контекст, сравнение с оригиналом, оценка сообщества, экспертный вклад, Индекс соответствия и обратная связь по проблемным зонам.
           </p>
         </motion.div>
@@ -52,10 +52,10 @@ export function AuthorSlideFour() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1.4, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          className="w-full relative flex flex-col items-center flex-1 min-h-0 justify-center mb-8 sm:mb-12 2xl:mb-16"
+          className="relative flex w-full flex-1 min-h-0 flex-col items-center justify-center"
         >
-          {/* Main Case-Canvas */}
-          <div className="w-full max-w-4xl lg:max-w-5xl 2xl:max-w-[1300px] h-full max-h-[460px] sm:max-h-[500px] lg:max-h-[600px] 2xl:max-h-[750px] relative rounded-xl sm:rounded-2xl lg:rounded-[32px] overflow-hidden shadow-[0_30px_60px_-15px_rgba(0,0,0,0.7)] border border-[#2A2621]/60 bg-[#12100E] group">
+          {/* Main Case-Canvas — ограничение по высоте экрана, чтобы всё влезало в 100svh */}
+          <div className="w-full max-w-[min(92vw,1300px)] relative aspect-video max-h-[min(32svh,340px)] sm:max-h-[min(36svh,400px)] lg:max-h-[min(38svh,460px)] 2xl:max-h-[min(40svh,520px)] rounded-xl sm:rounded-2xl lg:rounded-[32px] overflow-hidden shadow-[0_30px_60px_-15px_rgba(0,0,0,0.7)] border border-[#2A2621]/60 bg-[#12100E] group">
             
             {/* The Image (Reconstruction) */}
             <ImageWithFallback 
@@ -196,9 +196,9 @@ export function AuthorSlideFour() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1.2, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="text-center max-w-3xl 2xl:max-w-4xl flex-shrink-0"
+          className="w-full max-w-[min(90vw,56rem)] flex-shrink-0 px-1 text-center sm:px-2"
         >
-          <p className="text-lg sm:text-xl lg:text-2xl 2xl:text-3xl text-[#F5EC9B] font-light tracking-wide text-balance drop-shadow-lg">
+          <p className="text-balance text-base font-light leading-snug tracking-wide text-[#F5EC9B] drop-shadow-lg sm:text-lg lg:text-xl 2xl:text-2xl">
             Мы хотим, чтобы ценность работы определялась не шумом, а качеством.
           </p>
         </motion.div>

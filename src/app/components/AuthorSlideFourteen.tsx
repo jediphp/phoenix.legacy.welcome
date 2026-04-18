@@ -2,6 +2,7 @@ import { motion, useInView } from 'motion/react';
 import { useRef, useState } from 'react';
 import { ArrowUpRight, Send, BookMarked, Eye } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import { SlideEyebrow } from './SlideEyebrow';
 
 const ACTIONS = [
   {
@@ -75,29 +76,19 @@ export function AuthorSlideFourteen() {
         className="relative z-20 w-full h-full flex flex-col"
       >
 
+        <SlideEyebrow toneClassName="border-[#D5A86B]/40 text-[#D5A86B] bg-[#D5A86B]/08">Ранний контур</SlideEyebrow>
+
         {/* Main content — vertically centered with slight upward bias */}
         <div className="flex-1 flex flex-col justify-center px-4 sm:px-8 lg:px-12 2xl:px-24 pt-[10vh]">
 
           <div className="w-full max-w-[1500px] 2xl:max-w-[2400px] mx-auto">
-
-            {/* Label */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-              className="mb-[4vh] sm:mb-[5vh]"
-            >
-              <span className="inline-block px-3 py-1 rounded-full text-[9px] sm:text-[10px] 2xl:text-xs tracking-[0.25em] uppercase border border-[#D5A86B]/40 text-[#D5A86B] bg-[#D5A86B]/08">
-                Ранний контур
-              </span>
-            </motion.div>
 
             {/* Main headline */}
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-[clamp(3rem,5vw,4.5rem)] 2xl:text-[6rem] font-light leading-[1.08] text-[#EAEADF] tracking-tight text-balance max-w-4xl 2xl:max-w-7xl mb-[5vh] sm:mb-[6vh]"
+              className="pr-36 text-2xl sm:pr-44 sm:text-3xl md:pr-52 md:text-4xl lg:text-[clamp(2.2rem,4.2vw,3.6rem)] 2xl:text-[4.25rem] font-light leading-[1.08] text-[#EAEADF] tracking-tight text-balance max-w-4xl 2xl:max-w-7xl mb-[4vh] sm:mb-[5vh]"
             >
               Если вам близка эта идея —{' '}
               <span className="text-[#D5A86B]">входите в ранний контур</span>

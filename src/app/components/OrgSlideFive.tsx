@@ -2,6 +2,7 @@ import { motion, useInView } from 'motion/react';
 import { useRef } from 'react';
 import { ArrowDown, FileText, SplitSquareHorizontal, FileSearch, Box, Activity } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import { SlideEyebrow } from './SlideEyebrow';
 
 const CONTENT_LAYERS = [
   { id: '1', title: 'Оригинал или исходный материал', icon: Box, delay: 0.4 },
@@ -26,6 +27,10 @@ export function OrgSlideFive() {
         <rect width="100%" height="100%" filter="url(#noise_org_5)" />
       </svg>
 
+      <SlideEyebrow toneClassName="border-[#A39B92]/25 text-[#A39B92] bg-[#A39B92]/5">
+        Структурированная работа
+      </SlideEyebrow>
+
       <div
         ref={sceneRef}
         className="relative z-20 w-full max-w-[90vw] mx-auto h-[100vh] flex flex-col px-[2vw] pt-[8vh] pb-[5vh]"
@@ -37,10 +42,7 @@ export function OrgSlideFive() {
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
           className="flex-shrink-0 mb-[6vh] text-center"
         >
-          <span className="inline-block px-[1vw] py-[0.5vh] rounded-full text-[clamp(9px,1.2vh,14px)] tracking-[0.25em] uppercase border border-[#A39B92]/25 text-[#A39B92] bg-[#A39B92]/5 mb-[2vh]">
-            Структурированная работа
-          </span>
-          <h2 className="text-[clamp(1.5rem,4vh,4rem)] font-light leading-[1.12] text-[#EAEADF] tracking-tight text-balance mx-auto max-w-[70vw]">
+          <h2 className="mx-auto max-w-[70vw] pr-36 text-[clamp(1.35rem,3.5vh,3.25rem)] font-light leading-[1.12] text-[#EAEADF] tracking-tight text-balance sm:pr-44 lg:pr-52">
             Публикуется не просто изображение, а{' '}
             <span className="text-[#A39B92]">структурированная работа</span>
           </h2>

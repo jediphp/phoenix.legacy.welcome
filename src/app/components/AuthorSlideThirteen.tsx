@@ -2,6 +2,7 @@ import { motion, useInView } from 'motion/react';
 import { useRef } from 'react';
 import { ArrowDown } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import { SlideEyebrow } from './SlideEyebrow';
 
 const LAUNCH_PHASES = [
   {
@@ -60,6 +61,8 @@ export function AuthorSlideThirteen() {
         transition={{ duration: 2.5, ease: 'easeOut' }}
       />
 
+      <SlideEyebrow toneClassName="border-[#D5A86B]/30 text-[#D5A86B] bg-[#D5A86B]/5">Запуск проекта</SlideEyebrow>
+
       <div
         ref={sceneRef}
         className="relative z-20 w-full max-w-[1500px] 2xl:max-w-[2400px] mx-auto flex flex-col h-full min-h-0 pt-[2vh] lg:pt-[4vh]"
@@ -72,10 +75,7 @@ export function AuthorSlideThirteen() {
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
           className="flex-shrink-0 mb-[4vh] lg:mb-[5vh]"
         >
-          <span className="inline-block px-3 py-1 rounded-full text-[9px] sm:text-[10px] 2xl:text-xs tracking-[0.25em] uppercase border border-[#D5A86B]/30 text-[#D5A86B] bg-[#D5A86B]/5 mb-[2vh] sm:mb-[3vh]">
-            Запуск проекта
-          </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-[clamp(2.2rem,3.8vw,3.4rem)] 2xl:text-[4.2rem] font-light leading-[1.1] text-[#EAEADF] tracking-tight text-balance max-w-4xl 2xl:max-w-6xl">
+          <h2 className="pr-36 text-2xl sm:pr-44 sm:text-3xl lg:pr-52 lg:text-[clamp(1.85rem,3.4vw,2.85rem)] 2xl:text-[3.35rem] font-light leading-[1.12] text-[#EAEADF] tracking-tight text-balance max-w-4xl 2xl:max-w-6xl">
             Запуск начинается{' '}
             <span className="text-[#D5A86B]">с сильного авторского ядра</span>
           </h2>

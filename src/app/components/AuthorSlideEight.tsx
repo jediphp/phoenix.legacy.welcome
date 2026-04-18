@@ -2,6 +2,7 @@ import { motion, useInView } from 'motion/react';
 import { useRef, useState, useEffect } from 'react';
 import { ArrowDown, PenLine, ThermometerSun, ScanLine } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import { SlideEyebrow } from './SlideEyebrow';
 
 const FEEDBACK_CHIPS = [
   { id: '01', label: 'Быстрая оценка' },
@@ -49,7 +50,11 @@ export function AuthorSlideEight() {
       {/* Ambient warm glow bottom-left */}
       <div className="absolute bottom-0 left-0 w-[55%] h-[45%] pointer-events-none z-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(144,94,38,0.09)_0%,transparent_70%)]" />
 
-      <div className="relative z-20 w-full max-w-[1500px] 2xl:max-w-[2400px] mx-auto flex flex-col h-full min-h-0 pt-[5vh]">
+      <SlideEyebrow toneClassName="border-[#905E26]/30 text-[#A39B92] bg-[#905E26]/5">
+        Инструмент доработки
+      </SlideEyebrow>
+
+      <div className="relative z-20 w-full max-w-[1500px] 2xl:max-w-[2400px] mx-auto flex flex-col h-full min-h-0 pt-[2vh] sm:pt-[3vh]">
 
         {/* ── Header ── */}
         <motion.div
@@ -57,20 +62,14 @@ export function AuthorSlideEight() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
-          className="flex-shrink-0 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 sm:gap-6 mb-4 sm:mb-6 2xl:mb-10"
+          className="flex-shrink-0 flex flex-col gap-3 mb-3 sm:mb-4 2xl:mb-6"
         >
-          <div>
-            <span className="inline-block px-3 py-1 rounded-full text-[9px] sm:text-[10px] 2xl:text-xs tracking-[0.25em] uppercase border border-[#905E26]/30 text-[#A39B92] bg-[#905E26]/5 mb-3 sm:mb-4 2xl:mb-5">
-              Инструмент доработки
-            </span>
-            <h2 className="text-2xl sm:text-3xl lg:text-[2.2rem] 2xl:text-[3.5rem] font-light leading-[1.15] text-[#EAEADF] tracking-tight max-w-2xl 2xl:max-w-4xl text-balance">
-              Обратная связь привязана{' '}
-              <span className="text-[#D5A86B]">к конкретным зонам</span> работы
-            </h2>
-          </div>
+          <h2 className="pr-36 text-xl sm:pr-44 sm:text-2xl lg:pr-52 lg:text-[clamp(1.35rem,2.4vw,1.85rem)] 2xl:text-[2.35rem] font-light leading-[1.18] text-[#EAEADF] tracking-tight max-w-3xl 2xl:max-w-4xl text-balance">
+            Обратная связь привязана{' '}
+            <span className="text-[#D5A86B]">к конкретным зонам</span> работы
+          </h2>
 
-          {/* 4 chips — desktop: top-right */}
-          <div className="hidden sm:flex flex-wrap gap-2 2xl:gap-3 justify-end max-w-xs 2xl:max-w-md flex-shrink-0 pb-1">
+          <div className="flex flex-wrap gap-2 2xl:gap-3">
             {FEEDBACK_CHIPS.map((chip, i) => (
               <motion.span
                 key={chip.id}
@@ -78,7 +77,7 @@ export function AuthorSlideEight() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.1 + i * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                className="flex items-center gap-1.5 px-2.5 py-1 2xl:px-4 2xl:py-1.5 rounded-full bg-[#0D0B09]/70 border border-white/[0.08] text-[8px] sm:text-[9px] 2xl:text-xs text-[#A39B92] uppercase tracking-widest backdrop-blur-sm"
+                className="flex items-center gap-1.5 px-2.5 py-1 2xl:px-3 2xl:py-1.5 rounded-full bg-[#0D0B09]/70 border border-white/[0.08] text-[7px] sm:text-[8px] 2xl:text-[10px] text-[#A39B92] uppercase tracking-widest backdrop-blur-sm"
               >
                 <span className="text-[#905E26]/70 font-mono">{chip.id}</span>
                 {chip.label}
@@ -95,13 +94,13 @@ export function AuthorSlideEight() {
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
           className="flex-1 min-h-0 relative rounded-2xl sm:rounded-3xl 2xl:rounded-[2.5rem] border border-[#2A2621]/60 overflow-hidden shadow-[0_0_80px_rgba(0,0,0,0.95)] bg-[#0A0908]"
-          style={{ minHeight: '240px' }}
+          style={{ minHeight: 'min(42svh, 520px)' }}
         >
           {/* Base image */}
           <ImageWithFallback
             src="https://images.unsplash.com/photo-1724431862290-d7ba1376db48?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjbGFzc2ljYWwlMjBvaWwlMjBwYWludGluZyUyMGRldGFpbCUyMGNhbnZhcyUyMHRleHR1cmUlMjByZXN0b3JhdGlvbiUyMGFydHxlbnwxfHx8fDE3NzY0NDQ2NTd8MA&ixlib=rb-4.1.0&q=80&w=1080"
             alt="Work in review session"
-            className="absolute inset-0 w-full h-full object-cover opacity-65"
+            className="absolute inset-0 w-full h-full object-contain object-center opacity-80"
           />
 
           {/* Vignette layers */}
@@ -294,24 +293,11 @@ export function AuthorSlideEight() {
           transition={{ duration: 1.1, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="flex-shrink-0 mt-3 sm:mt-4 2xl:mt-8 z-30 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3"
         >
-          <p className="text-sm sm:text-base lg:text-[1.05rem] 2xl:text-xl text-[#A39B92] font-light tracking-wide leading-relaxed text-balance max-w-3xl 2xl:max-w-5xl">
+          <p className="text-xs sm:text-sm lg:text-[0.95rem] 2xl:text-base text-[#A39B92] font-light tracking-wide leading-snug text-balance max-w-3xl 2xl:max-w-5xl">
             Это позволяет автору увидеть не только общую реакцию, но и понять,{' '}
             <span className="text-[#D5CCC3]">где именно результат вызывает сомнения</span>{' '}
             и что можно улучшить.
           </p>
-
-          {/* Chips mobile */}
-          <div className="flex flex-wrap gap-2 sm:hidden">
-            {FEEDBACK_CHIPS.map((chip) => (
-              <span
-                key={chip.id}
-                className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#0D0B09]/70 border border-white/[0.08] text-[8px] text-[#A39B92] uppercase tracking-widest"
-              >
-                <span className="text-[#905E26]/70 font-mono">{chip.id}</span>
-                {chip.label}
-              </span>
-            ))}
-          </div>
         </motion.div>
 
       </div>

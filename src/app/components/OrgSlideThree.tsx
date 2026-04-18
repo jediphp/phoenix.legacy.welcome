@@ -2,6 +2,7 @@ import { motion, useInView } from 'motion/react';
 import { useRef } from 'react';
 import { ArrowDown, FileText, Link2, CheckSquare, Award, Shield } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import { SlideEyebrow } from './SlideEyebrow';
 
 const PLATFORM_FUNCTIONS = [
   {
@@ -59,6 +60,10 @@ export function OrgSlideThree() {
         <rect width="100%" height="100%" filter="url(#noise_org_3)" />
       </svg>
 
+      <SlideEyebrow toneClassName="border-[#D5A86B]/25 text-[#D5A86B] bg-[#D5A86B]/5">
+        Что такое Феникс.Наследие
+      </SlideEyebrow>
+
       <div
         ref={sceneRef}
         className="relative z-20 w-full max-w-[90vw] mx-auto flex flex-col h-[100vh] px-[2vw] pt-[8vh] pb-[5vh]"
@@ -71,10 +76,7 @@ export function OrgSlideThree() {
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
           className="flex-shrink-0 mb-[5vh]"
         >
-          <span className="inline-block px-[1vw] py-[0.5vh] rounded-full text-[clamp(9px,1.2vh,14px)] tracking-[0.25em] uppercase border border-[#D5A86B]/25 text-[#D5A86B] bg-[#D5A86B]/5 mb-[3vh]">
-            Что такое Феникс.Наследие
-          </span>
-          <h2 className="text-[clamp(1.5rem,4.5vh,4.5rem)] font-light leading-[1.1] text-[#EAEADF] tracking-tight text-balance max-w-[70vw]">
+          <h2 className="pr-36 text-[clamp(1.35rem,4vh,3.75rem)] font-light leading-[1.1] text-[#EAEADF] tracking-tight text-balance max-w-[70vw] sm:pr-44 lg:pr-52">
             Это не генератор и{' '}
             <span className="text-[#A39B92]">не просто галерея изображений</span>
           </h2>

@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { useRef } from 'react';
 import { ArrowDown } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import { SlideEyebrow } from './SlideEyebrow';
 import myImage from '../../imports/image-1.png'; // Fallback if image-1.png is what the user provided
 
 export function AuthorSlideTwo() {
@@ -21,6 +22,8 @@ export function AuthorSlideTwo() {
       {/* Subtle warm glow around the media area (right side) */}
       <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1/2 h-3/4 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#905E26]/10 via-transparent to-transparent blur-[120px] pointer-events-none z-0" />
 
+      <SlideEyebrow toneClassName="border-[#905E26]/30 text-[#F5EC9B] bg-[#905E26]/10">Проблема</SlideEyebrow>
+
       {/* Grid Layout: Left Text (35-40%), Right Media (60-65%) */}
       <div className="relative z-10 w-full max-w-[1600px] 2xl:max-w-[1800px] px-6 sm:px-12 lg:px-16 flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-20 2xl:gap-32 h-full pt-20 pb-16 lg:py-0">
         
@@ -33,10 +36,7 @@ export function AuthorSlideTwo() {
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
         >
           <div className="mb-6 lg:mb-10">
-            <span className="inline-block px-3 py-1 rounded-full text-[10px] tracking-[0.2em] uppercase border border-[#905E26]/30 text-[#F5EC9B] bg-[#905E26]/10 mb-6 lg:mb-8">
-              Проблема
-            </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl 2xl:text-[3.5rem] font-light leading-[1.15] text-[#EAEADF] tracking-tight">
+            <h2 className="pr-32 text-2xl sm:pr-40 sm:text-3xl lg:pr-48 lg:text-4xl 2xl:text-[3rem] font-light leading-[1.15] text-[#EAEADF] tracking-tight">
               Историческая реконструкция сегодня почти не имеет своей среды
             </h2>
           </div>

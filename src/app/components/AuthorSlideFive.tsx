@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { ArrowDown } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import { SlideEyebrow } from './SlideEyebrow';
 
 const COLUMNS = [
   {
@@ -45,6 +46,8 @@ export function AuthorSlideFive() {
         <rect width="100%" height="100%" filter="url(#noise_slide_5)" />
       </svg>
 
+      <SlideEyebrow toneClassName="border-[#905E26]/30 text-[#A39B92] bg-[#905E26]/5">Типология результата</SlideEyebrow>
+
       <div className="relative z-20 w-full max-w-[1400px] 2xl:max-w-[2000px] mx-auto flex flex-col items-center justify-center h-full min-h-0 pt-[6vh]">
         
         {/* Top Header */}
@@ -53,12 +56,9 @@ export function AuthorSlideFive() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-          className="text-center flex-shrink-0 mb-8 sm:mb-10 lg:mb-14 2xl:mb-20"
+          className="text-center flex-shrink-0 mb-8 sm:mb-10 lg:mb-14 2xl:mb-20 w-full px-2 sm:px-8"
         >
-          <span className="inline-block px-3 py-1 rounded-full text-[9px] sm:text-[10px] 2xl:text-xs tracking-[0.2em] sm:tracking-[0.3em] uppercase border border-[#905E26]/30 text-[#A39B92] bg-[#905E26]/5 mb-4 sm:mb-6 lg:mb-8">
-            Типология результата
-          </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl 2xl:text-[3.5rem] font-light leading-[1.2] text-[#EAEADF] tracking-tight max-w-4xl mx-auto drop-shadow-xl text-balance">
+          <h2 className="mx-auto text-xl sm:text-2xl lg:text-3xl 2xl:text-[2.85rem] font-light leading-[1.2] text-[#EAEADF] tracking-tight max-w-4xl drop-shadow-xl text-balance pr-28 sm:pr-40 lg:pr-48">
             Не все ИИ-результаты одинаковы по своей природе
           </h2>
         </motion.div>

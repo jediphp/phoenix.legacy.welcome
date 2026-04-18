@@ -2,6 +2,7 @@ import { motion, useInView } from 'motion/react';
 import { useRef } from 'react';
 import { ArrowDown, Package, FileImage, LayoutTemplate, Library } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import { SlideEyebrow } from './SlideEyebrow';
 
 const EXPORT_PACKAGES = [
   { id: '01', title: 'Цифровая публикация', desc: 'Базовый пакет метаданных и изображений для онлайн-платформ', icon: FileImage },
@@ -24,6 +25,8 @@ export function OrgSlideSeven() {
         <rect width="100%" height="100%" filter="url(#noise_org_7)" />
       </svg>
 
+      <SlideEyebrow toneClassName="border-[#A39B92]/25 text-[#A39B92] bg-[#A39B92]/5">Экспорт и материалы</SlideEyebrow>
+
       <div
         ref={sceneRef}
         className="relative z-20 w-full max-w-[90vw] mx-auto h-[100vh] flex flex-col px-[2vw] pt-[8vh] pb-[5vh]"
@@ -35,10 +38,7 @@ export function OrgSlideSeven() {
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
           className="flex-shrink-0 mb-[5vh] text-center"
         >
-          <span className="inline-block px-[1vw] py-[0.5vh] rounded-full text-[clamp(9px,1.2vh,14px)] tracking-[0.25em] uppercase border border-[#A39B92]/25 text-[#A39B92] bg-[#A39B92]/5 mb-[2vh]">
-            Экспорт и материалы
-          </span>
-          <h2 className="text-[clamp(1.5rem,4vh,4rem)] font-light leading-[1.12] text-[#EAEADF] tracking-tight text-balance mx-auto max-w-[75vw]">
+          <h2 className="mx-auto max-w-[75vw] pr-36 text-[clamp(1.35rem,3.5vh,3.25rem)] font-light leading-[1.12] text-[#EAEADF] tracking-tight text-balance sm:pr-44 lg:pr-52">
             Организация должна получать не хаотичный набор файлов,{' '}
             <span className="text-[#A39B92]">а понятный пакет</span>
           </h2>

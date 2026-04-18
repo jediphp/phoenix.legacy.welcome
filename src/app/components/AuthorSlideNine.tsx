@@ -1,6 +1,7 @@
 import { motion, useInView } from 'motion/react';
 import { useRef } from 'react';
 import { ArrowDown } from 'lucide-react';
+import { SlideEyebrow } from './SlideEyebrow';
 
 const TRAJECTORY_STEPS = [
   {
@@ -53,6 +54,8 @@ export function AuthorSlideNine() {
         transition={{ duration: 2.5, ease: "easeOut" }}
       />
 
+      <SlideEyebrow toneClassName="border-[#D5A86B]/30 text-[#D5A86B] bg-[#D5A86B]/5">Личная ценность</SlideEyebrow>
+
       <div className="relative z-20 w-full max-w-[90vw] mx-auto flex flex-col min-h-[100svh] pt-[8vh] pb-[5vh]" ref={sceneRef}>
 
         {/* ── Header ── */}
@@ -62,10 +65,7 @@ export function AuthorSlideNine() {
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
           className="w-full flex-shrink-0 mb-[4vh]"
         >
-          <span className="inline-block px-[1vw] py-[0.5vh] rounded-full text-[clamp(10px,1.2vh,14px)] tracking-[0.25em] uppercase border border-[#D5A86B]/30 text-[#D5A86B] bg-[#D5A86B]/5 mb-[2vh]">
-            Личная ценность
-          </span>
-          <h2 className="text-[clamp(2rem,4vh,4.5rem)] font-light leading-[1.1] text-[#EAEADF] tracking-tight text-balance max-w-[70vw]">
+          <h2 className="pr-36 text-[clamp(1.65rem,3.4vh,3.25rem)] sm:pr-44 font-light leading-[1.1] text-[#EAEADF] tracking-tight text-balance max-w-[70vw] lg:pr-52">
             Здесь можно не просто публиковать,{' '}
             <span className="text-[#A39B92]">а накапливать репутацию</span>
           </h2>

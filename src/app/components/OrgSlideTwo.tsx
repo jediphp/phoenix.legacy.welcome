@@ -2,6 +2,7 @@ import { motion, useInView } from 'motion/react';
 import { useRef } from 'react';
 import { ArrowDown } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import { SlideEyebrow } from './SlideEyebrow';
 
 const PROBLEM_POINTS = [
   {
@@ -33,6 +34,10 @@ export function OrgSlideTwo() {
         <rect width="100%" height="100%" filter="url(#noise_org_2)" />
       </svg>
 
+      <SlideEyebrow toneClassName="border-[#A39B92]/25 text-[#A39B92] bg-[#A39B92]/5">
+        Институциональная проблема
+      </SlideEyebrow>
+
       <div
         ref={sceneRef}
         className="relative z-20 w-full max-w-[90vw] mx-auto h-[100vh] flex flex-col lg:flex-row items-stretch px-[2vw] pt-[8vh] pb-[5vh] gap-[4vh] lg:gap-[6vw]"
@@ -41,22 +46,12 @@ export function OrgSlideTwo() {
         {/* ── LEFT: Text block ── */}
         <div className="flex flex-col justify-center lg:w-[46%] flex-shrink-0 order-2 lg:order-1">
 
-          {/* Label */}
-          <motion.span
-            initial={{ opacity: 0, x: '-2vw' }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: '-2vw' }}
-            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="inline-block mb-[3vh] px-[1vw] py-[0.5vh] rounded-full text-[clamp(9px,1.2vh,14px)] tracking-[0.25em] uppercase border border-[#A39B92]/25 text-[#A39B92] bg-[#A39B92]/5 self-start"
-          >
-            Институциональная проблема
-          </motion.span>
-
           {/* Headline */}
           <motion.h2
             initial={{ opacity: 0, y: '3vh' }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: '3vh' }}
             transition={{ duration: 1.3, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
-            className="text-[clamp(1.5rem,4vh,4rem)] font-light leading-[1.12] text-[#EAEADF] tracking-tight text-balance mb-[4vh]"
+            className="pr-32 text-[clamp(1.35rem,3.5vh,3.25rem)] font-light leading-[1.12] text-[#EAEADF] tracking-tight text-balance mb-[4vh] sm:pr-40 lg:pr-48"
           >
             Исторические реконструкции редко существуют внутри понятного{' '}
             <span className="text-[#A39B92]">институционального контура</span>
