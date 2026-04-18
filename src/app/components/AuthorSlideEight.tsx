@@ -36,7 +36,7 @@ export function AuthorSlideEight() {
   }, [isInView]);
 
   return (
-    <div className="relative w-full h-screen flex flex-col overflow-hidden font-sans snap-start py-6 sm:py-10 lg:py-12 px-4 sm:px-8 lg:px-12 2xl:px-24">
+    <div className="relative w-full min-h-[100svh] flex flex-col overflow-hidden font-sans snap-start py-6 sm:py-10 lg:py-12 px-4 sm:px-8 lg:px-12 2xl:px-24">
 
       {/* Noise */}
       <svg className="absolute inset-0 pointer-events-none opacity-[0.03] mix-blend-overlay w-full h-full z-0">

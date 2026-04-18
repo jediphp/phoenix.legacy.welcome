@@ -56,16 +56,16 @@ export function AuthorSlideSix() {
   const isInView = useInView(sceneRef, { once: true, margin: '-50px' });
 
   return (
-    <div className="relative w-full h-[100vh] flex flex-col items-center justify-center overflow-hidden font-sans snap-start bg-transparent py-[5vh] px-[5vw]">
+    <div className="relative w-full min-h-[100svh] flex flex-col items-center justify-center overflow-hidden font-sans snap-start bg-transparent py-[4vh] px-[5vw]">
       {/* Noise filter */}
-      <svg className="absolute inset-0 pointer-events-none opacity-[0.03] mix-blend-overlay w-full h-[100vh] z-0">
+      <svg className="absolute inset-0 pointer-events-none opacity-[0.03] mix-blend-overlay w-full h-full z-0">
         <filter id="noise_slide_6">
           <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves={3} stitchTiles="stitch" />
         </filter>
         <rect width="100%" height="100%" filter="url(#noise_slide_6)" />
       </svg>
 
-      <div ref={sceneRef} className="relative z-20 w-full max-w-[90vw] mx-auto flex flex-col h-[100vh] min-h-0 pt-[8vh] pb-[5vh]">
+      <div ref={sceneRef} className="relative z-20 w-full max-w-[90vw] mx-auto flex flex-col min-h-[100svh] pt-[8vh] pb-[5vh]">
         
         {/* Top Header */}
         <motion.div

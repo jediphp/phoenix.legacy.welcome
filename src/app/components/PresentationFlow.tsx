@@ -66,7 +66,7 @@ export function PresentationFlow({ type }: { type: 'author' | 'org' }) {
       </div>
 
       {/* Fixed back-navigation header */}
-      <header className="fixed top-0 w-full z-50 flex justify-start p-8 sm:p-12 pointer-events-none">
+      <header className="fixed top-0 w-full z-50 flex justify-start p-4 sm:p-8 lg:p-10 pointer-events-none">
         <button
           onClick={() => router.push('/')}
           className="group flex items-center gap-3 text-sm text-[#A39B92] hover:text-white transition-colors duration-300 cursor-pointer pointer-events-auto backdrop-blur-md bg-[#070605]/30 rounded-full pr-4 shadow-[0_0_15px_rgba(0,0,0,0.5)]"
@@ -83,7 +83,7 @@ export function PresentationFlow({ type }: { type: 'author' | 'org' }) {
   if (isAuthor) {
     return (
       <div
-        className="relative w-full h-screen bg-[#070605] overflow-y-auto overflow-x-hidden snap-y snap-mandatory font-sans scroll-smooth"
+        className="author-flow relative w-full h-[100svh] bg-[#070605] overflow-y-auto overflow-x-hidden snap-y snap-mandatory font-sans scroll-smooth"
         onMouseMove={handleMouseMove}
       >
         {sharedWrapper}
@@ -108,7 +108,7 @@ export function PresentationFlow({ type }: { type: 'author' | 'org' }) {
   // ── Organisation flow ──
   return (
     <div
-      className="relative w-full h-[100vh] bg-[#080705] overflow-y-auto overflow-x-hidden snap-y snap-mandatory font-sans scroll-smooth"
+      className="relative w-full h-[100svh] bg-[#080705] overflow-y-auto overflow-x-hidden snap-y snap-mandatory font-sans scroll-smooth"
       onMouseMove={handleMouseMove}
     >
       {sharedWrapper}

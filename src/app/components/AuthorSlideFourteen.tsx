@@ -30,7 +30,7 @@ export function AuthorSlideFourteen() {
   const [hoveredAction, setHoveredAction] = useState<string | null>(null);
 
   return (
-    <div className="relative w-full h-screen flex flex-col overflow-hidden font-sans snap-start bg-[#0B0907]">
+    <div className="relative w-full min-h-[100svh] flex flex-col overflow-hidden font-sans snap-start bg-[#0B0907]">
 
       {/* Noise */}
       <svg className="absolute inset-0 pointer-events-none opacity-[0.025] mix-blend-overlay w-full h-full z-0">

@@ -13,7 +13,7 @@ export function AuthorSlideThree() {
   ];
 
   return (
-    <div className="relative w-full h-screen flex flex-col items-center justify-center overflow-hidden font-sans snap-start py-8 sm:py-16 px-4 sm:px-8">
+    <div className="relative w-full min-h-[100svh] flex flex-col items-center justify-center overflow-hidden font-sans snap-start py-8 sm:py-16 px-4 sm:px-8">
       
       {/* Background with deep graphite and warm light */}
       <div className="absolute inset-0 z-0 pointer-events-none">
