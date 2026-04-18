@@ -10,7 +10,7 @@ export function AuthorSlideTwo() {
   return (
     <div 
       ref={containerRef}
-      className="relative w-full h-screen flex items-center justify-center overflow-hidden font-sans snap-start selection:bg-[#8F6D1F]/30"
+      className="relative w-full min-h-[100svh] flex items-center justify-center overflow-hidden font-sans snap-start selection:bg-[#8F6D1F]/30"
     >
       {/* Background base and noise */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#12100D]/40 via-[#0A0907]/40 to-[#040403]/40 z-0" />
