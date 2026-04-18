@@ -1,11 +1,34 @@
+# Phoenix Legacy Welcome (Next.js)
 
-  # Создание логотипа
+Проект переведён на **Next.js (App Router)** и готов к запуску как полноценное приложение.
 
-  This is a code bundle for Создание логотипа. The original project is available at https://www.figma.com/design/84DJRjmp4LXlvmfld0Cp0r/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BB%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF%D0%B0.
+## Быстрый старт
 
-  ## Running the code
+1. Установите зависимости:
+   ```bash
+   npm install
+   ```
+2. Создайте `.env.local` из примера:
+   ```bash
+   cp .env.example .env.local
+   ```
+3. Запустите dev-сервер:
+   ```bash
+   npm run dev
+   ```
 
-  Run `npm i` to install the dependencies.
+## Доступные скрипты
 
-  Run `npm run dev` to start the development server.
-  
+- `npm run dev` — запуск dev-сервера Next.js
+- `npm run build` — production-сборка
+- `npm run start` — запуск production-сборки
+- `npm run lint` — linting через Next.js
+
+## Переменные окружения
+
+Используются публичные переменные:
+
+- `NEXT_PUBLIC_APP_NAME` — название приложения
+- `NEXT_PUBLIC_APP_DESCRIPTION` — описание приложения
+
+См. файл `.env.example`.
