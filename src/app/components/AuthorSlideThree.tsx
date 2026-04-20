@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { Database, Image as ImageIcon, ScanSearch, CheckCircle2, ShieldCheck, DownloadCloud } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import { SlideFooter } from './SlideFooter';
 
 export function AuthorSlideThree() {
   const flowSteps = [
@@ -29,7 +30,7 @@ export function AuthorSlideThree() {
         <rect width="100%" height="100%" filter="url(#noise_slide_3)" />
       </svg>
 
-      <div className="relative z-20 w-full max-w-6xl mx-auto flex flex-col items-center justify-center h-full min-h-0">
+      <div className="relative z-20 mx-auto flex h-full min-h-0 w-full max-w-7xl flex-col items-center justify-center">
         
         {/* Header Block */}
         <motion.div
@@ -37,12 +38,12 @@ export function AuthorSlideThree() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-          className="text-center max-w-4xl flex-shrink-0 mb-6 sm:mb-10"
+          className="mb-6 max-w-5xl flex-shrink-0 text-center sm:mb-8"
         >
           <h2 className="text-fluid-caption text-fluid-label tracking-[0.2em] sm:tracking-[0.3em] uppercase text-[#F5EC9B] mb-2 sm:mb-4 font-light drop-shadow-md">
             Это не генератор картинок
           </h2>
-          <p className="text-sm sm:text-base lg:text-lg font-light leading-relaxed text-[#EAEADF] text-balance mb-0 max-w-3xl mx-auto px-4">
+          <p className="mx-auto mb-0 max-w-4xl px-2 text-base font-light leading-relaxed text-[#EAEADF] text-balance sm:px-4 sm:text-lg lg:text-xl">
             Феникс.Наследие — это платформа для публикации исторических реконструкций, привязки результата к оригиналу и контексту, оценки качества и соответствия источнику, верификации сильных работ и контролируемого использования.
           </p>
         </motion.div>
@@ -53,10 +54,10 @@ export function AuthorSlideThree() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1.4, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          className="w-full relative flex flex-col items-center flex-1 min-h-0 justify-center mb-6 sm:mb-10"
+          className="mb-6 flex min-h-0 w-full flex-1 flex-col items-center justify-center sm:mb-8"
         >
           {/* Mockup Container for Platform Logic - Hybrid Layout */}
-          <div className="w-full max-w-5xl h-full max-h-[460px] bg-gradient-to-br from-[#12100E] to-[#0A0908] rounded-2xl sm:rounded-[32px] p-4 sm:p-6 lg:p-8 border border-[#2A2621]/50 shadow-2xl relative overflow-hidden backdrop-blur-xl group flex flex-col justify-center min-h-0">
+          <div className="relative flex h-full min-h-0 w-full max-w-6xl flex-col justify-center overflow-hidden rounded-2xl border border-[#2A2621]/50 bg-gradient-to-br from-[#12100E] to-[#0A0908] p-4 shadow-2xl backdrop-blur-xl group max-h-[540px] sm:rounded-[32px] sm:p-6 lg:p-8">
             
             {/* Inner Glow */}
             <div className="absolute top-0 left-1/4 right-1/4 h-[1px] bg-gradient-to-r from-transparent via-[#905E26]/50 to-transparent opacity-50" />
@@ -182,6 +183,7 @@ export function AuthorSlideThree() {
         </motion.div>
 
       </div>
+      <SlideFooter step="03" />
     </div>
   );
 }

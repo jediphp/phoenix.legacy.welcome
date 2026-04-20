@@ -1,8 +1,9 @@
 import { motion, useInView } from 'motion/react';
 import { useRef, useState, useEffect } from 'react';
-import { ArrowDown, MessageSquare, Layers, Zap, BarChart3 } from 'lucide-react';
+import { MessageSquare, Layers, Zap, BarChart3 } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { SlideEyebrow } from './SlideEyebrow';
+import { SlideFooter } from './SlideFooter';
 
 const FEEDBACK_TYPES = [
   {
@@ -87,7 +88,7 @@ export function AuthorSlideSeven() {
   }, [isInView]);
 
   return (
-    <div className="relative w-full min-h-[100svh] flex flex-col items-center justify-center overflow-hidden font-sans snap-start slide-shell py-6 sm:py-10 lg:py-14 px-4 sm:px-8 lg:px-12 2xl:px-24">
+    <div className="relative w-full min-h-[100svh] flex flex-col items-center justify-center overflow-hidden px-4 py-6 pb-20 font-sans snap-start sm:px-8 sm:py-10 sm:pb-24 lg:px-12 lg:py-14 2xl:px-24">
       {/* Noise filter */}
       <svg className="absolute inset-0 pointer-events-none opacity-[0.03] mix-blend-overlay w-full h-full z-0">
         <filter id="noise_slide_7">
@@ -101,7 +102,7 @@ export function AuthorSlideSeven() {
 
       <SlideEyebrow toneClassName="border-[#905E26]/30 text-[#A39B92] bg-[#905E26]/5">Инструмент роста</SlideEyebrow>
 
-      <div className="relative z-20 w-full max-w-[1500px] 2xl:max-w-[2300px] mx-auto flex flex-col h-full min-h-0 pt-[6vh] sm:pt-[5vh] pb-[3vh]">
+      <div className="relative z-20 mx-auto flex h-full min-h-0 w-full max-w-[1500px] flex-col pt-[6vh] pb-[11vh] sm:pt-[5vh] sm:pb-[12vh] 2xl:max-w-[2300px]">
 
         {/* ── Top: Label + Title ── */}
         <motion.div
@@ -382,6 +383,7 @@ export function AuthorSlideSeven() {
         </motion.div>
 
       </div>
+      <SlideFooter step="07" />
     </div>
   );
 }

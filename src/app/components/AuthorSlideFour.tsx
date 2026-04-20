@@ -5,14 +5,14 @@ import {
   Users, 
   Verified, 
   AlertCircle,
-  Database,
-  ArrowDown
+  Database
 } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import { SlideFooter } from './SlideFooter';
 
 export function AuthorSlideFour() {
   return (
-    <div className="relative flex min-h-[100svh] w-full flex-col items-center justify-center overflow-hidden px-5 font-sans snap-start slide-shell py-10 sm:px-8 sm:py-12 lg:px-12 lg:py-14 xl:px-16">
+    <div className="relative flex min-h-[100svh] w-full flex-col items-center justify-center overflow-hidden px-5 pb-20 pt-10 font-sans snap-start sm:px-8 sm:pb-24 sm:pt-12 lg:px-12 lg:pt-14 xl:px-16">
       
       {/* Background with deep graphite and subtle spot light */}
       <div className="absolute inset-0 z-0 pointer-events-none">
@@ -28,7 +28,7 @@ export function AuthorSlideFour() {
         <rect width="100%" height="100%" filter="url(#noise_slide_4)" />
       </svg>
 
-      <div className="relative z-20 mx-auto flex min-h-0 w-full max-w-[min(96vw,92rem)] flex-1 flex-col items-center justify-center gap-2 sm:gap-3 lg:gap-4">
+      <div className="relative z-20 mx-auto flex min-h-0 w-full max-w-[min(96vw,92rem)] flex-1 flex-col items-center justify-center gap-2 sm:gap-3">
         
         {/* Top Text Block — шире по горизонтали и компактнее по вертикали */}
         <motion.div
@@ -36,7 +36,7 @@ export function AuthorSlideFour() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-          className="w-full max-w-[min(92vw,80rem)] flex-shrink-0 text-center"
+          className="mb-2 w-full max-w-[min(92vw,80rem)] flex-shrink-0 text-center sm:mb-3"
         >
           <h2 className="mb-2 text-fluid-caption font-light uppercase tracking-[0.2em] text-[#A39B92] drop-shadow-md sm:mb-2.5 text-fluid-label sm:tracking-[0.3em] text-fluid-label">
             Здесь важен не только результат, но и его основание
@@ -52,7 +52,7 @@ export function AuthorSlideFour() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1.4, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          className="relative flex w-full flex-1 min-h-0 flex-col items-center justify-center"
+          className="relative my-2 flex min-h-0 w-full flex-col items-center justify-center sm:my-3"
         >
           {/* Main Case-Canvas — ограничение по высоте экрана, чтобы всё влезало в 100svh */}
           <div className="w-full max-w-[min(92vw,1300px)] relative aspect-video max-h-[min(32svh,340px)] sm:max-h-[min(36svh,400px)] lg:max-h-[min(38svh,460px)] 2xl:max-h-[min(40svh,520px)] rounded-xl sm:rounded-2xl lg:rounded-[32px] overflow-hidden shadow-[0_30px_60px_-15px_rgba(0,0,0,0.7)] border border-[#2A2621]/60 bg-[#12100E] group">
@@ -196,7 +196,7 @@ export function AuthorSlideFour() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1.2, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="w-full max-w-[min(90vw,56rem)] flex-shrink-0 px-1 text-center sm:px-2"
+          className="mt-2 w-full max-w-[min(90vw,56rem)] flex-shrink-0 px-1 text-center sm:mt-3 sm:px-2"
         >
           <p className="text-balance text-base font-light leading-snug tracking-wide text-[#F5EC9B] drop-shadow-lg sm:text-lg lg:text-xl 2xl:text-2xl">
             Мы хотим, чтобы ценность работы определялась не шумом, а качеством.
@@ -228,6 +228,7 @@ export function AuthorSlideFour() {
         </motion.div>
 
       </div>
+      <SlideFooter step="04" />
     </div>
   );
 }

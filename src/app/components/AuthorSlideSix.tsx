@@ -1,8 +1,9 @@
 import { motion, useInView } from 'motion/react';
 import { useRef } from 'react';
-import { ArrowDown, MessageSquare, Users, ShieldAlert, CheckCircle, BrainCircuit } from 'lucide-react';
+import { MessageSquare, Users, ShieldAlert, CheckCircle, BrainCircuit } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { SlideEyebrow } from './SlideEyebrow';
+import { SlideFooter } from './SlideFooter';
 
 const SIGNALS = [
   {
@@ -57,7 +58,7 @@ export function AuthorSlideSix() {
   const isInView = useInView(sceneRef, { once: true, margin: '-50px' });
 
   return (
-    <div className="relative w-full min-h-[100svh] flex flex-col items-center justify-center overflow-hidden font-sans snap-start slide-shell bg-transparent py-[4vh] px-[5vw]">
+    <div className="relative w-full min-h-[100svh] flex flex-col items-center justify-center overflow-hidden bg-transparent px-[5vw] py-[4vh] pb-20 font-sans snap-start sm:pb-24">
       {/* Noise filter */}
       <svg className="absolute inset-0 pointer-events-none opacity-[0.03] mix-blend-overlay w-full h-full z-0">
         <filter id="noise_slide_6">
@@ -68,7 +69,7 @@ export function AuthorSlideSix() {
 
       <SlideEyebrow toneClassName="border-[#905E26]/30 text-[#A39B92] bg-[#905E26]/5">Индекс соответствия</SlideEyebrow>
 
-      <div ref={sceneRef} className="relative z-20 w-full max-w-[90vw] mx-auto flex flex-col min-h-[100svh] pt-[8vh] pb-[5vh]">
+      <div ref={sceneRef} className="relative z-20 mx-auto flex min-h-[100svh] w-full max-w-[90vw] flex-col pt-[8vh] pb-[11vh] sm:pb-[12vh]">
         
         {/* Top Header */}
         <motion.div
@@ -167,37 +168,15 @@ export function AuthorSlideSix() {
           initial={{ opacity: 0, y: '2vh' }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: '2vh' }}
           transition={{ duration: 1.2, delay: 1.2, ease: [0.16, 1, 0.3, 1] }}
-          className="w-full flex-shrink-0 z-30 pt-[4vh]"
+          className="w-full flex-shrink-0 z-30 pt-[2vh] sm:pt-[3vh]"
         >
           <p className="text-[clamp(12px,1.6vh,20px)] text-[#A39B92] font-light tracking-wide text-balance leading-relaxed">
             Индекс соответствия — это не декоративная цифра, а инструмент более честного разговора о качестве результата.
           </p>
         </motion.div>
 
-        {/* Progress / Step indicator at bottom */}
-        <div className="absolute bottom-[5vh] left-0 flex items-center gap-[1vw] z-20 pointer-events-none hidden sm:flex">
-          <span className="text-[clamp(10px,1.2vh,14px)] uppercase tracking-widest text-[#A39B92]">06</span>
-          <div className="w-[4vw] h-[1px] bg-white/10">
-            <div className="w-full h-full bg-[#905E26] origin-left" />
-          </div>
-        </div>
-
-        {/* Scroll Hint */}
-        <motion.div 
-          className="absolute bottom-[5vh] right-0 z-20 flex flex-col items-center justify-center opacity-60 pointer-events-none hidden sm:flex"
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 0.6 } : { opacity: 0 }}
-        >
-          <motion.div
-            animate={{ y: [0, '1vh', 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            className="p-[1vh] rounded-full border border-white/10 bg-white/5 text-[#EAEADF]"
-          >
-            <ArrowDown className="w-[2vh] h-[2vh]" strokeWidth={1.5} />
-          </motion.div>
-        </motion.div>
-
       </div>
+      <SlideFooter step="06" />
     </div>
   );
 }
