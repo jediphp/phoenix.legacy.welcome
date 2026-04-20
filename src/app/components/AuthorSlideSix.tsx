@@ -58,7 +58,7 @@ export function AuthorSlideSix() {
   const isInView = useInView(sceneRef, { once: true, margin: '-50px' });
 
   return (
-    <div className="relative w-full min-h-[100svh] flex flex-col items-center justify-center overflow-hidden bg-transparent px-[5vw] py-[4vh] pb-20 font-sans snap-start sm:pb-24">
+    <div className="relative w-full h-[100svh] flex flex-col items-center justify-center overflow-hidden bg-transparent px-[5vw] py-[4vh] font-sans snap-start">
       {/* Noise filter */}
       <svg className="absolute inset-0 pointer-events-none opacity-[0.03] mix-blend-overlay w-full h-full z-0">
         <filter id="noise_slide_6">
@@ -69,7 +69,7 @@ export function AuthorSlideSix() {
 
       <SlideEyebrow toneClassName="border-[#905E26]/30 text-[#A39B92] bg-[#905E26]/5">Индекс соответствия</SlideEyebrow>
 
-      <div ref={sceneRef} className="relative z-20 mx-auto flex min-h-[100svh] w-full max-w-[90vw] flex-col pt-[8vh] pb-[11vh] sm:pb-[12vh]">
+      <div ref={sceneRef} className="relative z-20 mx-auto flex h-full w-full max-w-[90vw] flex-col pt-[8vh] pb-[6vh]">
         
         {/* Top Header */}
         <motion.div
@@ -100,7 +100,7 @@ export function AuthorSlideSix() {
               className="absolute inset-0 rounded-[2vh] border border-[#2A2621]/60 bg-[#0A0908] shadow-[0_0_5vh_rgba(0,0,0,0.8)] overflow-hidden z-20 group"
             >
               <ImageWithFallback 
-                src="https://images.unsplash.com/photo-1651509961850-1e5fbe6fbf9c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhbmNpZW50JTIwZnJlc2NvJTIwcmVzdG9yYXRpb24lMjBtdXNldW18ZW58MXx8fHwxNzc2NDQzNjMzfDA&ixlib=rb-4.1.0&q=80&w=1080"
+                src="/images/author-flow/slide-06/case-fresco-restoration.jpg"
                 alt="Product work case"
                 className="absolute inset-0 w-full h-full object-cover opacity-80 mix-blend-luminosity group-hover:mix-blend-normal group-hover:scale-105 transition-all duration-[2s] ease-out"
               />
@@ -174,7 +174,6 @@ export function AuthorSlideSix() {
             Индекс соответствия — это не декоративная цифра, а инструмент более честного разговора о качестве результата.
           </p>
         </motion.div>
-
       </div>
       <SlideFooter step="06" />
     </div>

@@ -3,6 +3,7 @@ import { useRef } from 'react';
 import { ArrowDown } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { SlideEyebrow } from './SlideEyebrow';
+import { SlideFooter } from './SlideFooter';
 import myImage from '../../imports/image-1.png'; // Fallback if image-1.png is what the user provided
 
 export function AuthorSlideTwo() {
@@ -83,21 +84,13 @@ export function AuthorSlideTwo() {
             {/* Small UI detail overlay to give a "museum-tech / digital vitrine" feel */}
             <div className="absolute bottom-6 right-6 flex items-center gap-3 opacity-60">
               <div className="w-1.5 h-1.5 rounded-full bg-[#F5EC9B] animate-pulse" />
-              <span className="text-fluid-label uppercase tracking-widest text-[#F5EC9B]">Source / Analysis</span>
+              <span className="text-fluid-label uppercase tracking-widest text-[#F5EC9B]">Источник / Анализ</span>
             </div>
             <div className="absolute top-6 left-6 text-fluid-label uppercase tracking-widest text-[#A39B92] opacity-50 font-mono">
-              Fig. 01 / Context
+              Рис. 01 / Контекст
             </div>
           </div>
         </motion.div>
-      </div>
-
-      {/* Progress / Step indicator at bottom */}
-      <div className="absolute bottom-6 left-6 lg:bottom-10 lg:left-12 flex items-center gap-4 z-20">
-        <span className="text-fluid-label uppercase tracking-widest text-[#A39B92]">02</span>
-        <div className="w-12 h-[1px] bg-white/10">
-          <div className="w-full h-full bg-[#905E26] origin-left" />
-        </div>
       </div>
       
       {/* Scroll Hint */}
@@ -115,7 +108,7 @@ export function AuthorSlideTwo() {
           <ArrowDown className="w-3 h-3 lg:w-4 lg:h-4" strokeWidth={1.5} />
         </motion.div>
       </motion.div>
-
+      <SlideFooter step="02" />
     </div>
   );
 }

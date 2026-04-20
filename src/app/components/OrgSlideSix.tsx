@@ -2,6 +2,7 @@ import { motion, useInView } from 'motion/react';
 import { useRef } from 'react';
 import { ArrowDown, MonitorSmartphone, BookOpen, Presentation, Grid, Compass } from 'lucide-react';
 import { SlideEyebrow } from './SlideEyebrow';
+import { SlideFooter } from './SlideFooter';
 
 const SCENARIOS = [
   {
@@ -143,14 +144,6 @@ export function OrgSlideSix() {
         </motion.div>
       </div>
 
-      {/* Progress */}
-      <div className="absolute bottom-[5vh] left-[2vw] flex items-center gap-[1vw] z-20 pointer-events-none hidden sm:flex">
-        <span className="text-[clamp(10px,1.2vh,14px)] uppercase tracking-widest text-[#A39B92]">06</span>
-        <div className="w-[4vw] h-[1px] bg-white/10">
-          <div className="w-full h-full bg-[#905E26] origin-left" />
-        </div>
-      </div>
-
       {/* Scroll hint */}
       <motion.div
         className="absolute bottom-[5vh] right-[2vw] z-20 flex items-center justify-center opacity-50 pointer-events-none hidden sm:flex"
@@ -166,6 +159,7 @@ export function OrgSlideSix() {
           <ArrowDown className="w-[2vh] h-[2vh]" strokeWidth={1.5} />
         </motion.div>
       </motion.div>
+      <SlideFooter step="06" />
     </div>
   );
 }

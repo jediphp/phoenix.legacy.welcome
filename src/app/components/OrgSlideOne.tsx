@@ -3,6 +3,7 @@ import { ArrowDown } from 'lucide-react';
 import brandLogo from '../../imports/image.png';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import LogoVertical from '../../imports/LogoVertical';
+import { SlideFooter } from './SlideFooter';
 
 export function OrgSlideOne() {
   return (
@@ -116,14 +117,7 @@ export function OrgSlideOne() {
         </div>
 
         {/* Bottom bar */}
-        <div className="flex-shrink-0 pb-[5vh] flex items-end justify-between">
-          <div className="flex items-center gap-[1vw] pointer-events-none">
-            <span className="text-[clamp(10px,1.2vh,14px)] uppercase tracking-widest text-[#A39B92]">01</span>
-            <div className="w-[3vw] h-[1px] bg-white/10">
-              <div className="w-full h-full bg-[#905E26] origin-left" />
-            </div>
-          </div>
-
+        <div className="flex-shrink-0 pb-[5vh] flex items-end justify-end">
           <motion.div
             className="flex items-center justify-center opacity-50 pointer-events-none"
             initial={{ opacity: 0 }}
@@ -140,6 +134,7 @@ export function OrgSlideOne() {
           </motion.div>
         </div>
       </div>
+      <SlideFooter step="01" />
     </div>
   );
 }

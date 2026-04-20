@@ -3,6 +3,7 @@ import { useRef } from 'react';
 import { ArrowDown, BookOpen, Handshake, Award, Layers } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { SlideEyebrow } from './SlideEyebrow';
+import { SlideFooter } from './SlideFooter';
 
 const MONETIZATION_SCENARIOS = [
   {
@@ -88,7 +89,7 @@ export function AuthorSlideTen() {
             style={{ minHeight: '220px' }}
           >
             <ImageWithFallback
-              src="https://images.unsplash.com/photo-1606819717115-9159c900370b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtdXNldW0lMjBnYWxsZXJ5JTIwY3VyYXRvciUyMHByZW1pdW0lMjBhcnQlMjBleGhpYml0aW9ufGVufDF8fHx8MTc3NjQ0NzA5OHww&ixlib=rb-4.1.0&q=80&w=1080"
+              src="/images/author-flow/slide-10/curator-gallery-premium.jpg"
               alt="Museum gallery space"
               className="absolute inset-0 w-full h-full object-cover opacity-60"
             />
@@ -178,15 +179,6 @@ export function AuthorSlideTen() {
             Каждый из сценариев опирается на верифицированный профиль и историю работ внутри платформы
           </p>
         </motion.div>
-
-      </div>
-
-      {/* Progress indicator */}
-      <div className="absolute bottom-5 left-6 lg:bottom-[4vh] lg:left-12 flex items-center gap-4 z-20 pointer-events-none hidden sm:flex">
-        <span className="text-fluid-label uppercase tracking-widest text-[#A39B92]">10</span>
-        <div className="w-12 h-[1px] bg-white/10">
-          <div className="w-full h-full bg-[#905E26] origin-left" />
-        </div>
       </div>
 
       {/* Scroll hint */}
@@ -204,7 +196,7 @@ export function AuthorSlideTen() {
           <ArrowDown className="w-3 h-3 lg:w-4 lg:h-4" strokeWidth={1.5} />
         </motion.div>
       </motion.div>
-
+      <SlideFooter step="10" />
     </div>
   );
 }

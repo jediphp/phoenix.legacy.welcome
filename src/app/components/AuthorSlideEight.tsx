@@ -3,6 +3,7 @@ import { useRef, useState, useEffect } from 'react';
 import { ArrowDown, PenLine, ThermometerSun, ScanLine } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { SlideEyebrow } from './SlideEyebrow';
+import { SlideFooter } from './SlideFooter';
 
 const FEEDBACK_CHIPS = [
   { id: '01', label: 'Быстрая оценка' },
@@ -37,7 +38,7 @@ export function AuthorSlideEight() {
   }, [isInView]);
 
   return (
-    <div className="relative w-full min-h-[100svh] flex flex-col overflow-hidden font-sans snap-start slide-shell py-6 sm:py-10 lg:py-12 px-4 sm:px-8 lg:px-12 2xl:px-24">
+    <div className="relative w-full min-h-[100svh] flex flex-col overflow-hidden font-sans snap-start slide-shell py-8 sm:py-12 lg:py-14 px-4 sm:px-8 lg:px-12 2xl:px-24">
 
       {/* Noise */}
       <svg className="absolute inset-0 pointer-events-none opacity-[0.03] mix-blend-overlay w-full h-full z-0">
@@ -54,7 +55,7 @@ export function AuthorSlideEight() {
         Инструмент доработки
       </SlideEyebrow>
 
-      <div className="relative z-20 w-full max-w-[1500px] 2xl:max-w-[2400px] mx-auto flex flex-col h-full min-h-0 pt-[2vh] sm:pt-[3vh]">
+      <div className="relative z-20 w-full max-w-[1500px] 2xl:max-w-[2400px] mx-auto flex flex-col h-full min-h-0 pt-[4vh] sm:pt-[5vh]">
 
         {/* ── Header ── */}
         <motion.div
@@ -62,7 +63,7 @@ export function AuthorSlideEight() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
-          className="flex-shrink-0 flex flex-col gap-3 mb-3 sm:mb-4 2xl:mb-6"
+          className="flex-shrink-0 flex flex-col gap-4 sm:gap-5 mb-5 sm:mb-6 2xl:mb-8"
         >
           <h2 className="pr-36 text-xl sm:pr-44 sm:text-2xl lg:pr-52 lg:text-[clamp(1.35rem,2.4vw,1.85rem)] 2xl:text-[2.35rem] font-light leading-[1.18] text-[#EAEADF] tracking-tight max-w-3xl 2xl:max-w-4xl text-balance">
             Обратная связь привязана{' '}
@@ -98,9 +99,9 @@ export function AuthorSlideEight() {
         >
           {/* Base image */}
           <ImageWithFallback
-            src="https://images.unsplash.com/photo-1724431862290-d7ba1376db48?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjbGFzc2ljYWwlMjBvaWwlMjBwYWludGluZyUyMGRldGFpbCUyMGNhbnZhcyUyMHRleHR1cmUlMjByZXN0b3JhdGlvbiUyMGFydHxlbnwxfHx8fDE3NzY0NDQ2NTd8MA&ixlib=rb-4.1.0&q=80&w=1080"
+            src="/images/author-flow/slide-08/review-session-painting.jpg"
             alt="Work in review session"
-            className="absolute inset-0 w-full h-full object-contain object-center opacity-80"
+            className="absolute inset-0 w-full h-full object-cover object-bottom opacity-80"
           />
 
           {/* Vignette layers */}
@@ -168,7 +169,7 @@ export function AuthorSlideEight() {
                   <span className="text-fluid-micro text-fluid-caption font-mono text-[#905E26]/60">зона A</span>
                 </div>
                 <p className="text-fluid-caption text-fluid-label text-fluid-label 2xl:text-sm text-[#D5CCC3] font-light leading-relaxed mb-2 2xl:mb-3">
-                  Фактура нижнего слоя прописана не в технике эпохи. Рекомендую изучить аналоги из источника и сверить с оригиналом.
+                  Одежда явно из другой эпохи. Рекомендую изучить аналоги из источника и сверить с оригиналом.
                 </p>
                 <div className="flex items-center gap-2 pt-2 border-t border-white/5">
                   <div className="w-5 h-5 2xl:w-7 2xl:h-7 rounded-full bg-[#1A1613] border border-white/10 flex items-center justify-center flex-shrink-0">
@@ -291,7 +292,7 @@ export function AuthorSlideEight() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1.1, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="flex-shrink-0 mt-3 sm:mt-4 2xl:mt-8 z-30 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3"
+          className="flex-shrink-0 mt-5 sm:mt-6 2xl:mt-10 z-30 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 sm:gap-5"
         >
           <p className="text-fluid-label sm:text-sm lg:text-[0.95rem] 2xl:text-base text-[#A39B92] font-light tracking-wide leading-snug text-balance max-w-3xl 2xl:max-w-5xl">
             Это позволяет автору увидеть не только общую реакцию, но и понять,{' '}
@@ -299,15 +300,6 @@ export function AuthorSlideEight() {
             и что можно улучшить.
           </p>
         </motion.div>
-
-      </div>
-
-      {/* Progress indicator */}
-      <div className="absolute bottom-5 left-6 lg:bottom-8 lg:left-12 flex items-center gap-4 z-20 pointer-events-none hidden sm:flex">
-        <span className="text-fluid-label uppercase tracking-widest text-[#A39B92]">08</span>
-        <div className="w-12 h-[1px] bg-white/10">
-          <div className="w-full h-full bg-[#905E26] origin-left" />
-        </div>
       </div>
 
       {/* Scroll hint */}
@@ -325,7 +317,7 @@ export function AuthorSlideEight() {
           <ArrowDown className="w-3 h-3 lg:w-4 lg:h-4" strokeWidth={1.5} />
         </motion.div>
       </motion.div>
-
+      <SlideFooter step="08" />
     </div>
   );
 }

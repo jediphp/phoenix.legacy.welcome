@@ -3,6 +3,7 @@ import { useRef } from 'react';
 import { ArrowDown, ShieldCheck, Eye, BarChart, CheckCircle, MessageSquare, Layers } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { SlideEyebrow } from './SlideEyebrow';
+import { SlideFooter } from './SlideFooter';
 
 const TRUST_LAYERS = [
   { id: 'source', label: 'Работа с источником', icon: Layers, position: 'top-[10%] left-[-10%]' },
@@ -135,14 +136,6 @@ export function OrgSlideFour() {
         </motion.div>
       </div>
 
-      {/* Progress */}
-      <div className="absolute bottom-[5vh] left-[2vw] flex items-center gap-[1vw] z-20 pointer-events-none hidden sm:flex">
-        <span className="text-[clamp(10px,1.2vh,14px)] uppercase tracking-widest text-[#A39B92]">04</span>
-        <div className="w-[4vw] h-[1px] bg-white/10">
-          <div className="w-full h-full bg-[#905E26] origin-left" />
-        </div>
-      </div>
-
       {/* Scroll hint */}
       <motion.div
         className="absolute bottom-[5vh] right-[2vw] z-20 flex items-center justify-center opacity-50 pointer-events-none hidden sm:flex"
@@ -158,6 +151,7 @@ export function OrgSlideFour() {
           <ArrowDown className="w-[2vh] h-[2vh]" strokeWidth={1.5} />
         </motion.div>
       </motion.div>
+      <SlideFooter step="04" />
     </div>
   );
 }

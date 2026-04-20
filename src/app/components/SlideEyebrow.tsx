@@ -9,13 +9,13 @@ type SlideEyebrowProps = {
 };
 
 /**
- * Eyebrow label pinned to the slide’s top-right, using the same inset as
- * `PresentationFlow` back control (`p-4 sm:p-8 lg:p-10`) so it reads on one line with «К выбору сценария».
+ * Eyebrow label pinned to the top-center, aligned with the fixed back control
+ * inset in `PresentationFlow` (`p-4 sm:p-8 lg:p-10`).
  */
 export function SlideEyebrow({ children, toneClassName }: SlideEyebrowProps) {
   return (
     <span
-      className={`pointer-events-auto absolute top-4 right-4 z-[45] max-w-[min(52vw,17rem)] text-right sm:top-8 sm:right-8 lg:top-10 lg:right-10 inline-block rounded-full border px-2.5 py-0.5 meta-label font-light sm:px-3 ${toneClassName}`}
+      className={`pointer-events-auto absolute left-1/2 top-4 z-[45] inline-block max-w-[min(52vw,22rem)] -translate-x-1/2 rounded-full border px-2.5 py-0.5 text-center meta-label font-light sm:top-8 sm:px-3 lg:top-10 ${toneClassName}`}
     >
       {children}
     </span>

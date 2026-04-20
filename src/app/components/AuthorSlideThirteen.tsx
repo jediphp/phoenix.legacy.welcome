@@ -3,6 +3,7 @@ import { useRef } from 'react';
 import { ArrowDown } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { SlideEyebrow } from './SlideEyebrow';
+import { SlideFooter } from './SlideFooter';
 
 const LAUNCH_PHASES = [
   {
@@ -173,7 +174,7 @@ export function AuthorSlideThirteen() {
             className="lg:w-[38%] 2xl:w-[35%] flex-shrink-0 relative rounded-2xl sm:rounded-3xl 2xl:rounded-[2.5rem] overflow-hidden border border-white/[0.05] shadow-[0_0_60px_rgba(0,0,0,0.9)] hidden lg:block"
           >
             <ImageWithFallback
-              src="https://images.unsplash.com/photo-1608080969021-dd6328f897ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcmNoaXRlY3R1cmFsJTIwbGlnaHQlMjBtaW5pbWFsJTIwb3BlbiUyMHNwYWNlJTIwbGF1bmNofGVufDF8fHx8MTc3NjQ0NzEwMHww&ixlib=rb-4.1.0&q=80&w=1080"
+              src="/images/author-flow/slide-13/architectural-light-launch.jpg"
               alt="Open architectural space"
               className="absolute inset-0 w-full h-full object-cover opacity-50"
             />
@@ -233,15 +234,6 @@ export function AuthorSlideThirteen() {
             <span className="text-[#D5CCC3]">не после того, как ниша сложилась, а в момент её формирования.</span>
           </p>
         </motion.div>
-
-      </div>
-
-      {/* Progress indicator */}
-      <div className="absolute bottom-5 left-6 lg:bottom-[4vh] lg:left-12 flex items-center gap-4 z-20 pointer-events-none hidden sm:flex">
-        <span className="text-fluid-label uppercase tracking-widest text-[#A39B92]">13</span>
-        <div className="w-12 h-[1px] bg-white/10">
-          <div className="w-full h-full bg-[#905E26] origin-left" />
-        </div>
       </div>
 
       {/* Scroll hint */}
@@ -259,7 +251,7 @@ export function AuthorSlideThirteen() {
           <ArrowDown className="w-3 h-3 lg:w-4 lg:h-4" strokeWidth={1.5} />
         </motion.div>
       </motion.div>
-
+      <SlideFooter step="13" />
     </div>
   );
 }

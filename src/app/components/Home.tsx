@@ -10,12 +10,14 @@ function Zone({
   type, 
   title, 
   subtitle, 
+  titleClassName,
   hoveredZone, 
   setHoveredZone 
 }: { 
   type: 'author' | 'org';
   title: string;
   subtitle: string;
+  titleClassName?: string;
   hoveredZone: 'author' | 'org' | null;
   setHoveredZone: (val: 'author' | 'org' | null) => void;
 }) {
@@ -50,7 +52,7 @@ function Zone({
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         className="relative z-10 flex flex-col items-center text-center pt-8 sm:pt-4 w-full max-w-md"
       >
-        <h2 className={`text-4xl sm:text-5xl lg:text-6xl font-light mb-6 transition-colors duration-700
+        <h2 className={`text-4xl sm:text-5xl lg:text-6xl font-light mb-6 transition-colors duration-700 ${titleClassName ?? ''}
           ${isHovered 
             ? (type === 'author' ? 'text-[#F5EC9B]' : 'text-white') 
             : 'text-[#EAEADF]'
@@ -140,12 +142,12 @@ export function Home() {
       />
 
       {/* Header: Отдельный блок во всю ширину экрана */}
-      <header className="relative w-full z-40 pt-8 sm:pt-12 pb-4 flex flex-col items-center justify-center pointer-events-none shrink-0">
+      <header className="relative w-full z-40 pt-12 sm:pt-16 lg:pt-20 pb-6 flex flex-col items-center justify-center pointer-events-none shrink-0">
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-          className="w-[clamp(17.5rem,28vw,26.25rem)] h-[clamp(4.8125rem,8vw,7.1875rem)] relative flex justify-center items-center drop-shadow-2xl translate-x-[21.3%]"
+          className="w-[clamp(22rem,36vw,35rem)] h-[clamp(6rem,10.8vw,9.6rem)] relative flex justify-center items-center drop-shadow-2xl translate-x-[21.3%]"
         >
           <LogoVertical />
         </motion.div>
@@ -154,7 +156,7 @@ export function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.8 }}
           transition={{ delay: 0.6, duration: 1.5 }}
-          className="mt-4 sm:mt-6 meta-label text-[#F5EC9B] text-center"
+          className="mt-4 sm:mt-6 text-sm sm:text-base lg:text-lg tracking-[0.18em] text-[#F5EC9B] text-center"
         >
           Одна платформа — два сценария входа
         </motion.p>
@@ -176,6 +178,7 @@ export function Home() {
         <Zone
           type="org"
           title="Я организация"
+          titleClassName="whitespace-nowrap"
           subtitle="Хочу понять, как платформа работает с качеством, форматами и сотрудничеством"
           hoveredZone={hoveredZone}
           setHoveredZone={setHoveredZone}

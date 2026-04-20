@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { ArrowDown } from 'lucide-react';
 import brandLogo from '../../imports/image.png';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import { SlideFooter } from './SlideFooter';
 
 export function AuthorSlideOne() {
   return (
@@ -10,7 +11,7 @@ export function AuthorSlideOne() {
       {/* Background Image - Atmospheric Historical Visual */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <ImageWithFallback 
-          src="https://images.unsplash.com/photo-1697363717000-5b6d8fe70e09?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjbGFzc2ljYWwlMjBzY3VscHR1cmUlMjBkYXJrJTIwbXVzZXVtJTIwd2FybSUyMGxpZ2h0fGVufDF8fHx8MTc3NjQ0MDExOXww&ixlib=rb-4.1.0&q=80&w=1920"
+          src="/images/author-flow/slide-01/hero-classical-sculpture.jpg"
           alt="Classical sculpture in warm light"
           className="w-full h-full object-cover opacity-30 mix-blend-luminosity"
         />
@@ -79,6 +80,7 @@ export function AuthorSlideOne() {
           <ArrowDown className="w-4 h-4" strokeWidth={1.5} />
         </motion.div>
       </motion.div>
+      <SlideFooter step="01" />
     </div>
   );
 }

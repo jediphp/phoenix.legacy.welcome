@@ -5,7 +5,8 @@ import {
   Users, 
   Verified, 
   AlertCircle,
-  Database
+  Database,
+  ArrowDown
 } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { SlideFooter } from './SlideFooter';
@@ -59,7 +60,7 @@ export function AuthorSlideFour() {
             
             {/* The Image (Reconstruction) */}
             <ImageWithFallback 
-              src="https://images.unsplash.com/photo-1669413542695-2cd33b903367?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoaXN0b3JpY2FsJTIwbWVkaWV2YWwlMjBhcmNoaXRlY3R1cmUlMjByZWNvbnN0cnVjdGlvbiUyMDNkfGVufDF8fHx8MTc3NjQ0Mjc3NHww&ixlib=rb-4.1.0&q=80&w=1080"
+              src="/images/author-flow/slide-04/case-medieval-reconstruction.jpg"
               alt="Historical Reconstruction Case Study"
               className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-[3s] ease-out"
             />
@@ -76,7 +77,7 @@ export function AuthorSlideFour() {
               className="absolute top-4 left-4 sm:top-6 sm:left-6 lg:top-8 lg:left-8 flex items-center gap-2 sm:gap-3 bg-[#0A0908]/80 backdrop-blur-md border border-[#2A2621] rounded-lg sm:rounded-xl p-1.5 sm:p-2 pr-3 sm:pr-4 shadow-xl"
             >
               <div className="w-8 h-8 sm:w-10 sm:h-10 rounded border border-white/10 bg-[#161412] overflow-hidden flex-shrink-0 hidden sm:block">
-                <ImageWithFallback src="https://images.unsplash.com/photo-1720264715239-29338d845802?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhbmNpZW50JTIwcnVpbmVkJTIwYXJ0aWZhY3QlMjBhcnRpZmFjdCUyMG1hbnVzY3JpcHR8ZW58MXx8fHwxNzc2NDQyNzc4fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Source" className="w-full h-full object-cover opacity-60 mix-blend-luminosity" />
+                <ImageWithFallback src="/images/author-flow/slide-04/source-ruined-artifact.jpg" alt="Source" className="w-full h-full object-cover opacity-60 mix-blend-luminosity" />
               </div>
               <div className="flex flex-col justify-center px-1">
                 <div className="flex items-center gap-1.5 text-fluid-caption text-fluid-caption text-[#A39B92] uppercase tracking-widest mb-0.5">
@@ -92,7 +93,7 @@ export function AuthorSlideFour() {
               className="absolute top-4 left-1/2 -translate-x-1/2 sm:top-6 lg:top-8 bg-[#0A0908]/80 backdrop-blur-md border border-[#2A2621] rounded-full px-3 py-1.5 sm:px-4 sm:py-2 flex items-center gap-2 sm:gap-3 shadow-xl"
             >
               <SplitSquareHorizontal className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#A39B92]" />
-              <span className="text-fluid-caption text-fluid-caption text-fluid-label text-[#EAEADF] uppercase tracking-widest whitespace-nowrap">Diff Mode</span>
+              <span className="text-fluid-caption text-fluid-caption text-fluid-label text-[#EAEADF] uppercase tracking-widest whitespace-nowrap">Режим сравнения</span>
               <div className="w-6 h-3 sm:w-8 sm:h-4 bg-[#161412] rounded-full p-0.5 border border-[#2A2621] flex">
                 <div className="w-2 h-2 sm:w-3 sm:h-3 bg-[#905E26] rounded-full" />
               </div>
@@ -117,7 +118,7 @@ export function AuthorSlideFour() {
               initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 1.4 }}
               className="absolute top-1/2 -translate-y-1/2 right-4 sm:right-6 lg:right-8 bg-[#0A0908]/90 backdrop-blur-xl border border-[#2A2621] rounded-xl p-3 sm:p-4 lg:p-5 flex flex-col items-center shadow-2xl"
             >
-              <span className="text-fluid-caption text-fluid-caption text-fluid-label text-[#A39B92] uppercase tracking-widest mb-2 sm:mb-3 whitespace-nowrap">Match Index</span>
+              <span className="text-fluid-caption text-fluid-caption text-fluid-label text-[#A39B92] uppercase tracking-widest mb-2 sm:mb-3 whitespace-nowrap">Индекс соответствия</span>
               <div className="relative w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 flex items-center justify-center">
                 <svg className="absolute inset-0 w-full h-full -rotate-90">
                   <circle cx="50%" cy="50%" r="42%" stroke="#161412" strokeWidth="3" fill="none" />
@@ -161,7 +162,7 @@ export function AuthorSlideFour() {
               </div>
               <div className="bg-[#0A0908]/90 backdrop-blur-md border border-red-500/30 rounded-md sm:rounded-lg px-2 py-1.5 flex items-center gap-1.5 shadow-lg hidden sm:flex">
                 <AlertCircle className="w-3 h-3 text-red-400" />
-                <span className="text-fluid-caption text-fluid-caption text-red-400 uppercase tracking-wider">Узел крепления</span>
+                <span className="text-fluid-caption text-fluid-caption text-red-400 uppercase tracking-wider">Проблемная зона</span>
               </div>
             </motion.div>
 
@@ -203,14 +204,6 @@ export function AuthorSlideFour() {
           </p>
         </motion.div>
         
-        {/* Progress / Step indicator at bottom */}
-        <div className="absolute bottom-6 left-6 lg:bottom-10 lg:left-12 flex items-center gap-4 z-20 pointer-events-none hidden sm:flex">
-          <span className="text-fluid-label uppercase tracking-widest text-[#A39B92]">04</span>
-          <div className="w-12 h-[1px] bg-white/10">
-            <div className="w-full h-full bg-[#905E26] origin-left" />
-          </div>
-        </div>
-
         {/* Scroll Hint */}
         <motion.div 
           className="absolute bottom-6 right-6 lg:bottom-10 lg:right-12 z-20 flex flex-col items-center justify-center opacity-60 pointer-events-none hidden sm:flex"
@@ -226,7 +219,6 @@ export function AuthorSlideFour() {
             <ArrowDown className="w-3 h-3 lg:w-4 lg:h-4" strokeWidth={1.5} />
           </motion.div>
         </motion.div>
-
       </div>
       <SlideFooter step="04" />
     </div>

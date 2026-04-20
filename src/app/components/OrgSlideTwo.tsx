@@ -3,6 +3,7 @@ import { useRef } from 'react';
 import { ArrowDown } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { SlideEyebrow } from './SlideEyebrow';
+import { SlideFooter } from './SlideFooter';
 
 const PROBLEM_POINTS = [
   {
@@ -159,15 +160,6 @@ export function OrgSlideTwo() {
             </span>
           </motion.div>
         </motion.div>
-
-      </div>
-
-      {/* Progress */}
-      <div className="absolute bottom-[5vh] left-[2vw] flex items-center gap-[1vw] z-20 pointer-events-none hidden sm:flex">
-        <span className="text-[clamp(10px,1.2vh,14px)] uppercase tracking-widest text-[#A39B92]">02</span>
-        <div className="w-[4vw] h-[1px] bg-white/10">
-          <div className="w-full h-full bg-[#905E26] origin-left" />
-        </div>
       </div>
 
       {/* Scroll hint */}
@@ -185,7 +177,7 @@ export function OrgSlideTwo() {
           <ArrowDown className="w-[2vh] h-[2vh]" strokeWidth={1.5} />
         </motion.div>
       </motion.div>
-
+      <SlideFooter step="02" />
     </div>
   );
 }

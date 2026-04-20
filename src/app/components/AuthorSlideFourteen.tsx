@@ -3,6 +3,7 @@ import { useRef, useState } from 'react';
 import { ArrowUpRight, Send, BookMarked, Eye } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { SlideEyebrow } from './SlideEyebrow';
+import { SlideFooter } from './SlideFooter';
 
 const ACTIONS = [
   {
@@ -44,7 +45,7 @@ export function AuthorSlideFourteen() {
       {/* Hero background image — full bleed */}
       <div className="absolute inset-0 z-0">
         <ImageWithFallback
-          src="https://images.unsplash.com/photo-1769002783651-52db678cadd4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnb2xkZW4lMjBsaWdodCUyMGhvcml6b24lMjBsYW5kc2NhcGUlMjBkcmFtYXRpYyUyMGR1c2t8ZW58MXx8fHwxNzc2NDQ3MTAxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+          src="/images/author-flow/slide-14/golden-horizon-dusk.jpg"
           alt="Dramatic golden horizon"
           className="w-full h-full object-cover opacity-30"
         />
@@ -220,18 +221,8 @@ export function AuthorSlideFourteen() {
             </motion.p>
           </div>
         </motion.div>
-
       </div>
-
-      {/* Progress indicator */}
-      <div className="absolute bottom-[calc(3vh+2px)] left-6 lg:bottom-[calc(4vh+2px)] lg:left-12 flex items-center gap-4 z-30 pointer-events-none hidden sm:flex">
-        <span className="text-fluid-label uppercase tracking-widest text-[#A39B92]">14</span>
-        <div className="w-12 h-[1px] bg-white/10">
-          <div className="w-full h-full bg-[#D5A86B]/40 origin-left" />
-        </div>
-        <span className="text-fluid-label uppercase tracking-widest text-[#D5A86B]/40 font-mono">Финал</span>
-      </div>
-
+      <SlideFooter step="14" />
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import { motion, useInView } from 'motion/react';
 import { useRef, useState, useEffect } from 'react';
-import { MessageSquare, Layers, Zap, BarChart3 } from 'lucide-react';
+import { MessageSquare, Layers, Zap, BarChart3, ArrowDown } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { SlideEyebrow } from './SlideEyebrow';
 import { SlideFooter } from './SlideFooter';
@@ -165,7 +165,7 @@ export function AuthorSlideSeven() {
           >
             {/* Base Image */}
             <ImageWithFallback
-              src="https://images.unsplash.com/photo-1604403893213-5c7c88a137e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoaXN0b3JpY2FsJTIwbWFudXNjcmlwdCUyMHBhaW50aW5nJTIwcmVzdG9yYXRpb24lMjBkZXRhaWx8ZW58MXx8fHwxNzc2NDQ0MjI0fDA&ixlib=rb-4.1.0&q=80&w=1080"
+              src="/images/author-flow/slide-07/manuscript-restoration-detail.jpg"
               alt="Work under review"
               className="absolute inset-0 w-full h-full object-cover opacity-70"
             />
@@ -358,14 +358,6 @@ export function AuthorSlideSeven() {
           </p>
         </motion.div>
 
-        {/* Progress indicator */}
-        <div className="absolute bottom-5 left-6 lg:bottom-8 lg:left-12 flex items-center gap-4 z-20 pointer-events-none hidden sm:flex">
-          <span className="text-fluid-label uppercase tracking-widest text-[#A39B92]">07</span>
-          <div className="w-12 h-[1px] bg-white/10">
-            <div className="w-full h-full bg-[#905E26] origin-left" />
-          </div>
-        </div>
-
         {/* Scroll hint */}
         <motion.div
           className="absolute bottom-5 right-6 lg:bottom-8 lg:right-12 z-20 flex flex-col items-center justify-center opacity-60 pointer-events-none hidden sm:flex"
@@ -381,7 +373,6 @@ export function AuthorSlideSeven() {
             <ArrowDown className="w-3 h-3 lg:w-4 lg:h-4" strokeWidth={1.5} />
           </motion.div>
         </motion.div>
-
       </div>
       <SlideFooter step="07" />
     </div>

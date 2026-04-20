@@ -2,6 +2,7 @@ import { motion, useInView } from 'motion/react';
 import { useRef } from 'react';
 import { ArrowDown } from 'lucide-react';
 import { SlideEyebrow } from './SlideEyebrow';
+import { SlideFooter } from './SlideFooter';
 
 const TRAJECTORY_STEPS = [
   {
@@ -122,27 +123,18 @@ export function AuthorSlideNine() {
           initial={{ opacity: 0, y: '2vh' }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: '2vh' }}
           transition={{ duration: 1.2, delay: 1.5, ease: [0.16, 1, 0.3, 1] }}
-          className="flex-shrink-0 mt-auto ml-auto max-w-[40vw] z-30"
+          className="flex-shrink-0 mt-auto ml-auto max-w-[78vw] lg:max-w-[74vw] z-30"
         >
           <div className="p-[2vh] rounded-[2vh] bg-gradient-to-br from-[#12100E] to-[#0A0908] border border-white/[0.05] shadow-2xl relative overflow-hidden">
             {/* Subtle inner glow */}
             <div className="absolute top-0 right-0 w-[15vw] h-[15vw] bg-[#905E26] opacity-[0.03] blur-[40px] rounded-full mix-blend-screen" />
             
-            <p className="text-[clamp(14px,1.8vh,22px)] text-[#D5CCC3] font-light leading-relaxed text-balance relative z-10 text-right">
+            <p className="text-[clamp(11px,1.15vw,22px)] text-[#D5CCC3] font-light leading-relaxed xl:whitespace-nowrap relative z-10 text-right">
               На платформе ценится не шумная активность, а{' '}
               <span className="text-[#D5A86B]">полезный вклад</span> в качество среды.
             </p>
           </div>
         </motion.div>
-
-      </div>
-
-      {/* Progress indicator */}
-      <div className="absolute bottom-[5vh] left-[2vw] flex items-center gap-[1vw] z-20 pointer-events-none hidden sm:flex">
-        <span className="text-[clamp(10px,1.2vh,14px)] uppercase tracking-widest text-[#A39B92]">09</span>
-        <div className="w-[4vw] h-[1px] bg-white/10">
-          <div className="w-full h-full bg-[#905E26] origin-left" />
-        </div>
       </div>
 
       {/* Scroll hint */}
@@ -159,7 +151,7 @@ export function AuthorSlideNine() {
           <ArrowDown className="w-[2vh] h-[2vh]" strokeWidth={1.5} />
         </motion.div>
       </motion.div>
-
+      <SlideFooter step="09" />
     </div>
   );
 }

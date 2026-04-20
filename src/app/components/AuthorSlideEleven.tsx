@@ -3,6 +3,7 @@ import { useRef } from 'react';
 import { ArrowDown, Eye, Users, Compass, Star, ShieldCheck } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { SlideEyebrow } from './SlideEyebrow';
+import { SlideFooter } from './SlideFooter';
 
 const ADVANTAGES = [
   {
@@ -93,7 +94,7 @@ export function AuthorSlideEleven() {
             style={{ minHeight: '200px' }}
           >
             <ImageWithFallback
-              src="https://images.unsplash.com/photo-1572540234832-75c0484179ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcG90bGlnaHQlMjBzdGFnZSUyMGVhcmx5JTIwYWNjZXNzJTIwZXhjbHVzaXZlJTIwcHJlbWllcmV8ZW58MXx8fHwxNzc2NDQ3MDk5fDA&ixlib=rb-4.1.0&q=80&w=1080"
+              src="/images/author-flow/slide-11/spotlight-early-access.jpg"
               alt="Spotlight early access"
               className="absolute inset-0 w-full h-full object-cover opacity-55"
             />
@@ -203,15 +204,6 @@ export function AuthorSlideEleven() {
             <span className="text-[#D5CCC3]">ранняя сильная позиция особенно ценна.</span>
           </p>
         </motion.div>
-
-      </div>
-
-      {/* Progress indicator */}
-      <div className="absolute bottom-5 left-6 lg:bottom-[4vh] lg:left-12 flex items-center gap-4 z-20 pointer-events-none hidden sm:flex">
-        <span className="text-fluid-label uppercase tracking-widest text-[#A39B92]">11</span>
-        <div className="w-12 h-[1px] bg-white/10">
-          <div className="w-full h-full bg-[#905E26] origin-left" />
-        </div>
       </div>
 
       {/* Scroll hint */}
@@ -229,7 +221,7 @@ export function AuthorSlideEleven() {
           <ArrowDown className="w-3 h-3 lg:w-4 lg:h-4" strokeWidth={1.5} />
         </motion.div>
       </motion.div>
-
+      <SlideFooter step="11" />
     </div>
   );
 }

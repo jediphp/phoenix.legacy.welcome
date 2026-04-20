@@ -3,6 +3,7 @@ import { useRef } from 'react';
 import { ArrowDown, FileText, Link2, CheckSquare, Award, Shield } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { SlideEyebrow } from './SlideEyebrow';
+import { SlideFooter } from './SlideFooter';
 
 const PLATFORM_FUNCTIONS = [
   {
@@ -202,15 +203,6 @@ export function OrgSlideThree() {
             Феникс.Наследие — платформа для публикации, структурирования и верификации исторических реконструкций
           </p>
         </motion.div>
-
-      </div>
-
-      {/* Progress */}
-      <div className="absolute bottom-[5vh] left-[2vw] flex items-center gap-[1vw] z-20 pointer-events-none hidden sm:flex">
-        <span className="text-[clamp(10px,1.2vh,14px)] uppercase tracking-widest text-[#A39B92]">03</span>
-        <div className="w-[4vw] h-[1px] bg-white/10">
-          <div className="w-full h-full bg-[#905E26] origin-left" />
-        </div>
       </div>
 
       {/* Scroll hint */}
@@ -228,7 +220,7 @@ export function OrgSlideThree() {
           <ArrowDown className="w-[2vh] h-[2vh]" strokeWidth={1.5} />
         </motion.div>
       </motion.div>
-
+      <SlideFooter step="03" />
     </div>
   );
 }

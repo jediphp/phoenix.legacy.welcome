@@ -57,7 +57,7 @@ export function AuthorSlideThree() {
           className="mb-6 flex min-h-0 w-full flex-1 flex-col items-center justify-center sm:mb-8"
         >
           {/* Mockup Container for Platform Logic - Hybrid Layout */}
-          <div className="relative flex h-full min-h-0 w-full max-w-6xl flex-col justify-center overflow-hidden rounded-2xl border border-[#2A2621]/50 bg-gradient-to-br from-[#12100E] to-[#0A0908] p-4 shadow-2xl backdrop-blur-xl group max-h-[540px] sm:rounded-[32px] sm:p-6 lg:p-8">
+          <div className="relative flex h-full min-h-0 w-full max-w-6xl flex-col justify-center overflow-hidden rounded-2xl border border-[#2A2621]/50 bg-gradient-to-br from-[#12100E] to-[#0A0908] p-4 shadow-2xl backdrop-blur-xl group max-h-[760px] sm:rounded-[32px] sm:p-6 lg:p-8">
             
             {/* Inner Glow */}
             <div className="absolute top-0 left-1/4 right-1/4 h-[1px] bg-gradient-to-r from-transparent via-[#905E26]/50 to-transparent opacity-50" />
@@ -76,9 +76,9 @@ export function AuthorSlideThree() {
                   </div>
                   {/* Image Placeholder */}
                   <ImageWithFallback 
-                    src="https://images.unsplash.com/photo-1599839619722-39751411ea63?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwzfHxhbmNpZW50JTIwbWFudXNjcmlwdCUyMGFyY2hpdmV8ZW58MXx8fHwxNzc2NDQwNDM1fDA&ixlib=rb-4.1.0&q=80&w=1080"
+                    src="/images/author-flow/slide-03/original-scan-manuscript.jpg"
                     alt="Original scan placeholder"
-                    className="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-luminosity"
+                    className="absolute inset-0 w-full h-full object-cover object-bottom opacity-40 mix-blend-luminosity"
                   />
                   <div className="absolute bottom-2 left-2 flex items-center gap-1 bg-[#070605]/80 backdrop-blur-md px-2 py-1 rounded-full border border-white/5 text-fluid-micro text-fluid-caption text-[#A39B92] tracking-wider uppercase z-20">
                     <Database className="w-2.5 h-2.5" />
@@ -92,9 +92,9 @@ export function AuthorSlideThree() {
                   </div>
                   {/* Image Placeholder */}
                   <ImageWithFallback 
-                    src="https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxNHx8Y2xhc3NpY2FsJTIwYXJ0JTIwbXVzZXVtfGVufDF8fHx8MTc3NjQ0MDU4OXww&ixlib=rb-4.1.0&q=80&w=1080"
+                    src="/images/author-flow/slide-03/reconstruction-museum-art.jpg"
                     alt="Reconstruction placeholder"
-                    className="absolute inset-0 w-full h-full object-cover opacity-60"
+                    className="absolute inset-0 w-full h-full object-cover object-bottom opacity-60"
                   />
                   <div className="absolute bottom-2 left-2 flex items-center gap-1 bg-[#070605]/80 backdrop-blur-md px-2 py-1 rounded-full border border-[#905E26]/30 text-fluid-micro text-fluid-caption text-[#EAEADF] tracking-wider uppercase shadow-[0_0_15px_rgba(144,94,38,0.2)] z-20">
                     <ImageIcon className="w-2.5 h-2.5 text-[#905E26]" />
@@ -127,7 +127,7 @@ export function AuthorSlideThree() {
                   </div>
                 </div>
 
-                <div className="bg-[#161412]/80 backdrop-blur-sm border border-[#2A2621] rounded-xl p-4 flex-1 flex flex-col justify-center min-h-[80px]">
+                <div className="bg-[#161412]/80 backdrop-blur-sm border border-[#2A2621] rounded-xl p-4 flex-1 flex flex-col justify-center min-h-[240px]">
                   <div className="flex items-center gap-2 mb-2 sm:mb-3">
                     <div className="p-1.5 sm:p-2 bg-green-500/10 border border-green-500/20 rounded-lg text-green-400">
                       <ShieldCheck className="w-3.5 h-3.5" />
@@ -136,16 +136,28 @@ export function AuthorSlideThree() {
                   </div>
                   <div className="flex flex-col gap-1.5 sm:gap-2">
                     <div className="flex justify-between items-center text-fluid-caption text-fluid-label">
-                      <span className="text-[#8A837A]">Оценка эксперта</span>
-                      <span className="text-[#EAEADF]">Подтверждено</span>
+                      <span className="text-[#8A837A]">Оценка сообщества</span>
+                      <span className="text-[#EAEADF]">4.8</span>
+                    </div>
+                    <div className="flex justify-between items-center text-fluid-caption text-fluid-label">
+                      <span className="text-[#8A837A]">Соответствие эпохе</span>
+                      <span className="text-[#EAEADF]">4 из 5</span>
                     </div>
                     <div className="flex justify-between items-center text-fluid-caption text-fluid-label">
                       <span className="text-[#8A837A]">Качество деталей</span>
-                      <span className="text-[#EAEADF]">Высокое</span>
+                      <span className="text-[#EAEADF]">5 из 5</span>
+                    </div>
+                    <div className="flex justify-between items-center text-fluid-caption text-fluid-label">
+                      <span className="text-[#8A837A]">Реализм</span>
+                      <span className="text-[#EAEADF]">5 из 5</span>
+                    </div>
+                    <div className="flex justify-between items-center text-fluid-caption text-fluid-label">
+                      <span className="text-[#8A837A]">Тепловая карта</span>
+                      <span className="text-[#EAEADF]">Доступна</span>
                     </div>
                     <div className="flex justify-between items-center text-fluid-caption text-fluid-label pt-1.5 sm:pt-2 border-t border-[#2A2621]">
                       <span className="text-[#8A837A]">Права использования</span>
-                      <span className="text-[#F5EC9B]">Доступно</span>
+                      <span className="text-[#F5EC9B]">Социальное некоммерческое</span>
                     </div>
                   </div>
                 </div>
@@ -181,7 +193,6 @@ export function AuthorSlideThree() {
             ))}
           </div>
         </motion.div>
-
       </div>
       <SlideFooter step="03" />
     </div>
