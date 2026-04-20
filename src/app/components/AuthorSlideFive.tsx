@@ -35,7 +35,7 @@ const COLUMNS = [
 
 export function AuthorSlideFive() {
   return (
-    <div className="relative w-full min-h-[100svh] flex flex-col items-center justify-center overflow-hidden font-sans snap-start py-8 sm:py-12 lg:py-16 px-4 sm:px-8 lg:px-12 2xl:px-24">
+    <div className="relative w-full min-h-[100svh] flex flex-col items-center justify-center overflow-hidden font-sans snap-start slide-shell py-8 sm:py-12 lg:py-16 px-4 sm:px-8 lg:px-12 2xl:px-24">
       {/* Background is removed so that the global presentation mouse glow can shine through from beneath */}
       
       {/* Noise filter */}
@@ -85,9 +85,9 @@ export function AuthorSlideFive() {
                 
                 {/* Overlay Tags */}
                 <div className="absolute top-4 left-4 sm:top-5 sm:left-5 2xl:top-8 2xl:left-8 flex items-center gap-2 sm:gap-3 opacity-60 group-hover:opacity-100 transition-opacity duration-700">
-                  <span className="text-[9px] sm:text-[10px] 2xl:text-xs font-mono text-[#A39B92]">{col.id}</span>
+                  <span className="text-fluid-caption text-fluid-label text-fluid-label font-mono text-[#A39B92]">{col.id}</span>
                   <div className="w-3 sm:w-4 h-[1px] bg-[#905E26]" />
-                  <span className="text-[8px] sm:text-[9px] 2xl:text-[10px] uppercase tracking-[0.2em]" style={{ color: col.color }}>{col.tag}</span>
+                  <span className="text-fluid-caption text-fluid-caption text-fluid-label uppercase tracking-[0.2em]" style={{ color: col.color }}>{col.tag}</span>
                 </div>
               </div>
 
@@ -98,10 +98,10 @@ export function AuthorSlideFive() {
                     {col.title}
                   </h3>
                 </div>
-                <span className="text-[10px] sm:text-[11px] 2xl:text-sm text-[#A39B92] uppercase tracking-[0.2em] font-light mb-3 sm:mb-4 2xl:mb-6 block opacity-70">
+                <span className="text-fluid-label text-fluid-label 2xl:text-sm text-[#A39B92] uppercase tracking-[0.2em] font-light mb-3 sm:mb-4 2xl:mb-6 block opacity-70">
                   {col.subtitle}
                 </span>
-                <p className="text-xs sm:text-sm 2xl:text-xl text-[#8A837A] font-light leading-relaxed">
+                <p className="text-fluid-label sm:text-sm 2xl:text-xl text-[#8A837A] font-light leading-relaxed">
                   {col.desc}
                 </p>
               </div>
@@ -124,7 +124,7 @@ export function AuthorSlideFive() {
 
         {/* Progress / Step indicator at bottom */}
         <div className="absolute bottom-6 left-6 lg:bottom-10 lg:left-12 flex items-center gap-4 z-20 pointer-events-none hidden sm:flex">
-          <span className="text-[10px] uppercase tracking-widest text-[#A39B92]">05</span>
+          <span className="text-fluid-label uppercase tracking-widest text-[#A39B92]">05</span>
           <div className="w-12 h-[1px] bg-white/10">
             <div className="w-full h-full bg-[#905E26] origin-left" />
           </div>

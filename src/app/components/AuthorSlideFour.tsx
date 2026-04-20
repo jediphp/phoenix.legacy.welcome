@@ -12,7 +12,7 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 
 export function AuthorSlideFour() {
   return (
-    <div className="relative flex min-h-[100svh] w-full flex-col items-center justify-center overflow-hidden px-5 font-sans snap-start py-10 sm:px-8 sm:py-12 lg:px-12 lg:py-14 xl:px-16">
+    <div className="relative flex min-h-[100svh] w-full flex-col items-center justify-center overflow-hidden px-5 font-sans snap-start slide-shell py-10 sm:px-8 sm:py-12 lg:px-12 lg:py-14 xl:px-16">
       
       {/* Background with deep graphite and subtle spot light */}
       <div className="absolute inset-0 z-0 pointer-events-none">
@@ -38,7 +38,7 @@ export function AuthorSlideFour() {
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
           className="w-full max-w-[min(92vw,80rem)] flex-shrink-0 text-center"
         >
-          <h2 className="mb-2 text-[9px] font-light uppercase tracking-[0.2em] text-[#A39B92] drop-shadow-md sm:mb-2.5 sm:text-[10px] sm:tracking-[0.3em] 2xl:text-xs">
+          <h2 className="mb-2 text-fluid-caption font-light uppercase tracking-[0.2em] text-[#A39B92] drop-shadow-md sm:mb-2.5 text-fluid-label sm:tracking-[0.3em] text-fluid-label">
             Здесь важен не только результат, но и его основание
           </h2>
           <p className="mx-auto w-full max-w-[min(90vw,76rem)] text-balance px-1 text-sm font-light leading-snug text-[#EAEADF] sm:px-2 sm:text-base sm:leading-normal lg:text-lg 2xl:text-xl">
@@ -79,10 +79,10 @@ export function AuthorSlideFour() {
                 <ImageWithFallback src="https://images.unsplash.com/photo-1720264715239-29338d845802?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhbmNpZW50JTIwcnVpbmVkJTIwYXJ0aWZhY3QlMjBhcnRpZmFjdCUyMG1hbnVzY3JpcHR8ZW58MXx8fHwxNzc2NDQyNzc4fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Source" className="w-full h-full object-cover opacity-60 mix-blend-luminosity" />
               </div>
               <div className="flex flex-col justify-center px-1">
-                <div className="flex items-center gap-1.5 text-[8px] sm:text-[9px] text-[#A39B92] uppercase tracking-widest mb-0.5">
+                <div className="flex items-center gap-1.5 text-fluid-caption text-fluid-caption text-[#A39B92] uppercase tracking-widest mb-0.5">
                   <Database className="w-2.5 h-2.5" /> Источник
                 </div>
-                <div className="text-[10px] sm:text-xs text-[#EAEADF] font-mono leading-none">OBJ-742-A</div>
+                <div className="text-fluid-label text-fluid-label text-[#EAEADF] font-mono leading-none">OBJ-742-A</div>
               </div>
             </motion.div>
 
@@ -92,7 +92,7 @@ export function AuthorSlideFour() {
               className="absolute top-4 left-1/2 -translate-x-1/2 sm:top-6 lg:top-8 bg-[#0A0908]/80 backdrop-blur-md border border-[#2A2621] rounded-full px-3 py-1.5 sm:px-4 sm:py-2 flex items-center gap-2 sm:gap-3 shadow-xl"
             >
               <SplitSquareHorizontal className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#A39B92]" />
-              <span className="text-[8px] sm:text-[9px] lg:text-[10px] text-[#EAEADF] uppercase tracking-widest whitespace-nowrap">Diff Mode</span>
+              <span className="text-fluid-caption text-fluid-caption text-fluid-label text-[#EAEADF] uppercase tracking-widest whitespace-nowrap">Diff Mode</span>
               <div className="w-6 h-3 sm:w-8 sm:h-4 bg-[#161412] rounded-full p-0.5 border border-[#2A2621] flex">
                 <div className="w-2 h-2 sm:w-3 sm:h-3 bg-[#905E26] rounded-full" />
               </div>
@@ -107,8 +107,8 @@ export function AuthorSlideFour() {
                 <Verified className="w-3 h-3 sm:w-4 sm:h-4 text-[#F5EC9B]" />
               </div>
               <div className="flex flex-col justify-center px-1">
-                <div className="text-[8px] sm:text-[9px] text-[#F5EC9B] uppercase tracking-widest mb-0.5">Верификация</div>
-                <div className="text-[9px] sm:text-[10px] lg:text-xs text-[#EAEADF] leading-none">Редакционный совет</div>
+                <div className="text-fluid-caption text-fluid-caption text-[#F5EC9B] uppercase tracking-widest mb-0.5">Верификация</div>
+                <div className="text-fluid-caption text-fluid-label text-fluid-label text-[#EAEADF] leading-none">Редакционный совет</div>
               </div>
             </motion.div>
 
@@ -117,7 +117,7 @@ export function AuthorSlideFour() {
               initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 1.4 }}
               className="absolute top-1/2 -translate-y-1/2 right-4 sm:right-6 lg:right-8 bg-[#0A0908]/90 backdrop-blur-xl border border-[#2A2621] rounded-xl p-3 sm:p-4 lg:p-5 flex flex-col items-center shadow-2xl"
             >
-              <span className="text-[8px] sm:text-[9px] lg:text-[10px] text-[#A39B92] uppercase tracking-widest mb-2 sm:mb-3 whitespace-nowrap">Match Index</span>
+              <span className="text-fluid-caption text-fluid-caption text-fluid-label text-[#A39B92] uppercase tracking-widest mb-2 sm:mb-3 whitespace-nowrap">Match Index</span>
               <div className="relative w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 flex items-center justify-center">
                 <svg className="absolute inset-0 w-full h-full -rotate-90">
                   <circle cx="50%" cy="50%" r="42%" stroke="#161412" strokeWidth="3" fill="none" />
@@ -131,7 +131,7 @@ export function AuthorSlideFour() {
                 </svg>
                 <div className="flex items-baseline relative z-10">
                   <span className="text-sm sm:text-lg lg:text-xl text-[#EAEADF] font-light">94</span>
-                  <span className="text-[8px] sm:text-[10px] lg:text-xs text-[#8A837A] ml-0.5">%</span>
+                  <span className="text-fluid-caption text-fluid-label text-fluid-label text-[#8A837A] ml-0.5">%</span>
                 </div>
               </div>
             </motion.div>
@@ -143,9 +143,9 @@ export function AuthorSlideFour() {
             >
               <div className="flex items-center gap-1.5 sm:gap-2 mb-1.5 sm:mb-2">
                 <History className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#905E26]" />
-                <span className="text-[8px] sm:text-[9px] text-[#905E26] uppercase tracking-widest">Контекст</span>
+                <span className="text-fluid-caption text-fluid-caption text-[#905E26] uppercase tracking-widest">Контекст</span>
               </div>
-              <div className="text-[9px] sm:text-[10px] lg:text-xs text-[#A39B92] leading-relaxed line-clamp-2 sm:line-clamp-3">
+              <div className="text-fluid-caption text-fluid-label text-fluid-label text-[#A39B92] leading-relaxed line-clamp-2 sm:line-clamp-3">
                 Реконструкция на базе архивных чертежей и гравировок XV века.
               </div>
             </motion.div>
@@ -161,7 +161,7 @@ export function AuthorSlideFour() {
               </div>
               <div className="bg-[#0A0908]/90 backdrop-blur-md border border-red-500/30 rounded-md sm:rounded-lg px-2 py-1.5 flex items-center gap-1.5 shadow-lg hidden sm:flex">
                 <AlertCircle className="w-3 h-3 text-red-400" />
-                <span className="text-[8px] sm:text-[9px] text-red-400 uppercase tracking-wider">Узел крепления</span>
+                <span className="text-fluid-caption text-fluid-caption text-red-400 uppercase tracking-wider">Узел крепления</span>
               </div>
             </motion.div>
 
@@ -172,11 +172,11 @@ export function AuthorSlideFour() {
             >
               <div className="flex items-center gap-1.5 sm:gap-2">
                 <Users className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#A39B92]" />
-                <span className="text-[9px] sm:text-[10px] lg:text-xs text-[#EAEADF] font-mono">1.2k</span>
+                <span className="text-fluid-caption text-fluid-label text-fluid-label text-[#EAEADF] font-mono">1.2k</span>
               </div>
               <div className="w-[1px] h-3 sm:h-4 bg-[#2A2621]" />
               <div className="flex items-center gap-2 sm:gap-3">
-                <span className="text-[8px] sm:text-[9px] text-[#A39B92] uppercase tracking-widest hidden sm:inline">Оценка</span>
+                <span className="text-fluid-caption text-fluid-caption text-[#A39B92] uppercase tracking-widest hidden sm:inline">Оценка</span>
                 <div className="flex gap-0.5 sm:gap-1">
                   <div className="w-0.5 sm:w-1 h-2 sm:h-3 bg-[#F5EC9B] rounded-sm" />
                   <div className="w-0.5 sm:w-1 h-2.5 sm:h-3.5 bg-[#F5EC9B] rounded-sm" />
@@ -205,7 +205,7 @@ export function AuthorSlideFour() {
         
         {/* Progress / Step indicator at bottom */}
         <div className="absolute bottom-6 left-6 lg:bottom-10 lg:left-12 flex items-center gap-4 z-20 pointer-events-none hidden sm:flex">
-          <span className="text-[10px] uppercase tracking-widest text-[#A39B92]">04</span>
+          <span className="text-fluid-label uppercase tracking-widest text-[#A39B92]">04</span>
           <div className="w-12 h-[1px] bg-white/10">
             <div className="w-full h-full bg-[#905E26] origin-left" />
           </div>

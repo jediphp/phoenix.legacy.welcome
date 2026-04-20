@@ -14,7 +14,7 @@ export function OrgSlideTen() {
   const isInView = useInView(sceneRef, { once: true, margin: '-50px' });
 
   return (
-    <div className="relative w-full h-[100vh] flex flex-col overflow-hidden font-sans snap-start bg-[#080705]">
+    <div className="relative w-full min-h-[100svh] flex flex-col overflow-hidden font-sans snap-start slide-shell bg-[#080705]">
       {/* Full-bleed closing hero image */}
       <div className="absolute inset-0 z-0">
         <ImageWithFallback
@@ -33,7 +33,7 @@ export function OrgSlideTen() {
       </div>
 
       {/* Noise */}
-      <svg className="absolute inset-0 pointer-events-none opacity-[0.035] mix-blend-overlay w-full h-[100vh] z-0">
+      <svg className="absolute inset-0 pointer-events-none opacity-[0.035] mix-blend-overlay w-full min-h-[100svh] z-0">
         <filter id="noise_org_10">
           <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves={3} stitchTiles="stitch" />
         </filter>
@@ -42,7 +42,7 @@ export function OrgSlideTen() {
 
       <div
         ref={sceneRef}
-        className="relative z-20 w-full max-w-[90vw] mx-auto h-[100vh] flex flex-col justify-center px-[2vw] pt-[15vh] pb-[10vh]"
+        className="relative z-20 w-full max-w-[90vw] mx-auto min-h-[100svh] flex flex-col justify-center px-[2vw] pt-[15vh] pb-[10vh]"
       >
         <div className="max-w-[75vw] mx-auto text-center flex flex-col items-center">
           

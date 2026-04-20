@@ -37,7 +37,7 @@ export function AuthorSlideEight() {
   }, [isInView]);
 
   return (
-    <div className="relative w-full min-h-[100svh] flex flex-col overflow-hidden font-sans snap-start py-6 sm:py-10 lg:py-12 px-4 sm:px-8 lg:px-12 2xl:px-24">
+    <div className="relative w-full min-h-[100svh] flex flex-col overflow-hidden font-sans snap-start slide-shell py-6 sm:py-10 lg:py-12 px-4 sm:px-8 lg:px-12 2xl:px-24">
 
       {/* Noise */}
       <svg className="absolute inset-0 pointer-events-none opacity-[0.03] mix-blend-overlay w-full h-full z-0">
@@ -77,7 +77,7 @@ export function AuthorSlideEight() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.1 + i * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                className="flex items-center gap-1.5 px-2.5 py-1 2xl:px-3 2xl:py-1.5 rounded-full bg-[#0D0B09]/70 border border-white/[0.08] text-[7px] sm:text-[8px] 2xl:text-[10px] text-[#A39B92] uppercase tracking-widest backdrop-blur-sm"
+                className="flex items-center gap-1.5 px-2.5 py-1 2xl:px-3 2xl:py-1.5 rounded-full bg-[#0D0B09]/70 border border-white/[0.08] text-fluid-micro text-fluid-caption text-fluid-label text-[#A39B92] uppercase tracking-widest backdrop-blur-sm"
               >
                 <span className="text-[#905E26]/70 font-mono">{chip.id}</span>
                 {chip.label}
@@ -161,24 +161,24 @@ export function AuthorSlideEight() {
                 <div className="flex items-center justify-between mb-2 2xl:mb-3">
                   <div className="flex items-center gap-1.5">
                     <div className="w-1.5 h-1.5 rounded-full bg-[#D5A86B]" />
-                    <span className="text-[7px] sm:text-[8px] 2xl:text-[10px] uppercase tracking-widest text-[#D5A86B]/80 font-mono">
+                    <span className="text-fluid-micro text-fluid-caption text-fluid-label uppercase tracking-widest text-[#D5A86B]/80 font-mono">
                       Замечание эксперта
                     </span>
                   </div>
-                  <span className="text-[7px] sm:text-[8px] font-mono text-[#905E26]/60">зона A</span>
+                  <span className="text-fluid-micro text-fluid-caption font-mono text-[#905E26]/60">зона A</span>
                 </div>
-                <p className="text-[9px] sm:text-[10px] lg:text-[11px] 2xl:text-sm text-[#D5CCC3] font-light leading-relaxed mb-2 2xl:mb-3">
+                <p className="text-fluid-caption text-fluid-label text-fluid-label 2xl:text-sm text-[#D5CCC3] font-light leading-relaxed mb-2 2xl:mb-3">
                   Фактура нижнего слоя прописана не в технике эпохи. Рекомендую изучить аналоги из источника и сверить с оригиналом.
                 </p>
                 <div className="flex items-center gap-2 pt-2 border-t border-white/5">
                   <div className="w-5 h-5 2xl:w-7 2xl:h-7 rounded-full bg-[#1A1613] border border-white/10 flex items-center justify-center flex-shrink-0">
-                    <span className="text-[6px] 2xl:text-[8px] text-[#A39B92] font-mono">Эк</span>
+                    <span className="text-fluid-micro text-fluid-caption text-[#A39B92] font-mono">Эк</span>
                   </div>
-                  <p className="flex-1 text-[7px] sm:text-[8px] 2xl:text-[10px] text-[#8A837A] font-light truncate">
+                  <p className="flex-1 text-fluid-micro text-fluid-caption text-fluid-label text-[#8A837A] font-light truncate">
                     Реставрационный эксперт
                   </p>
                   <div className="px-1.5 py-0.5 2xl:px-2 2xl:py-1 rounded-md bg-[#905E26]/15 border border-[#905E26]/25">
-                    <span className="text-[6px] sm:text-[7px] 2xl:text-[9px] text-[#D5A86B] uppercase tracking-widest font-mono">
+                    <span className="text-fluid-micro text-fluid-micro text-fluid-caption text-[#D5A86B] uppercase tracking-widest font-mono">
                       Улучшить
                     </span>
                   </div>
@@ -215,7 +215,7 @@ export function AuthorSlideEight() {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
             <ThermometerSun className="w-3 h-3 2xl:w-4 2xl:h-4 text-[#D5A86B]" strokeWidth={1.5} />
-            <span className="text-[7px] sm:text-[8px] 2xl:text-[10px] uppercase tracking-widest text-[#D5A86B]/80 font-mono">
+            <span className="text-fluid-micro text-fluid-caption text-fluid-label uppercase tracking-widest text-[#D5A86B]/80 font-mono">
               Тепловая карта
             </span>
             <div className="w-1.5 h-1.5 rounded-full bg-[#D5A86B] animate-pulse" />
@@ -223,7 +223,7 @@ export function AuthorSlideEight() {
 
           {/* Work label — top-left */}
           <div className="absolute top-4 left-4 sm:top-5 sm:left-5 2xl:top-8 2xl:left-8 z-40">
-            <span className="text-[7px] sm:text-[8px] 2xl:text-[10px] uppercase tracking-widest text-[#EAEADF]/25 font-mono">
+            <span className="text-fluid-micro text-fluid-caption text-fluid-label uppercase tracking-widest text-[#EAEADF]/25 font-mono">
               Работа / сессия оценки
             </span>
           </div>
@@ -241,7 +241,7 @@ export function AuthorSlideEight() {
                 {/* Live indicator */}
                 <div className="flex items-center gap-1.5 flex-shrink-0">
                   <div className="w-1.5 h-1.5 2xl:w-2 2xl:h-2 rounded-full bg-emerald-500 animate-pulse" />
-                  <span className="text-[7px] sm:text-[8px] 2xl:text-[10px] uppercase tracking-widest text-emerald-500/70 font-mono hidden sm:block">
+                  <span className="text-fluid-micro text-fluid-caption text-fluid-label uppercase tracking-widest text-emerald-500/70 font-mono hidden sm:block">
                     Активна
                   </span>
                 </div>
@@ -256,7 +256,7 @@ export function AuthorSlideEight() {
                 ].map((stat) => (
                   <div key={stat.label} className="flex items-baseline gap-1 flex-shrink-0">
                     <span className="text-sm sm:text-base 2xl:text-xl font-light text-[#D5CCC3]">{stat.n}</span>
-                    <span className="text-[7px] sm:text-[8px] 2xl:text-[10px] text-[#6B645D] font-light uppercase tracking-wider">
+                    <span className="text-fluid-micro text-fluid-caption text-fluid-label text-[#6B645D] font-light uppercase tracking-wider">
                       {stat.label}
                     </span>
                   </div>
@@ -266,7 +266,7 @@ export function AuthorSlideEight() {
 
                 {/* Heatmap density bar */}
                 <div className="hidden sm:flex items-center gap-2 2xl:gap-3 flex-shrink-0">
-                  <span className="text-[7px] 2xl:text-[9px] uppercase tracking-widest text-[#6B645D] font-mono">
+                  <span className="text-fluid-micro text-fluid-caption uppercase tracking-widest text-[#6B645D] font-mono">
                     Плотность
                   </span>
                   <div className="w-20 sm:w-24 2xl:w-36 h-1.5 2xl:h-2 rounded-full overflow-hidden bg-[#1A1613]">
@@ -277,7 +277,7 @@ export function AuthorSlideEight() {
                       transition={{ duration: 1.2, delay: 0.3, ease: 'easeOut' }}
                     />
                   </div>
-                  <span className="text-[7px] 2xl:text-[9px] text-[#D5A86B] font-mono">72%</span>
+                  <span className="text-fluid-micro text-fluid-caption text-[#D5A86B] font-mono">72%</span>
                 </div>
               </div>
             </div>
@@ -293,7 +293,7 @@ export function AuthorSlideEight() {
           transition={{ duration: 1.1, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="flex-shrink-0 mt-3 sm:mt-4 2xl:mt-8 z-30 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3"
         >
-          <p className="text-xs sm:text-sm lg:text-[0.95rem] 2xl:text-base text-[#A39B92] font-light tracking-wide leading-snug text-balance max-w-3xl 2xl:max-w-5xl">
+          <p className="text-fluid-label sm:text-sm lg:text-[0.95rem] 2xl:text-base text-[#A39B92] font-light tracking-wide leading-snug text-balance max-w-3xl 2xl:max-w-5xl">
             Это позволяет автору увидеть не только общую реакцию, но и понять,{' '}
             <span className="text-[#D5CCC3]">где именно результат вызывает сомнения</span>{' '}
             и что можно улучшить.
@@ -304,7 +304,7 @@ export function AuthorSlideEight() {
 
       {/* Progress indicator */}
       <div className="absolute bottom-5 left-6 lg:bottom-8 lg:left-12 flex items-center gap-4 z-20 pointer-events-none hidden sm:flex">
-        <span className="text-[10px] uppercase tracking-widest text-[#A39B92]">08</span>
+        <span className="text-fluid-label uppercase tracking-widest text-[#A39B92]">08</span>
         <div className="w-12 h-[1px] bg-white/10">
           <div className="w-full h-full bg-[#905E26] origin-left" />
         </div>

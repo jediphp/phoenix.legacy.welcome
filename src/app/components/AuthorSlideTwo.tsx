@@ -11,7 +11,7 @@ export function AuthorSlideTwo() {
   return (
     <div 
       ref={containerRef}
-      className="relative w-full min-h-[100svh] flex items-center justify-center overflow-hidden font-sans snap-start selection:bg-[#8F6D1F]/30"
+      className="relative w-full min-h-[100svh] flex items-center justify-center overflow-hidden font-sans snap-start slide-shell selection:bg-[#8F6D1F]/30"
     >
       {/* Background base and noise */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#12100D]/40 via-[#0A0907]/40 to-[#040403]/40 z-0" />
@@ -83,9 +83,9 @@ export function AuthorSlideTwo() {
             {/* Small UI detail overlay to give a "museum-tech / digital vitrine" feel */}
             <div className="absolute bottom-6 right-6 flex items-center gap-3 opacity-60">
               <div className="w-1.5 h-1.5 rounded-full bg-[#F5EC9B] animate-pulse" />
-              <span className="text-[10px] uppercase tracking-widest text-[#F5EC9B]">Source / Analysis</span>
+              <span className="text-fluid-label uppercase tracking-widest text-[#F5EC9B]">Source / Analysis</span>
             </div>
-            <div className="absolute top-6 left-6 text-[10px] uppercase tracking-widest text-[#A39B92] opacity-50 font-mono">
+            <div className="absolute top-6 left-6 text-fluid-label uppercase tracking-widest text-[#A39B92] opacity-50 font-mono">
               Fig. 01 / Context
             </div>
           </div>
@@ -94,7 +94,7 @@ export function AuthorSlideTwo() {
 
       {/* Progress / Step indicator at bottom */}
       <div className="absolute bottom-6 left-6 lg:bottom-10 lg:left-12 flex items-center gap-4 z-20">
-        <span className="text-[10px] uppercase tracking-widest text-[#A39B92]">02</span>
+        <span className="text-fluid-label uppercase tracking-widest text-[#A39B92]">02</span>
         <div className="w-12 h-[1px] bg-white/10">
           <div className="w-full h-full bg-[#905E26] origin-left" />
         </div>

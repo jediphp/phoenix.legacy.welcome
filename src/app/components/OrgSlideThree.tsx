@@ -50,10 +50,10 @@ export function OrgSlideThree() {
   const isInView = useInView(sceneRef, { once: true, margin: '-50px' });
 
   return (
-    <div className="relative w-full h-[100vh] flex flex-col overflow-hidden font-sans snap-start bg-[#090807]">
+    <div className="relative w-full min-h-[100svh] flex flex-col overflow-hidden font-sans snap-start slide-shell bg-[#090807]">
 
       {/* Noise */}
-      <svg className="absolute inset-0 pointer-events-none opacity-[0.03] mix-blend-overlay w-full h-[100vh] z-0">
+      <svg className="absolute inset-0 pointer-events-none opacity-[0.03] mix-blend-overlay w-full min-h-[100svh] z-0">
         <filter id="noise_org_3">
           <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves={3} stitchTiles="stitch" />
         </filter>
@@ -66,7 +66,7 @@ export function OrgSlideThree() {
 
       <div
         ref={sceneRef}
-        className="relative z-20 w-full max-w-[90vw] mx-auto flex flex-col h-[100vh] px-[2vw] pt-[8vh] pb-[5vh]"
+        className="relative z-20 w-full max-w-[90vw] mx-auto flex flex-col min-h-[100svh] px-[2vw] pt-[8vh] pb-[5vh]"
       >
 
         {/* ── Header ── */}

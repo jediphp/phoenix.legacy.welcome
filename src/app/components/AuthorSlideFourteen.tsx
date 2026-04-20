@@ -31,7 +31,7 @@ export function AuthorSlideFourteen() {
   const [hoveredAction, setHoveredAction] = useState<string | null>(null);
 
   return (
-    <div className="relative w-full min-h-[100svh] flex flex-col overflow-hidden font-sans snap-start bg-[#0B0907]">
+    <div className="relative w-full min-h-[100svh] flex flex-col overflow-hidden font-sans snap-start slide-shell bg-[#0B0907]">
 
       {/* Noise */}
       <svg className="absolute inset-0 pointer-events-none opacity-[0.025] mix-blend-overlay w-full h-full z-0">
@@ -136,7 +136,7 @@ export function AuthorSlideFourteen() {
                         >
                           {action.label}
                         </p>
-                        <p className="text-[9px] sm:text-[10px] 2xl:text-xs text-[#4A4540] uppercase tracking-widest font-mono mt-0.5">
+                        <p className="text-fluid-caption text-fluid-label text-fluid-label text-[#4A4540] uppercase tracking-widest font-mono mt-0.5">
                           {action.desc}
                         </p>
                       </div>
@@ -205,7 +205,7 @@ export function AuthorSlideFourteen() {
           className="flex-shrink-0 px-4 sm:px-8 lg:px-12 2xl:px-24 py-[3vh] sm:py-[4vh] border-t border-white/[0.04]"
         >
           <div className="w-full max-w-[1500px] 2xl:max-w-[2400px] mx-auto flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3">
-            <p className="text-xs sm:text-sm 2xl:text-base text-[#4A4540] font-light leading-relaxed max-w-2xl 2xl:max-w-3xl">
+            <p className="text-fluid-label sm:text-sm 2xl:text-base text-[#4A4540] font-light leading-relaxed max-w-2xl 2xl:max-w-3xl">
               Феникс.Наследие — это место, где историческая реконструкция может стать{' '}
               не разрозненным экспериментом, а{' '}
               <span className="text-[#6B645D]">новой осмысленной средой.</span>
@@ -214,7 +214,7 @@ export function AuthorSlideFourteen() {
               initial={{ opacity: 0 }}
               animate={isInView ? { opacity: 1 } : { opacity: 0 }}
               transition={{ duration: 1.5, delay: 2, ease: 'easeOut' }}
-              className="text-xs sm:text-sm 2xl:text-base text-[#D5A86B]/50 font-light tracking-wide whitespace-nowrap"
+              className="text-fluid-label sm:text-sm 2xl:text-base text-[#D5A86B]/50 font-light tracking-wide whitespace-nowrap"
             >
               Ниша только формируется.
             </motion.p>
@@ -225,11 +225,11 @@ export function AuthorSlideFourteen() {
 
       {/* Progress indicator */}
       <div className="absolute bottom-[calc(3vh+2px)] left-6 lg:bottom-[calc(4vh+2px)] lg:left-12 flex items-center gap-4 z-30 pointer-events-none hidden sm:flex">
-        <span className="text-[10px] uppercase tracking-widest text-[#A39B92]">14</span>
+        <span className="text-fluid-label uppercase tracking-widest text-[#A39B92]">14</span>
         <div className="w-12 h-[1px] bg-white/10">
           <div className="w-full h-full bg-[#D5A86B]/40 origin-left" />
         </div>
-        <span className="text-[10px] uppercase tracking-widest text-[#D5A86B]/40 font-mono">Финал</span>
+        <span className="text-fluid-label uppercase tracking-widest text-[#D5A86B]/40 font-mono">Финал</span>
       </div>
 
     </div>

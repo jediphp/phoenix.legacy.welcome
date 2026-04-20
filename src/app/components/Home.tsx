@@ -101,8 +101,8 @@ export function Home() {
     mouseY.set(e.clientY / window.innerHeight);
   };
 
-  const spotlightLeft = useTransform(smoothX, [0, 1], ["calc(0% - 400px)", "calc(100% - 400px)"]);
-  const spotlightTop = useTransform(smoothY, [0, 1], ["calc(0% - 400px)", "calc(100% - 400px)"]);
+  const spotlightLeft = useTransform(smoothX, [0, 1], ["calc(0% - (var(--glow-size) / 2))", "calc(100% - (var(--glow-size) / 2))"]);
+  const spotlightTop = useTransform(smoothY, [0, 1], ["calc(0% - (var(--glow-size) / 2))", "calc(100% - (var(--glow-size) / 2))"]);
 
   return (
     <div 
@@ -117,10 +117,10 @@ export function Home() {
 
       {/* Интерактивный свет (Parallax Spotlight) - сделал чуть ярче */}
       <motion.div
-        className="absolute pointer-events-none z-10 rounded-full blur-[100px] opacity-85 mix-blend-screen"
+        className="absolute pointer-events-none z-10 rounded-full blur-[clamp(3.5rem,8vw,6.25rem)] opacity-85 mix-blend-screen"
         style={{
-          width: '800px',
-          height: '800px',
+          width: 'var(--glow-size)',
+          height: 'var(--glow-size)',
           background: 'radial-gradient(circle, rgba(190, 130, 60, 0.25) 0%, rgba(0,0,0,0) 70%)',
           left: spotlightLeft,
           top: spotlightTop,
@@ -145,7 +145,7 @@ export function Home() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-          className="w-[280px] h-[77px] sm:w-[360px] sm:h-[99px] lg:w-[420px] lg:h-[115px] relative flex justify-center items-center drop-shadow-2xl translate-x-[21.3%]"
+          className="w-[clamp(17.5rem,28vw,26.25rem)] h-[clamp(4.8125rem,8vw,7.1875rem)] relative flex justify-center items-center drop-shadow-2xl translate-x-[21.3%]"
         >
           <LogoVertical />
         </motion.div>
@@ -154,7 +154,7 @@ export function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.8 }}
           transition={{ delay: 0.6, duration: 1.5 }}
-          className="mt-4 sm:mt-6 text-[10px] sm:text-xs uppercase tracking-[0.25em] text-[#F5EC9B] text-center"
+          className="mt-4 sm:mt-6 meta-label text-[#F5EC9B] text-center"
         >
           Одна платформа — два сценария входа
         </motion.p>

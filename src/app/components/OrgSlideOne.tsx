@@ -6,7 +6,7 @@ import LogoVertical from '../../imports/LogoVertical';
 
 export function OrgSlideOne() {
   return (
-    <div className="relative w-full h-[100vh] flex flex-col overflow-hidden font-sans snap-start bg-[#080705]">
+    <div className="relative w-full min-h-[100svh] flex flex-col overflow-hidden font-sans snap-start slide-shell bg-[#080705]">
 
       {/* Full-bleed hero image */}
       <div className="absolute inset-0 z-0">
@@ -21,7 +21,7 @@ export function OrgSlideOne() {
       </div>
 
       {/* Noise - above image, below content */}
-      <svg className="absolute inset-0 pointer-events-none opacity-[0.035] mix-blend-overlay w-full h-[100vh] z-0">
+      <svg className="absolute inset-0 pointer-events-none opacity-[0.035] mix-blend-overlay w-full min-h-[100svh] z-0">
         <filter id="noise_org_1">
           <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves={3} stitchTiles="stitch" />
         </filter>
@@ -29,7 +29,7 @@ export function OrgSlideOne() {
       </svg>
 
       {/* Content layer */}
-      <div className="relative z-20 flex flex-col h-[100vh] w-full max-w-[90vw] mx-auto px-[2vw]">
+      <div className="relative z-20 flex flex-col min-h-[100svh] w-full max-w-[90vw] mx-auto px-[2vw]">
 
         {/* Top bar */}
         <motion.div

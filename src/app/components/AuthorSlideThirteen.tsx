@@ -42,7 +42,7 @@ export function AuthorSlideThirteen() {
   const isInView = useInView(sceneRef, { once: true, margin: '-80px' });
 
   return (
-    <div className="relative w-full min-h-[100svh] flex flex-col overflow-hidden font-sans snap-start py-[4vh] lg:py-[6vh] px-4 sm:px-8 lg:px-12 2xl:px-24 bg-[#090807]">
+    <div className="relative w-full min-h-[100svh] flex flex-col overflow-hidden font-sans snap-start slide-shell py-[4vh] lg:py-[6vh] px-4 sm:px-8 lg:px-12 2xl:px-24 bg-[#090807]">
 
       {/* Noise */}
       <svg className="absolute inset-0 pointer-events-none opacity-[0.03] mix-blend-overlay w-full h-full z-0">
@@ -123,7 +123,7 @@ export function AuthorSlideThirteen() {
                     transition={{ duration: 2, delay: 0.5 + index * 0.2, ease: 'easeInOut' }}
                   >
                     <span
-                      className="text-[8px] sm:text-[9px] 2xl:text-xs font-mono"
+                      className="text-fluid-caption text-fluid-caption text-fluid-label font-mono"
                       style={{ color: phase.isActive ? '#D5A86B' : '#3A3530' }}
                     >
                       {phase.id}
@@ -148,14 +148,14 @@ export function AuthorSlideThirteen() {
                         transition={{ duration: 0.6, delay: 0.8 + index * 0.2 }}
                       >
                         <div className="w-1 h-1 rounded-full bg-[#D5A86B] animate-pulse" />
-                        <span className="text-[7px] sm:text-[8px] 2xl:text-[10px] uppercase tracking-widest text-[#D5A86B]/70 font-mono">
+                        <span className="text-fluid-micro text-fluid-caption text-fluid-label uppercase tracking-widest text-[#D5A86B]/70 font-mono">
                           Сейчас
                         </span>
                       </motion.div>
                     )}
                   </div>
                   <p
-                    className="text-[10px] sm:text-xs 2xl:text-sm font-light leading-relaxed max-w-lg 2xl:max-w-2xl"
+                    className="text-fluid-label text-fluid-label 2xl:text-sm font-light leading-relaxed max-w-lg 2xl:max-w-2xl"
                     style={{ color: phase.isActive ? '#6B645D' : '#2A2520' }}
                   >
                     {phase.desc}
@@ -182,7 +182,7 @@ export function AuthorSlideThirteen() {
 
             {/* Top label */}
             <div className="absolute top-5 left-5 2xl:top-8 2xl:left-8 z-10">
-              <span className="text-[7px] sm:text-[8px] 2xl:text-[10px] uppercase tracking-widest text-[#EAEADF]/25 font-mono">
+              <span className="text-fluid-micro text-fluid-caption text-fluid-label uppercase tracking-widest text-[#EAEADF]/25 font-mono">
                 Старт
               </span>
             </div>
@@ -200,7 +200,7 @@ export function AuthorSlideThirteen() {
               >
                 <div className="text-center">
                   <div className="text-lg sm:text-xl 2xl:text-3xl font-light text-[#D5A86B]/80 mb-0.5">I</div>
-                  <div className="text-[7px] sm:text-[8px] 2xl:text-[10px] uppercase tracking-widest text-[#A39B92]/50 font-mono">Этап</div>
+                  <div className="text-fluid-micro text-fluid-caption text-fluid-label uppercase tracking-widest text-[#A39B92]/50 font-mono">Этап</div>
                 </div>
               </div>
             </motion.div>
@@ -211,7 +211,7 @@ export function AuthorSlideThirteen() {
                 initial={{ opacity: 0, y: 8 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 8 }}
                 transition={{ duration: 1, delay: 1.8, ease: [0.16, 1, 0.3, 1] }}
-                className="text-xs sm:text-sm 2xl:text-base text-[#8A837A] font-light leading-relaxed"
+                className="text-fluid-label sm:text-sm 2xl:text-base text-[#8A837A] font-light leading-relaxed"
               >
                 На этом этапе особенно важны{' '}
                 <span className="text-[#D5CCC3]">те, кто входит в момент формирования</span>
@@ -238,7 +238,7 @@ export function AuthorSlideThirteen() {
 
       {/* Progress indicator */}
       <div className="absolute bottom-5 left-6 lg:bottom-[4vh] lg:left-12 flex items-center gap-4 z-20 pointer-events-none hidden sm:flex">
-        <span className="text-[10px] uppercase tracking-widest text-[#A39B92]">13</span>
+        <span className="text-fluid-label uppercase tracking-widest text-[#A39B92]">13</span>
         <div className="w-12 h-[1px] bg-white/10">
           <div className="w-full h-full bg-[#905E26] origin-left" />
         </div>

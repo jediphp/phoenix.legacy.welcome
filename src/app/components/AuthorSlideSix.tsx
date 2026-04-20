@@ -57,7 +57,7 @@ export function AuthorSlideSix() {
   const isInView = useInView(sceneRef, { once: true, margin: '-50px' });
 
   return (
-    <div className="relative w-full min-h-[100svh] flex flex-col items-center justify-center overflow-hidden font-sans snap-start bg-transparent py-[4vh] px-[5vw]">
+    <div className="relative w-full min-h-[100svh] flex flex-col items-center justify-center overflow-hidden font-sans snap-start slide-shell bg-transparent py-[4vh] px-[5vw]">
       {/* Noise filter */}
       <svg className="absolute inset-0 pointer-events-none opacity-[0.03] mix-blend-overlay w-full h-full z-0">
         <filter id="noise_slide_6">

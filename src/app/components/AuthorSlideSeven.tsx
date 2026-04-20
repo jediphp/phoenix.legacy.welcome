@@ -87,7 +87,7 @@ export function AuthorSlideSeven() {
   }, [isInView]);
 
   return (
-    <div className="relative w-full min-h-[100svh] flex flex-col items-center justify-center overflow-hidden font-sans snap-start py-6 sm:py-10 lg:py-14 px-4 sm:px-8 lg:px-12 2xl:px-24">
+    <div className="relative w-full min-h-[100svh] flex flex-col items-center justify-center overflow-hidden font-sans snap-start slide-shell py-6 sm:py-10 lg:py-14 px-4 sm:px-8 lg:px-12 2xl:px-24">
       {/* Noise filter */}
       <svg className="absolute inset-0 pointer-events-none opacity-[0.03] mix-blend-overlay w-full h-full z-0">
         <filter id="noise_slide_7">
@@ -138,12 +138,12 @@ export function AuthorSlideSeven() {
                   </div>
                   <div className="min-w-0">
                     <div className="flex items-center gap-2 mb-1 2xl:mb-2">
-                      <span className="text-[8px] 2xl:text-[10px] font-mono text-[#A39B92]/50">{item.id}</span>
-                      <p className="text-[10px] sm:text-[11px] 2xl:text-sm text-[#D5CCC3] uppercase tracking-[0.15em] font-light leading-snug">
+                      <span className="text-fluid-caption text-fluid-label font-mono text-[#A39B92]/50">{item.id}</span>
+                      <p className="text-fluid-label text-fluid-label 2xl:text-sm text-[#D5CCC3] uppercase tracking-[0.15em] font-light leading-snug">
                         {item.label}
                       </p>
                     </div>
-                    <p className="text-[9px] sm:text-[10px] 2xl:text-xs text-[#6B645D] font-light leading-relaxed hidden sm:block">
+                    <p className="text-fluid-caption text-fluid-label text-fluid-label text-[#6B645D] font-light leading-relaxed hidden sm:block">
                       {item.desc}
                     </p>
                   </div>
@@ -200,7 +200,7 @@ export function AuthorSlideSeven() {
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             >
               <div className="w-1.5 h-1.5 2xl:w-2 2xl:h-2 rounded-full bg-[#D5A86B] animate-pulse" />
-              <span className="text-[8px] sm:text-[9px] 2xl:text-xs uppercase tracking-widest text-[#D5A86B] font-mono">
+              <span className="text-fluid-caption text-fluid-caption text-fluid-label uppercase tracking-widest text-[#D5A86B] font-mono">
                 Тепловая карта
               </span>
             </motion.div>
@@ -245,7 +245,7 @@ export function AuthorSlideSeven() {
                     }}
                   >
                     <span
-                      className="text-[9px] sm:text-[10px] 2xl:text-sm font-mono"
+                      className="text-fluid-caption text-fluid-label 2xl:text-sm font-mono"
                       style={{ color: marker.severity === 'high' ? '#D5A86B' : '#A39B92' }}
                     >
                       {marker.id}
@@ -266,19 +266,19 @@ export function AuthorSlideSeven() {
                     <div className="p-2.5 sm:p-3 2xl:p-5 rounded-xl sm:rounded-2xl bg-[#0D0B09]/90 backdrop-blur-xl border border-[#D5A86B]/20 shadow-2xl">
                       <div className="flex items-center gap-1.5 mb-1.5 2xl:mb-2">
                         <div className="w-1 h-1 2xl:w-1.5 2xl:h-1.5 rounded-full bg-[#D5A86B]" />
-                        <span className="text-[7px] sm:text-[8px] 2xl:text-[10px] uppercase tracking-widest text-[#D5A86B]/70 font-mono">
+                        <span className="text-fluid-micro text-fluid-caption text-fluid-label uppercase tracking-widest text-[#D5A86B]/70 font-mono">
                           Замечание
                         </span>
                       </div>
-                      <p className="text-[8px] sm:text-[9px] 2xl:text-xs text-[#D5CCC3] font-light leading-relaxed">
+                      <p className="text-fluid-caption text-fluid-caption text-fluid-label text-[#D5CCC3] font-light leading-relaxed">
                         {marker.comment}
                       </p>
                       <div className="mt-2 2xl:mt-3 pt-1.5 2xl:pt-2 border-t border-white/5 flex items-center gap-2">
-                        <span className="text-[6px] sm:text-[7px] 2xl:text-[9px] text-[#6B645D] uppercase tracking-widest">
+                        <span className="text-fluid-micro text-fluid-micro text-fluid-caption text-[#6B645D] uppercase tracking-widest">
                           Эксперт
                         </span>
                         <div className="flex-1 h-[1px] bg-white/5" />
-                        <span className="text-[6px] sm:text-[7px] 2xl:text-[9px] font-mono text-[#905E26]">
+                        <span className="text-fluid-micro text-fluid-micro text-fluid-caption font-mono text-[#905E26]">
                           зона #1
                         </span>
                       </div>
@@ -299,11 +299,11 @@ export function AuthorSlideSeven() {
                     <div className="p-2 sm:p-2.5 2xl:p-4 rounded-xl bg-[#0D0B09]/85 backdrop-blur-xl border border-[#A39B92]/15 shadow-xl">
                       <div className="flex items-center gap-1.5 mb-1 2xl:mb-1.5">
                         <div className="w-1 h-1 rounded-full bg-[#A39B92]/60" />
-                        <span className="text-[7px] sm:text-[8px] 2xl:text-[10px] uppercase tracking-widest text-[#A39B92]/60 font-mono">
+                        <span className="text-fluid-micro text-fluid-caption text-fluid-label uppercase tracking-widest text-[#A39B92]/60 font-mono">
                           Замечание
                         </span>
                       </div>
-                      <p className="text-[8px] sm:text-[9px] 2xl:text-xs text-[#A39B92] font-light leading-relaxed">
+                      <p className="text-fluid-caption text-fluid-caption text-fluid-label text-[#A39B92] font-light leading-relaxed">
                         {marker.comment}
                       </p>
                     </div>
@@ -320,15 +320,15 @@ export function AuthorSlideSeven() {
               transition={{ duration: 1.2, ease: 'easeOut' }}
             >
               <div className="flex items-center gap-3 sm:gap-5 2xl:gap-8">
-                <span className="text-[7px] sm:text-[8px] 2xl:text-[10px] uppercase tracking-widest text-[#6B645D] font-mono flex-shrink-0">
+                <span className="text-fluid-micro text-fluid-caption text-fluid-label uppercase tracking-widest text-[#6B645D] font-mono flex-shrink-0">
                   Плотность замечаний
                 </span>
                 {/* Gradient bar */}
                 <div className="flex-1 h-[3px] sm:h-1 2xl:h-1.5 rounded-full overflow-hidden bg-gradient-to-r from-transparent via-[#D5A86B]/50 to-[#905E26]/80" />
                 <div className="flex items-center gap-1.5 2xl:gap-2.5">
-                  <span className="text-[7px] sm:text-[8px] 2xl:text-[10px] text-[#6B645D] font-mono">низкая</span>
+                  <span className="text-fluid-micro text-fluid-caption text-fluid-label text-[#6B645D] font-mono">низкая</span>
                   <div className="w-1 h-1 rounded-full bg-[#905E26]/40" />
-                  <span className="text-[7px] sm:text-[8px] 2xl:text-[10px] text-[#D5A86B] font-mono">высокая</span>
+                  <span className="text-fluid-micro text-fluid-caption text-fluid-label text-[#D5A86B] font-mono">высокая</span>
                 </div>
               </div>
             </motion.div>
@@ -336,7 +336,7 @@ export function AuthorSlideSeven() {
             {/* Corner label — top left */}
             <div className="absolute top-4 left-4 sm:top-5 sm:left-5 2xl:top-8 2xl:left-8 z-40 flex items-center gap-2">
               <div className="w-1 h-1 2xl:w-1.5 2xl:h-1.5 rounded-full bg-[#EAEADF]/40" />
-              <span className="text-[7px] sm:text-[8px] 2xl:text-[10px] uppercase tracking-widest text-[#EAEADF]/30 font-mono">
+              <span className="text-fluid-micro text-fluid-caption text-fluid-label uppercase tracking-widest text-[#EAEADF]/30 font-mono">
                 Работа / обзор
               </span>
             </div>
@@ -359,7 +359,7 @@ export function AuthorSlideSeven() {
 
         {/* Progress indicator */}
         <div className="absolute bottom-5 left-6 lg:bottom-8 lg:left-12 flex items-center gap-4 z-20 pointer-events-none hidden sm:flex">
-          <span className="text-[10px] uppercase tracking-widest text-[#A39B92]">07</span>
+          <span className="text-fluid-label uppercase tracking-widest text-[#A39B92]">07</span>
           <div className="w-12 h-[1px] bg-white/10">
             <div className="w-full h-full bg-[#905E26] origin-left" />
           </div>

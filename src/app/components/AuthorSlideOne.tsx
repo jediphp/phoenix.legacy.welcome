@@ -50,7 +50,7 @@ export function AuthorSlideOne() {
           transition={{ duration: 1.2, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
           className="flex flex-col items-center flex-shrink-1"
         >
-          <h1 className="text-[10px] sm:text-xs tracking-[0.2em] sm:tracking-[0.3em] uppercase text-[#F5EC9B] mb-5 sm:mb-6 font-light drop-shadow-md">
+          <h1 className="text-fluid-label text-fluid-label tracking-[0.2em] sm:tracking-[0.3em] uppercase text-[#F5EC9B] mb-5 sm:mb-6 font-light drop-shadow-md">
             Феникс.Наследие
           </h1>
           

@@ -13,7 +13,7 @@ export function AuthorSlideThree() {
   ];
 
   return (
-    <div className="relative w-full min-h-[100svh] flex flex-col items-center justify-center overflow-hidden font-sans snap-start py-8 sm:py-16 px-4 sm:px-8">
+    <div className="relative w-full min-h-[100svh] flex flex-col items-center justify-center overflow-hidden font-sans snap-start slide-shell py-8 sm:py-16 px-4 sm:px-8">
       
       {/* Background with deep graphite and warm light */}
       <div className="absolute inset-0 z-0 pointer-events-none">
@@ -39,7 +39,7 @@ export function AuthorSlideThree() {
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
           className="text-center max-w-4xl flex-shrink-0 mb-6 sm:mb-10"
         >
-          <h2 className="text-[9px] sm:text-[10px] tracking-[0.2em] sm:tracking-[0.3em] uppercase text-[#F5EC9B] mb-2 sm:mb-4 font-light drop-shadow-md">
+          <h2 className="text-fluid-caption text-fluid-label tracking-[0.2em] sm:tracking-[0.3em] uppercase text-[#F5EC9B] mb-2 sm:mb-4 font-light drop-shadow-md">
             Это не генератор картинок
           </h2>
           <p className="text-sm sm:text-base lg:text-lg font-light leading-relaxed text-[#EAEADF] text-balance mb-0 max-w-3xl mx-auto px-4">
@@ -71,7 +71,7 @@ export function AuthorSlideThree() {
               <div className="flex flex-row md:flex-col gap-3 sm:gap-4 h-full min-h-0">
                 <div className="flex-1 relative rounded-xl overflow-hidden border border-[#2A2621] bg-[#161412] group-hover:border-[#905E26]/30 transition-colors duration-500 min-h-[80px]">
                   <div className="absolute inset-0 bg-[#EAEADF]/5 flex items-center justify-center z-10 pointer-events-none">
-                    <span className="text-[9px] sm:text-[10px] uppercase tracking-widest text-[#A39B92] font-light bg-[#070605]/60 px-2 py-1 rounded backdrop-blur-sm">Скан оригинала</span>
+                    <span className="text-fluid-caption text-fluid-label uppercase tracking-widest text-[#A39B92] font-light bg-[#070605]/60 px-2 py-1 rounded backdrop-blur-sm">Скан оригинала</span>
                   </div>
                   {/* Image Placeholder */}
                   <ImageWithFallback 
@@ -79,7 +79,7 @@ export function AuthorSlideThree() {
                     alt="Original scan placeholder"
                     className="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-luminosity"
                   />
-                  <div className="absolute bottom-2 left-2 flex items-center gap-1 bg-[#070605]/80 backdrop-blur-md px-2 py-1 rounded-full border border-white/5 text-[7px] sm:text-[8px] text-[#A39B92] tracking-wider uppercase z-20">
+                  <div className="absolute bottom-2 left-2 flex items-center gap-1 bg-[#070605]/80 backdrop-blur-md px-2 py-1 rounded-full border border-white/5 text-fluid-micro text-fluid-caption text-[#A39B92] tracking-wider uppercase z-20">
                     <Database className="w-2.5 h-2.5" />
                     <span className="hidden sm:inline">ID_SOURCE:</span> 1042
                   </div>
@@ -87,7 +87,7 @@ export function AuthorSlideThree() {
                 
                 <div className="flex-1 relative rounded-xl overflow-hidden border border-[#2A2621] bg-[#161412] group-hover:border-[#905E26]/40 transition-colors duration-500 min-h-[80px]">
                   <div className="absolute inset-0 bg-[#EAEADF]/5 flex items-center justify-center z-10 pointer-events-none">
-                    <span className="text-[9px] sm:text-[10px] uppercase tracking-widest text-[#EAEADF] font-light bg-[#070605]/60 px-2 py-1 rounded backdrop-blur-sm shadow-[0_0_10px_rgba(144,94,38,0.2)]">Реконструкция</span>
+                    <span className="text-fluid-caption text-fluid-label uppercase tracking-widest text-[#EAEADF] font-light bg-[#070605]/60 px-2 py-1 rounded backdrop-blur-sm shadow-[0_0_10px_rgba(144,94,38,0.2)]">Реконструкция</span>
                   </div>
                   {/* Image Placeholder */}
                   <ImageWithFallback 
@@ -95,7 +95,7 @@ export function AuthorSlideThree() {
                     alt="Reconstruction placeholder"
                     className="absolute inset-0 w-full h-full object-cover opacity-60"
                   />
-                  <div className="absolute bottom-2 left-2 flex items-center gap-1 bg-[#070605]/80 backdrop-blur-md px-2 py-1 rounded-full border border-[#905E26]/30 text-[7px] sm:text-[8px] text-[#EAEADF] tracking-wider uppercase shadow-[0_0_15px_rgba(144,94,38,0.2)] z-20">
+                  <div className="absolute bottom-2 left-2 flex items-center gap-1 bg-[#070605]/80 backdrop-blur-md px-2 py-1 rounded-full border border-[#905E26]/30 text-fluid-micro text-fluid-caption text-[#EAEADF] tracking-wider uppercase shadow-[0_0_15px_rgba(144,94,38,0.2)] z-20">
                     <ImageIcon className="w-2.5 h-2.5 text-[#905E26]" />
                     <span className="hidden sm:inline">Авторская работа</span>
                   </div>
@@ -110,7 +110,7 @@ export function AuthorSlideThree() {
                     <div className="p-1.5 sm:p-2 bg-[#905E26]/20 rounded-lg text-[#F5EC9B]">
                       <ScanSearch className="w-3.5 h-3.5" />
                     </div>
-                    <span className="text-[9px] tracking-widest uppercase text-[#A39B92]">Индекс соответствия</span>
+                    <span className="text-fluid-caption tracking-widest uppercase text-[#A39B92]">Индекс соответствия</span>
                   </div>
                   <div className="text-2xl sm:text-3xl lg:text-4xl font-light text-[#EAEADF] mb-1">
                     94<span className="text-sm sm:text-base text-[#8A837A]">%</span>
@@ -131,18 +131,18 @@ export function AuthorSlideThree() {
                     <div className="p-1.5 sm:p-2 bg-green-500/10 border border-green-500/20 rounded-lg text-green-400">
                       <ShieldCheck className="w-3.5 h-3.5" />
                     </div>
-                    <span className="text-[9px] tracking-widest uppercase text-[#A39B92]">Статус верификации</span>
+                    <span className="text-fluid-caption tracking-widest uppercase text-[#A39B92]">Статус верификации</span>
                   </div>
                   <div className="flex flex-col gap-1.5 sm:gap-2">
-                    <div className="flex justify-between items-center text-[9px] sm:text-[10px]">
+                    <div className="flex justify-between items-center text-fluid-caption text-fluid-label">
                       <span className="text-[#8A837A]">Оценка эксперта</span>
                       <span className="text-[#EAEADF]">Подтверждено</span>
                     </div>
-                    <div className="flex justify-between items-center text-[9px] sm:text-[10px]">
+                    <div className="flex justify-between items-center text-fluid-caption text-fluid-label">
                       <span className="text-[#8A837A]">Качество деталей</span>
                       <span className="text-[#EAEADF]">Высокое</span>
                     </div>
-                    <div className="flex justify-between items-center text-[9px] sm:text-[10px] pt-1.5 sm:pt-2 border-t border-[#2A2621]">
+                    <div className="flex justify-between items-center text-fluid-caption text-fluid-label pt-1.5 sm:pt-2 border-t border-[#2A2621]">
                       <span className="text-[#8A837A]">Права использования</span>
                       <span className="text-[#F5EC9B]">Доступно</span>
                     </div>
@@ -169,7 +169,7 @@ export function AuthorSlideThree() {
                   <div className={`w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full border flex items-center justify-center transition-all duration-500 group-hover:scale-110 ${step.bg} ${step.border}`}>
                     <step.icon className={`w-3.5 h-3.5 sm:w-4 sm:h-4 ${index < 2 ? 'text-[#905E26]' : 'text-[#A39B92] group-hover:text-[#EAEADF]'} transition-colors duration-500`} />
                   </div>
-                  <span className="text-[7px] sm:text-[8px] lg:text-[9px] tracking-widest uppercase text-[#8A837A] font-light group-hover:text-[#EAEADF] transition-colors duration-300">
+                  <span className="text-fluid-micro text-fluid-caption text-fluid-caption tracking-widest uppercase text-[#8A837A] font-light group-hover:text-[#EAEADF] transition-colors duration-300">
                     {step.label}
                   </span>
                 </div>

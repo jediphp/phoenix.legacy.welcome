@@ -17,9 +17,9 @@ export function OrgSlideNine() {
   const isInView = useInView(sceneRef, { once: true, margin: '-50px' });
 
   return (
-    <div className="relative w-full h-[100vh] flex flex-col overflow-hidden font-sans snap-start bg-[#080705]">
+    <div className="relative w-full min-h-[100svh] flex flex-col overflow-hidden font-sans snap-start slide-shell bg-[#080705]">
       {/* Noise */}
-      <svg className="absolute inset-0 pointer-events-none opacity-[0.035] mix-blend-overlay w-full h-[100vh] z-0">
+      <svg className="absolute inset-0 pointer-events-none opacity-[0.035] mix-blend-overlay w-full min-h-[100svh] z-0">
         <filter id="noise_org_9">
           <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves={3} stitchTiles="stitch" />
         </filter>
@@ -32,7 +32,7 @@ export function OrgSlideNine() {
 
       <div
         ref={sceneRef}
-        className="relative z-20 w-full max-w-[90vw] mx-auto h-[100vh] flex flex-col px-[2vw] pt-[8vh] pb-[5vh]"
+        className="relative z-20 w-full max-w-[90vw] mx-auto min-h-[100svh] flex flex-col px-[2vw] pt-[8vh] pb-[5vh]"
       >
         {/* Header */}
         <motion.div

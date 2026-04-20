@@ -40,7 +40,7 @@ export function AuthorSlideTen() {
   const isInView = useInView(sceneRef, { once: true, margin: '-80px' });
 
   return (
-    <div className="relative w-full min-h-[100svh] flex flex-col overflow-hidden font-sans snap-start py-[4vh] lg:py-[6vh] px-4 sm:px-8 lg:px-12 2xl:px-24 bg-[#090807]">
+    <div className="relative w-full min-h-[100svh] flex flex-col overflow-hidden font-sans snap-start slide-shell py-[4vh] lg:py-[6vh] px-4 sm:px-8 lg:px-12 2xl:px-24 bg-[#090807]">
 
       {/* Noise */}
       <svg className="absolute inset-0 pointer-events-none opacity-[0.03] mix-blend-overlay w-full h-full z-0">
@@ -97,7 +97,7 @@ export function AuthorSlideTen() {
 
             {/* Corner label */}
             <div className="absolute top-4 left-4 sm:top-5 sm:left-5 2xl:top-8 2xl:left-8 z-10">
-              <span className="text-[7px] sm:text-[8px] 2xl:text-[10px] uppercase tracking-widest text-[#EAEADF]/30 font-mono">
+              <span className="text-fluid-micro text-fluid-caption text-fluid-label uppercase tracking-widest text-[#EAEADF]/30 font-mono">
                 Профессиональный путь
               </span>
             </div>
@@ -148,14 +148,14 @@ export function AuthorSlideTen() {
                     </div>
                     <div className="min-w-0">
                       <div className="flex items-center gap-2 mb-[1vh]">
-                        <span className="text-[8px] 2xl:text-[10px] font-mono" style={{ color: `${scenario.color}60` }}>
+                        <span className="text-fluid-caption text-fluid-label font-mono" style={{ color: `${scenario.color}60` }}>
                           {scenario.id}
                         </span>
-                        <h3 className="text-[11px] sm:text-xs 2xl:text-base text-[#D5CCC3] uppercase tracking-[0.15em] font-light">
+                        <h3 className="text-fluid-label text-fluid-label 2xl:text-base text-[#D5CCC3] uppercase tracking-[0.15em] font-light">
                           {scenario.title}
                         </h3>
                       </div>
-                      <p className="text-[10px] sm:text-xs 2xl:text-sm text-[#6B645D] font-light leading-relaxed">
+                      <p className="text-fluid-label text-fluid-label 2xl:text-sm text-[#6B645D] font-light leading-relaxed">
                         {scenario.desc}
                       </p>
                     </div>
@@ -174,7 +174,7 @@ export function AuthorSlideTen() {
           className="flex-shrink-0 mt-auto pt-[2vh] flex items-center gap-3 2xl:gap-5 hidden sm:flex"
         >
           <div className="w-[1px] h-4 2xl:h-6 bg-[#D5A86B]/30" />
-          <p className="text-[10px] sm:text-xs 2xl:text-sm text-[#6B645D] font-light tracking-wide">
+          <p className="text-fluid-label text-fluid-label 2xl:text-sm text-[#6B645D] font-light tracking-wide">
             Каждый из сценариев опирается на верифицированный профиль и историю работ внутри платформы
           </p>
         </motion.div>
@@ -183,7 +183,7 @@ export function AuthorSlideTen() {
 
       {/* Progress indicator */}
       <div className="absolute bottom-5 left-6 lg:bottom-[4vh] lg:left-12 flex items-center gap-4 z-20 pointer-events-none hidden sm:flex">
-        <span className="text-[10px] uppercase tracking-widest text-[#A39B92]">10</span>
+        <span className="text-fluid-label uppercase tracking-widest text-[#A39B92]">10</span>
         <div className="w-12 h-[1px] bg-white/10">
           <div className="w-full h-full bg-[#905E26] origin-left" />
         </div>

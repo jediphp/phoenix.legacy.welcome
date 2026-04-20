@@ -20,21 +20,15 @@
   .author-flow {
     --author-scale-up: 1;
   }
+  @media (max-height: 760px) {
+    .author-flow .micro-label,
+    .author-flow .text-fluid-micro {
+      opacity: 0.85;
+    }
 
-  /* Match arbitrary Tailwind classes in the generated `class` string */
-  .author-flow [class*='text-\\[6px\\]'],
-  .author-flow [class*='text-\\[7px\\]'] {
-    font-size: clamp(0.5rem, 0.45rem + 0.2vw, 0.7rem) !important;
-  }
-
-  .author-flow [class*='text-\\[8px\\]'],
-  .author-flow [class*='text-\\[9px\\]'],
-  .author-flow [class*='text-\\[10px\\]'] {
-    font-size: clamp(0.625rem, 0.56rem + 0.22vw, 0.85rem) !important;
-  }
-
-  .author-flow [class*='text-\\[11px\\]'],
-  .author-flow [class*='text-xs'] {
-    font-size: clamp(0.72rem, 0.68rem + 0.16vw, 0.95rem);
+    .author-flow .slide-shell {
+      padding-top: clamp(4rem, 8vh, 5.5rem);
+      padding-bottom: clamp(2.25rem, 4vh, 3.5rem);
+    }
   }
 }

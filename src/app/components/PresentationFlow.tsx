@@ -45,8 +45,8 @@ export function PresentationFlow({ type }: { type: 'author' | 'org' }) {
     mouseY.set(e.clientY / window.innerHeight);
   };
 
-  const spotlightLeft = useTransform(smoothX, [0, 1], ["calc(0% - 400px)", "calc(100% - 400px)"]);
-  const spotlightTop = useTransform(smoothY, [0, 1], ["calc(0% - 400px)", "calc(100% - 400px)"]);
+  const spotlightLeft = useTransform(smoothX, [0, 1], ["calc(0% - (var(--glow-size) / 2))", "calc(100% - (var(--glow-size) / 2))"]);
+  const spotlightTop = useTransform(smoothY, [0, 1], ["calc(0% - (var(--glow-size) / 2))", "calc(100% - (var(--glow-size) / 2))"]);
 
   // ── Shared wrapper props ──
   const sharedWrapper = (
@@ -54,10 +54,10 @@ export function PresentationFlow({ type }: { type: 'author' | 'org' }) {
       {/* Global Mouse Glow */}
       <div className="fixed inset-0 pointer-events-none z-10 overflow-hidden">
         <motion.div
-          className="absolute rounded-full blur-[100px] opacity-85 mix-blend-screen"
+          className="absolute rounded-full blur-[clamp(3.5rem,8vw,6.25rem)] opacity-85 mix-blend-screen"
           style={{
-            width: '800px',
-            height: '800px',
+            width: 'var(--glow-size)',
+            height: 'var(--glow-size)',
             background: 'radial-gradient(circle, rgba(190, 130, 60, 0.25) 0%, rgba(0,0,0,0) 70%)',
             left: spotlightLeft,
             top: spotlightTop,
@@ -74,7 +74,7 @@ export function PresentationFlow({ type }: { type: 'author' | 'org' }) {
           <div className="p-2 rounded-full border border-white/10 group-hover:bg-white/5 transition-colors">
             <ArrowLeft className="w-4 h-4" />
           </div>
-          <span className="uppercase tracking-widest text-[10px]">К выбору сценария</span>
+          <span className="meta-label">К выбору сценария</span>
         </button>
       </header>
     </>

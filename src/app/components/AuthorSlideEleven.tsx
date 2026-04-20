@@ -42,7 +42,7 @@ export function AuthorSlideEleven() {
   const isInView = useInView(sceneRef, { once: true, margin: '-80px' });
 
   return (
-    <div className="relative w-full min-h-[100svh] flex flex-col overflow-hidden font-sans snap-start py-[4vh] lg:py-[6vh] px-4 sm:px-8 lg:px-12 2xl:px-24 bg-[#090807]">
+    <div className="relative w-full min-h-[100svh] flex flex-col overflow-hidden font-sans snap-start slide-shell py-[4vh] lg:py-[6vh] px-4 sm:px-8 lg:px-12 2xl:px-24 bg-[#090807]">
 
       {/* Noise */}
       <svg className="absolute inset-0 pointer-events-none opacity-[0.03] mix-blend-overlay w-full h-full z-0">
@@ -103,7 +103,7 @@ export function AuthorSlideEleven() {
             {/* Corner label */}
             <div className="absolute top-4 left-4 sm:top-5 sm:left-5 z-10 flex items-center gap-2">
               <div className="w-1.5 h-1.5 rounded-full bg-[#D5A86B]/60 animate-pulse" />
-              <span className="text-[7px] sm:text-[8px] 2xl:text-[10px] uppercase tracking-widest text-[#D5A86B]/50 font-mono">
+              <span className="text-fluid-micro text-fluid-caption text-fluid-label uppercase tracking-widest text-[#D5A86B]/50 font-mono">
                 Curated spotlight
               </span>
             </div>
@@ -144,7 +144,7 @@ export function AuthorSlideEleven() {
                 className="flex items-center gap-3"
               >
                 <div className="flex-shrink-0 h-[1px] w-8 bg-[#D5A86B]/40" />
-                <p className="text-xs sm:text-sm 2xl:text-base text-[#A39B92] font-light leading-snug">
+                <p className="text-fluid-label sm:text-sm 2xl:text-base text-[#A39B92] font-light leading-snug">
                   Сильные участники на старте получают
                 </p>
               </motion.div>
@@ -178,10 +178,10 @@ export function AuthorSlideEleven() {
                   {/* Text */}
                   <div className="flex-1 pb-[1.5vh] 2xl:pb-[2vh]">
                     <div className="flex items-center gap-2 mb-1 2xl:mb-2">
-                      <span className="text-[8px] 2xl:text-[10px] font-mono text-[#905E26]/60">{adv.id}</span>
+                      <span className="text-fluid-caption text-fluid-label font-mono text-[#905E26]/60">{adv.id}</span>
                       <h3 className="text-sm sm:text-base 2xl:text-xl text-[#EAEADF] font-light tracking-wide">{adv.title}</h3>
                     </div>
-                    <p className="text-[11px] sm:text-xs 2xl:text-sm text-[#6B645D] font-light leading-relaxed max-w-lg 2xl:max-w-2xl">
+                    <p className="text-fluid-label text-fluid-label 2xl:text-sm text-[#6B645D] font-light leading-relaxed max-w-lg 2xl:max-w-2xl">
                       {adv.desc}
                     </p>
                   </div>
@@ -208,7 +208,7 @@ export function AuthorSlideEleven() {
 
       {/* Progress indicator */}
       <div className="absolute bottom-5 left-6 lg:bottom-[4vh] lg:left-12 flex items-center gap-4 z-20 pointer-events-none hidden sm:flex">
-        <span className="text-[10px] uppercase tracking-widest text-[#A39B92]">11</span>
+        <span className="text-fluid-label uppercase tracking-widest text-[#A39B92]">11</span>
         <div className="w-12 h-[1px] bg-white/10">
           <div className="w-full h-full bg-[#905E26] origin-left" />
         </div>

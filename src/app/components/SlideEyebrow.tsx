@@ -15,7 +15,7 @@ type SlideEyebrowProps = {
 export function SlideEyebrow({ children, toneClassName }: SlideEyebrowProps) {
   return (
     <span
-      className={`pointer-events-auto absolute top-4 right-4 z-[45] max-w-[min(52vw,17rem)] text-right sm:top-8 sm:right-8 lg:top-10 lg:right-10 inline-block rounded-full border px-2.5 py-0.5 text-[8px] font-light tracking-[0.18em] uppercase sm:px-3 sm:text-[9px] 2xl:text-[10px] ${toneClassName}`}
+      className={`pointer-events-auto absolute top-4 right-4 z-[45] max-w-[min(52vw,17rem)] text-right sm:top-8 sm:right-8 lg:top-10 lg:right-10 inline-block rounded-full border px-2.5 py-0.5 meta-label font-light sm:px-3 ${toneClassName}`}
     >
       {children}
     </span>

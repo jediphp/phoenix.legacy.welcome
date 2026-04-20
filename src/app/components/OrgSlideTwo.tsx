@@ -24,10 +24,10 @@ export function OrgSlideTwo() {
   const isInView = useInView(sceneRef, { once: true, margin: '-50px' });
 
   return (
-    <div className="relative w-full h-[100vh] flex flex-col overflow-hidden font-sans snap-start bg-[#090807]">
+    <div className="relative w-full min-h-[100svh] flex flex-col overflow-hidden font-sans snap-start slide-shell bg-[#090807]">
 
       {/* Noise */}
-      <svg className="absolute inset-0 pointer-events-none opacity-[0.03] mix-blend-overlay w-full h-[100vh] z-0">
+      <svg className="absolute inset-0 pointer-events-none opacity-[0.03] mix-blend-overlay w-full min-h-[100svh] z-0">
         <filter id="noise_org_2">
           <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves={3} stitchTiles="stitch" />
         </filter>
@@ -40,7 +40,7 @@ export function OrgSlideTwo() {
 
       <div
         ref={sceneRef}
-        className="relative z-20 w-full max-w-[90vw] mx-auto h-[100vh] flex flex-col lg:flex-row items-stretch px-[2vw] pt-[8vh] pb-[5vh] gap-[4vh] lg:gap-[6vw]"
+        className="relative z-20 w-full max-w-[90vw] mx-auto min-h-[100svh] flex flex-col lg:flex-row items-stretch px-[2vw] pt-[8vh] pb-[5vh] gap-[4vh] lg:gap-[6vw]"
       >
 
         {/* ── LEFT: Text block ── */}
