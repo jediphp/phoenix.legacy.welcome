@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { Database, Image as ImageIcon, ScanSearch, CheckCircle2, ShieldCheck, DownloadCloud } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import { SlideFooter } from './SlideFooter';
 
 export function AuthorSlideThree() {
   const flowSteps = [
@@ -13,7 +14,7 @@ export function AuthorSlideThree() {
   ];
 
   return (
-    <div className="relative w-full min-h-[100svh] flex flex-col items-center justify-center overflow-hidden font-sans snap-start py-8 sm:py-16 px-4 sm:px-8">
+    <div className="relative w-full min-h-[100svh] flex flex-col items-center justify-center overflow-hidden font-sans snap-start px-4 py-8 pb-20 sm:px-8 sm:py-14 sm:pb-24">
       
       {/* Background with deep graphite and warm light */}
       <div className="absolute inset-0 z-0 pointer-events-none">
@@ -29,7 +30,7 @@ export function AuthorSlideThree() {
         <rect width="100%" height="100%" filter="url(#noise_slide_3)" />
       </svg>
 
-      <div className="relative z-20 w-full max-w-6xl mx-auto flex flex-col items-center justify-center h-full min-h-0">
+      <div className="relative z-20 mx-auto flex h-full min-h-0 w-full max-w-7xl flex-col items-center justify-center">
         
         {/* Header Block */}
         <motion.div
@@ -37,12 +38,12 @@ export function AuthorSlideThree() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-          className="text-center max-w-4xl flex-shrink-0 mb-6 sm:mb-10"
+          className="mb-6 max-w-5xl flex-shrink-0 text-center sm:mb-8"
         >
-          <h2 className="text-[9px] sm:text-[10px] tracking-[0.2em] sm:tracking-[0.3em] uppercase text-[#F5EC9B] mb-2 sm:mb-4 font-light drop-shadow-md">
+          <h2 className="mb-2 text-xs font-light uppercase tracking-[0.18em] text-[#F5EC9B] drop-shadow-md sm:mb-3 sm:text-sm sm:tracking-[0.24em]">
             Это не генератор картинок
           </h2>
-          <p className="text-sm sm:text-base lg:text-lg font-light leading-relaxed text-[#EAEADF] text-balance mb-0 max-w-3xl mx-auto px-4">
+          <p className="mx-auto mb-0 max-w-4xl px-2 text-base font-light leading-relaxed text-[#EAEADF] text-balance sm:px-4 sm:text-lg lg:text-xl">
             Феникс.Наследие — это платформа для публикации исторических реконструкций, привязки результата к оригиналу и контексту, оценки качества и соответствия источнику, верификации сильных работ и контролируемого использования.
           </p>
         </motion.div>
@@ -53,10 +54,10 @@ export function AuthorSlideThree() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1.4, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          className="w-full relative flex flex-col items-center flex-1 min-h-0 justify-center mb-6 sm:mb-10"
+          className="mb-6 flex min-h-0 w-full flex-1 flex-col items-center justify-center sm:mb-8"
         >
           {/* Mockup Container for Platform Logic - Hybrid Layout */}
-          <div className="w-full max-w-5xl h-full max-h-[460px] bg-gradient-to-br from-[#12100E] to-[#0A0908] rounded-2xl sm:rounded-[32px] p-4 sm:p-6 lg:p-8 border border-[#2A2621]/50 shadow-2xl relative overflow-hidden backdrop-blur-xl group flex flex-col justify-center min-h-0">
+          <div className="relative flex h-full min-h-0 w-full max-w-6xl flex-col justify-center overflow-hidden rounded-2xl border border-[#2A2621]/50 bg-gradient-to-br from-[#12100E] to-[#0A0908] p-4 shadow-2xl backdrop-blur-xl group max-h-[540px] sm:rounded-[32px] sm:p-6 lg:p-8">
             
             {/* Inner Glow */}
             <div className="absolute top-0 left-1/4 right-1/4 h-[1px] bg-gradient-to-r from-transparent via-[#905E26]/50 to-transparent opacity-50" />
@@ -169,7 +170,7 @@ export function AuthorSlideThree() {
                   <div className={`w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full border flex items-center justify-center transition-all duration-500 group-hover:scale-110 ${step.bg} ${step.border}`}>
                     <step.icon className={`w-3.5 h-3.5 sm:w-4 sm:h-4 ${index < 2 ? 'text-[#905E26]' : 'text-[#A39B92] group-hover:text-[#EAEADF]'} transition-colors duration-500`} />
                   </div>
-                  <span className="text-[7px] sm:text-[8px] lg:text-[9px] tracking-widest uppercase text-[#8A837A] font-light group-hover:text-[#EAEADF] transition-colors duration-300">
+                  <span className="text-[9px] sm:text-[10px] lg:text-[11px] tracking-widest uppercase text-[#8A837A] font-light group-hover:text-[#EAEADF] transition-colors duration-300">
                     {step.label}
                   </span>
                 </div>
@@ -182,6 +183,7 @@ export function AuthorSlideThree() {
         </motion.div>
 
       </div>
+      <SlideFooter step="03" />
     </div>
   );
 }

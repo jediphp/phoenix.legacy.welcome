@@ -1,8 +1,9 @@
 import { motion, useInView } from 'motion/react';
 import { useRef, useState, useEffect } from 'react';
-import { ArrowDown, MessageSquare, Layers, Zap, BarChart3 } from 'lucide-react';
+import { MessageSquare, Layers, Zap, BarChart3 } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { SlideEyebrow } from './SlideEyebrow';
+import { SlideFooter } from './SlideFooter';
 
 const FEEDBACK_TYPES = [
   {
@@ -87,7 +88,7 @@ export function AuthorSlideSeven() {
   }, [isInView]);
 
   return (
-    <div className="relative w-full min-h-[100svh] flex flex-col items-center justify-center overflow-hidden font-sans snap-start py-6 sm:py-10 lg:py-14 px-4 sm:px-8 lg:px-12 2xl:px-24">
+    <div className="relative w-full min-h-[100svh] flex flex-col items-center justify-center overflow-hidden px-4 py-6 pb-20 font-sans snap-start sm:px-8 sm:py-10 sm:pb-24 lg:px-12 lg:py-14 2xl:px-24">
       {/* Noise filter */}
       <svg className="absolute inset-0 pointer-events-none opacity-[0.03] mix-blend-overlay w-full h-full z-0">
         <filter id="noise_slide_7">
@@ -101,7 +102,7 @@ export function AuthorSlideSeven() {
 
       <SlideEyebrow toneClassName="border-[#905E26]/30 text-[#A39B92] bg-[#905E26]/5">Инструмент роста</SlideEyebrow>
 
-      <div className="relative z-20 w-full max-w-[1500px] 2xl:max-w-[2300px] mx-auto flex flex-col h-full min-h-0 pt-[6vh] sm:pt-[5vh] pb-[3vh]">
+      <div className="relative z-20 mx-auto flex h-full min-h-0 w-full max-w-[1500px] flex-col pt-[6vh] pb-[11vh] sm:pt-[5vh] sm:pb-[12vh] 2xl:max-w-[2300px]">
 
         {/* ── Top: Label + Title ── */}
         <motion.div
@@ -357,31 +358,8 @@ export function AuthorSlideSeven() {
           </p>
         </motion.div>
 
-        {/* Progress indicator */}
-        <div className="absolute bottom-5 left-6 lg:bottom-8 lg:left-12 flex items-center gap-4 z-20 pointer-events-none hidden sm:flex">
-          <span className="text-[10px] uppercase tracking-widest text-[#A39B92]">07</span>
-          <div className="w-12 h-[1px] bg-white/10">
-            <div className="w-full h-full bg-[#905E26] origin-left" />
-          </div>
-        </div>
-
-        {/* Scroll hint */}
-        <motion.div
-          className="absolute bottom-5 right-6 lg:bottom-8 lg:right-12 z-20 flex flex-col items-center justify-center opacity-60 pointer-events-none hidden sm:flex"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <motion.div
-            animate={{ y: [0, 5, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-            className="p-2 lg:p-3 rounded-full border border-white/10 bg-white/5 text-[#EAEADF]"
-          >
-            <ArrowDown className="w-3 h-3 lg:w-4 lg:h-4" strokeWidth={1.5} />
-          </motion.div>
-        </motion.div>
-
       </div>
+      <SlideFooter step="07" />
     </div>
   );
 }
