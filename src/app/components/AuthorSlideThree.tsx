@@ -43,7 +43,7 @@ export function AuthorSlideThree() {
           <h2 className="text-fluid-caption text-fluid-label tracking-[0.2em] sm:tracking-[0.3em] uppercase text-[#F5EC9B] mb-2 sm:mb-4 font-light drop-shadow-md">
             Это не генератор картинок
           </h2>
-          <p className="mx-auto mb-0 max-w-4xl px-2 text-base font-light leading-relaxed text-[#EAEADF] text-balance sm:px-4 sm:text-lg lg:text-xl">
+          <p className="mx-auto mb-0 max-w-4xl px-2 text-base font-light leading-relaxed text-[#EAEADF] text-balance sm:px-4 sm:text-lg lg:text-xl 2xl:text-[1.35rem]">
             Феникс.Наследие — это платформа для публикации исторических реконструкций, привязки результата к оригиналу и контексту, оценки качества и соответствия источнику, верификации сильных работ и контролируемого использования.
           </p>
         </motion.div>

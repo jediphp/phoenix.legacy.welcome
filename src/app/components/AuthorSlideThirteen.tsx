@@ -66,7 +66,7 @@ export function AuthorSlideThirteen() {
 
       <div
         ref={sceneRef}
-        className="relative z-20 w-full max-w-[1500px] 2xl:max-w-[2400px] mx-auto flex flex-col h-full min-h-0 pt-[2vh] lg:pt-[4vh]"
+        className="relative z-20 w-full max-w-[1400px] 2xl:max-w-[2000px] mx-auto flex flex-col h-full min-h-0 pt-[2vh] lg:pt-[4vh]"
       >
 
         {/* Header */}
@@ -104,7 +104,7 @@ export function AuthorSlideThirteen() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
                 transition={{ duration: 0.9, delay: 0.4 + index * 0.2, ease: [0.16, 1, 0.3, 1] }}
-                className="flex items-start gap-4 2xl:gap-6 group pb-[2.5vh] 2xl:pb-[3vh]"
+                className="flex items-start gap-4 2xl:gap-6 group pb-[2.5vh] 2xl:pb-[3vh] px-2 py-1.5 rounded-lg"
               >
                 {/* Node */}
                 <div className="flex-shrink-0 relative mt-1">
@@ -124,8 +124,8 @@ export function AuthorSlideThirteen() {
                     transition={{ duration: 2, delay: 0.5 + index * 0.2, ease: 'easeInOut' }}
                   >
                     <span
-                      className="text-fluid-caption text-fluid-caption text-fluid-label font-mono"
-                      style={{ color: phase.isActive ? '#D5A86B' : '#3A3530' }}
+                      className="text-sm sm:text-base 2xl:text-[1.15rem] font-mono"
+                      style={{ color: phase.isActive ? '#D5A86B' : '#6B645D' }}
                     >
                       {phase.id}
                     </span>
@@ -136,8 +136,8 @@ export function AuthorSlideThirteen() {
                 <div className="flex-1 pt-0.5 2xl:pt-1">
                   <div className="flex items-center gap-3 mb-1 2xl:mb-2">
                     <h3
-                      className="text-sm sm:text-base 2xl:text-xl font-light tracking-wide"
-                      style={{ color: phase.isActive ? '#EAEADF' : '#4A4540' }}
+                      className="text-base sm:text-lg 2xl:text-[1.5rem] font-light tracking-wide"
+                      style={{ color: phase.isActive ? '#EAEADF' : '#A39B92' }}
                     >
                       {phase.title}
                     </h3>
@@ -156,8 +156,8 @@ export function AuthorSlideThirteen() {
                     )}
                   </div>
                   <p
-                    className="text-fluid-label text-fluid-label 2xl:text-sm font-light leading-relaxed max-w-lg 2xl:max-w-2xl"
-                    style={{ color: phase.isActive ? '#6B645D' : '#2A2520' }}
+                    className="text-sm sm:text-base 2xl:text-[1.12rem] font-light leading-relaxed max-w-lg 2xl:max-w-2xl"
+                    style={{ color: phase.isActive ? '#8A837A' : '#6B645D' }}
                   >
                     {phase.desc}
                   </p>
@@ -182,8 +182,8 @@ export function AuthorSlideThirteen() {
             <div className="absolute inset-0 bg-gradient-to-l from-transparent to-[#090807]/60 pointer-events-none" />
 
             {/* Top label */}
-            <div className="absolute top-5 left-5 2xl:top-8 2xl:left-8 z-10">
-              <span className="text-fluid-micro text-fluid-caption text-fluid-label uppercase tracking-widest text-[#EAEADF]/25 font-mono">
+            <div className="absolute top-5 left-5 2xl:top-8 2xl:left-8 z-10 px-2.5 py-1.5 rounded-md bg-[#090807]/45 backdrop-blur-sm border border-white/[0.08]">
+              <span className="text-sm sm:text-base 2xl:text-[1.08rem] uppercase tracking-widest text-[#EAEADF]/85 font-mono">
                 Старт
               </span>
             </div>
@@ -212,7 +212,7 @@ export function AuthorSlideThirteen() {
                 initial={{ opacity: 0, y: 8 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 8 }}
                 transition={{ duration: 1, delay: 1.8, ease: [0.16, 1, 0.3, 1] }}
-                className="text-fluid-label sm:text-sm 2xl:text-base text-[#8A837A] font-light leading-relaxed"
+                className="text-sm sm:text-base 2xl:text-[1.1rem] text-[#D5CCC3] font-light leading-relaxed px-3 py-2 rounded-md bg-[#090807]/40 backdrop-blur-sm border border-white/[0.06]"
               >
                 На этом этапе особенно важны{' '}
                 <span className="text-[#D5CCC3]">те, кто входит в момент формирования</span>

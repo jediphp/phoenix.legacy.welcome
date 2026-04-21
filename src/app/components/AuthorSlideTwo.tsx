@@ -16,13 +16,6 @@ export function AuthorSlideTwo() {
     >
       {/* Background base and noise */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#12100D]/40 via-[#0A0907]/40 to-[#040403]/40 z-0" />
-      <div className="absolute inset-0 pointer-events-none opacity-[0.05] mix-blend-screen z-0" 
-           style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }}>
-      </div>
-
-      {/* Subtle warm glow around the media area (right side) */}
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1/2 h-3/4 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#905E26]/10 via-transparent to-transparent blur-[120px] pointer-events-none z-0" />
-
       <SlideEyebrow toneClassName="border-[#905E26]/30 text-[#F5EC9B] bg-[#905E26]/10">Проблема</SlideEyebrow>
 
       {/* Grid Layout: Left Text (35-40%), Right Media (60-65%) */}

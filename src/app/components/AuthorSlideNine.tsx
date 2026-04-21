@@ -57,7 +57,7 @@ export function AuthorSlideNine() {
 
       <SlideEyebrow toneClassName="border-[#D5A86B]/30 text-[#D5A86B] bg-[#D5A86B]/5">Личная ценность</SlideEyebrow>
 
-      <div className="relative z-20 w-full max-w-[90vw] mx-auto flex flex-col min-h-[100svh] pt-[8vh] pb-[5vh]" ref={sceneRef}>
+      <div className="relative z-20 w-full max-w-[1400px] 2xl:max-w-[2000px] mx-auto px-6 sm:px-10 lg:px-16 flex flex-col min-h-[100svh] pt-[8vh] pb-[5vh]" ref={sceneRef}>
 
         {/* ── Header ── */}
         <motion.div

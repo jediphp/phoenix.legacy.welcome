@@ -66,7 +66,7 @@ export function AuthorSlideEleven() {
 
       <div
         ref={sceneRef}
-        className="relative z-20 w-full max-w-[1500px] 2xl:max-w-[2400px] mx-auto flex flex-col h-full min-h-0 pt-[2vh] lg:pt-[4vh]"
+        className="relative z-20 w-full max-w-[1400px] 2xl:max-w-[2000px] mx-auto flex flex-col h-full min-h-0 pt-[2vh] lg:pt-[4vh]"
       >
 
         {/* Header */}
@@ -83,14 +83,14 @@ export function AuthorSlideEleven() {
         </motion.div>
 
         {/* Content: left image + right list */}
-        <div className="flex-1 min-h-0 flex flex-col lg:flex-row gap-[3vh] lg:gap-[5vw] 2xl:gap-[6vw]">
+        <div className="flex-1 min-h-0 flex flex-col lg:flex-row gap-[3vh] lg:gap-[2vw] 2xl:gap-[3vw]">
 
           {/* Left: curated visual */}
           <motion.div
             initial={{ opacity: 0, scale: 0.96 }}
             animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.96 }}
             transition={{ duration: 1.6, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-            className="lg:w-[40%] 2xl:w-[38%] flex-shrink-0 relative rounded-2xl sm:rounded-3xl 2xl:rounded-[2.5rem] overflow-hidden border border-[#D5A86B]/10 shadow-[0_0_60px_rgba(0,0,0,0.9),0_0_80px_rgba(213,168,107,0.04)]"
+            className="lg:basis-[30%] 2xl:basis-[28%] lg:w-[30%] 2xl:w-[28%] flex-shrink-0 relative rounded-2xl sm:rounded-3xl 2xl:rounded-[2.5rem] overflow-hidden border border-[#D5A86B]/10 shadow-[0_0_60px_rgba(0,0,0,0.9),0_0_80px_rgba(213,168,107,0.04)]"
             style={{ minHeight: '200px' }}
           >
             <ImageWithFallback
@@ -153,7 +153,7 @@ export function AuthorSlideEleven() {
           </motion.div>
 
           {/* Right: advantage list */}
-          <div className="flex-1 min-h-0 flex flex-col gap-[2vh] sm:gap-[2.5vh] 2xl:gap-[3vh] pb-[10vh] lg:pb-0 overflow-y-auto lg:overflow-visible">
+          <div className="flex-1 lg:basis-[70%] 2xl:basis-[72%] lg:w-[70%] 2xl:w-[72%] min-h-0 flex flex-col gap-[2vh] sm:gap-[2.5vh] 2xl:gap-[3vh] pb-[10vh] lg:pb-0 overflow-y-auto lg:overflow-visible">
             {ADVANTAGES.map((adv, index) => {
               const Icon = adv.icon;
               return (
@@ -177,12 +177,12 @@ export function AuthorSlideEleven() {
                   </div>
 
                   {/* Text */}
-                  <div className="flex-1 pb-[1.5vh] 2xl:pb-[2vh]">
+                  <div className="flex-1 w-full pb-[1.5vh] 2xl:pb-[2vh]">
                     <div className="flex items-center gap-2 mb-1 2xl:mb-2">
-                      <span className="text-fluid-caption text-fluid-label font-mono text-[#905E26]/60">{adv.id}</span>
-                      <h3 className="text-sm sm:text-base 2xl:text-xl text-[#EAEADF] font-light tracking-wide">{adv.title}</h3>
+                      <span className="text-sm sm:text-base 2xl:text-[1.35rem] font-mono text-[#905E26]/60">{adv.id}</span>
+                      <h3 className="text-base sm:text-lg 2xl:text-[1.55rem] text-[#EAEADF] font-light tracking-wide">{adv.title}</h3>
                     </div>
-                    <p className="text-fluid-label text-fluid-label 2xl:text-sm text-[#6B645D] font-light leading-relaxed max-w-lg 2xl:max-w-2xl">
+                    <p className="text-sm sm:text-base 2xl:text-[1.15rem] text-[#6B645D] font-light leading-relaxed w-full">
                       {adv.desc}
                     </p>
                   </div>

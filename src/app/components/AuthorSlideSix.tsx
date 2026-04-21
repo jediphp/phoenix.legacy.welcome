@@ -19,7 +19,7 @@ const SIGNALS = [
     id: 2,
     title: "Экспертный вклад",
     icon: CheckCircle,
-    align: "top-[15%] right-0 translate-x-full ml-[2vw]",
+    align: "top-[15%] right-[-16vw]",
     color: "#F5EC9B",
     bg: "bg-[#F5EC9B]/15",
     borderHover: "hover:border-[#F5EC9B]/40"
@@ -37,7 +37,7 @@ const SIGNALS = [
     id: 4,
     title: "Проблемные зоны",
     icon: ShieldAlert,
-    align: "bottom-[20%] right-0 translate-x-full ml-[2vw]",
+    align: "bottom-[20%] right-[-16vw]",
     color: "#905E26",
     bg: "bg-[#905E26]/20",
     borderHover: "hover:border-[#905E26]/40"
@@ -69,7 +69,7 @@ export function AuthorSlideSix() {
 
       <SlideEyebrow toneClassName="border-[#905E26]/30 text-[#A39B92] bg-[#905E26]/5">Индекс соответствия</SlideEyebrow>
 
-      <div ref={sceneRef} className="relative z-20 mx-auto flex h-full w-full max-w-[90vw] flex-col pt-[8vh] pb-[6vh]">
+      <div ref={sceneRef} className="relative z-20 mx-auto flex h-full w-full max-w-[1400px] 2xl:max-w-[2000px] flex-col pt-[8vh] pb-[6vh]">
         
         {/* Top Header */}
         <motion.div
@@ -125,9 +125,9 @@ export function AuthorSlideSix() {
                   <span className="text-[clamp(18px,2.5vh,32px)] font-light text-[#EAEADF]">94</span>
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-[#F5EC9B] text-[clamp(10px,1.2vh,14px)] uppercase tracking-widest font-mono mb-[0.5vh]">Match Index</span>
+                  <span className="text-[#F5EC9B] text-[clamp(10px,1.2vh,14px)] uppercase tracking-widest font-mono mb-[0.5vh]">Индекс соответствия</span>
                   <span className="text-[#8A837A] text-[clamp(10px,1.2vh,14px)] font-light leading-snug max-w-[12vw] text-balance">
-                    Высокое подтвержденное соответствие
+                    Высокое качество работы
                   </span>
                 </div>
               </div>

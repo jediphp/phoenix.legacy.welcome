@@ -82,7 +82,7 @@ export function AuthorSlideFourteen() {
         {/* Main content — vertically centered with slight upward bias */}
         <div className="flex-1 flex flex-col justify-center px-4 sm:px-8 lg:px-12 2xl:px-24 pt-[10vh]">
 
-          <div className="w-full max-w-[1500px] 2xl:max-w-[2400px] mx-auto">
+          <div className="w-full max-w-[1400px] 2xl:max-w-[2000px] mx-auto">
 
             {/* Main headline */}
             <motion.h2
@@ -205,7 +205,7 @@ export function AuthorSlideFourteen() {
           transition={{ duration: 1.5, delay: 1.4, ease: 'easeOut' }}
           className="flex-shrink-0 px-4 sm:px-8 lg:px-12 2xl:px-24 py-[3vh] sm:py-[4vh] border-t border-white/[0.04]"
         >
-          <div className="w-full max-w-[1500px] 2xl:max-w-[2400px] mx-auto flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3">
+          <div className="w-full max-w-[1400px] 2xl:max-w-[2000px] mx-auto flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3">
             <p className="text-fluid-label sm:text-sm 2xl:text-base text-[#4A4540] font-light leading-relaxed max-w-2xl 2xl:max-w-3xl">
               Феникс.Наследие — это место, где историческая реконструкция может стать{' '}
               не разрозненным экспериментом, а{' '}

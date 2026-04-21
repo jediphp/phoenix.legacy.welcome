@@ -55,7 +55,7 @@ export function AuthorSlideEight() {
         Инструмент доработки
       </SlideEyebrow>
 
-      <div className="relative z-20 w-full max-w-[1500px] 2xl:max-w-[2400px] mx-auto flex flex-col h-full min-h-0 pt-[4vh] sm:pt-[5vh]">
+      <div className="relative z-20 w-full max-w-[1400px] 2xl:max-w-[2000px] mx-auto flex flex-col h-full min-h-0 pt-[4vh] sm:pt-[5vh]">
 
         {/* ── Header ── */}
         <motion.div
@@ -95,13 +95,13 @@ export function AuthorSlideEight() {
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
           className="flex-1 min-h-0 relative rounded-2xl sm:rounded-3xl 2xl:rounded-[2.5rem] border border-[#2A2621]/60 overflow-hidden shadow-[0_0_80px_rgba(0,0,0,0.95)] bg-[#0A0908]"
-          style={{ minHeight: 'min(42svh, 520px)' }}
+          style={{ minHeight: 'min(60svh, 620px)' }}
         >
           {/* Base image */}
           <ImageWithFallback
             src="/images/author-flow/slide-08/review-session-painting.jpg"
             alt="Work in review session"
-            className="absolute inset-0 w-full h-full object-cover object-bottom opacity-80"
+            className="absolute inset-0 w-full h-full object-cover object-[50%_80%] opacity-80"
           />
 
           {/* Vignette layers */}
@@ -129,7 +129,7 @@ export function AuthorSlideEight() {
           ))}
 
           {/* ── Primary annotation pin — upper-left ── */}
-          <div className="absolute z-30" style={{ left: '20%', top: '28%', transform: 'translate(-50%, -50%)' }}>
+          <div className="absolute z-30" style={{ left: '18%', top: '60%', transform: 'translate(-50%, -50%)' }}>
             {/* Pulsing ring */}
             <motion.div
               className="absolute rounded-full border border-[#D5A86B]/50"
@@ -152,9 +152,9 @@ export function AuthorSlideEight() {
 
             {/* Comment card — floats right */}
             <motion.div
-              className="absolute top-1/2 left-full ml-3 sm:ml-5 2xl:ml-7 -translate-y-1/2 w-[170px] sm:w-[220px] lg:w-[255px] 2xl:w-[360px] pointer-events-none"
-              initial={{ opacity: 0, x: -12 }}
-              animate={showComment ? { opacity: 1, x: 0 } : {}}
+              className="absolute top-1/2 left-full ml-2 sm:ml-4 2xl:ml-6 -translate-y-1/2 w-[170px] sm:w-[220px] lg:w-[255px] 2xl:w-[360px] pointer-events-none"
+              initial={{ opacity: 0 }}
+              animate={showComment ? { opacity: 1 } : { opacity: 0 }}
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             >
               <div className="absolute right-full top-1/2 w-3 sm:w-5 h-[1px] bg-[#D5A86B]/35" />

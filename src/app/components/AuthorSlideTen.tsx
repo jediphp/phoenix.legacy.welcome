@@ -16,7 +16,7 @@ const MONETIZATION_SCENARIOS = [
   {
     id: '02',
     icon: Handshake,
-    title: 'Институциональное сотрудничество',
+    title: 'Сотрудничество',
     desc: 'Совместные проекты с архивами, культурными фондами и исследовательскими организациями.',
     color: '#A39B92',
   },
@@ -61,7 +61,7 @@ export function AuthorSlideTen() {
 
       <div
         ref={sceneRef}
-        className="relative z-20 w-full max-w-[1500px] 2xl:max-w-[2400px] mx-auto flex flex-col h-full min-h-0 pt-[2vh] lg:pt-[4vh]"
+        className="relative z-20 w-full max-w-[1400px] 2xl:max-w-[2000px] mx-auto flex flex-col h-full min-h-0 pt-[2vh] lg:pt-[3vh]"
       >
 
         {/* Header */}
@@ -69,7 +69,7 @@ export function AuthorSlideTen() {
           initial={{ opacity: 0, y: 24 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-          className="flex-shrink-0 mb-[4vh] lg:mb-[5vh]"
+          className="flex-shrink-0 mb-[3vh] lg:mb-[4vh]"
         >
           <h2 className="pr-36 text-2xl sm:pr-44 sm:text-3xl lg:pr-52 lg:text-[clamp(1.85rem,3vw,2.75rem)] 2xl:text-[3.25rem] font-light leading-[1.12] text-[#EAEADF] tracking-tight text-balance max-w-3xl 2xl:max-w-5xl">
             Платформа открывает{' '}
@@ -78,15 +78,15 @@ export function AuthorSlideTen() {
         </motion.div>
 
         {/* Two-column layout */}
-        <div className="flex-1 min-h-0 flex flex-col lg:flex-row gap-[3vh] lg:gap-[4vw] 2xl:gap-[5vw]">
+        <div className="flex-1 min-h-0 flex flex-col lg:flex-row gap-[2.5vh] lg:gap-[2.8vw] 2xl:gap-[3.5vw]">
 
           {/* Left: image */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
             transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-            className="lg:w-[42%] 2xl:w-[38%] flex-shrink-0 relative rounded-2xl sm:rounded-3xl 2xl:rounded-[2.5rem] overflow-hidden border border-[#2A2621]/60 shadow-[0_0_60px_rgba(0,0,0,0.9)]"
-            style={{ minHeight: '220px' }}
+            className="lg:w-[46%] 2xl:w-[42%] flex-shrink-0 relative rounded-2xl sm:rounded-3xl 2xl:rounded-[2.5rem] overflow-hidden border border-[#2A2621]/60 shadow-[0_0_60px_rgba(0,0,0,0.9)]"
+            style={{ minHeight: '280px' }}
           >
             <ImageWithFallback
               src="/images/author-flow/slide-10/curator-gallery-premium.jpg"
@@ -119,7 +119,7 @@ export function AuthorSlideTen() {
           </motion.div>
 
           {/* Right: scenario cards */}
-          <div className="flex-1 min-h-0 grid grid-cols-1 sm:grid-cols-2 gap-[2vh] sm:gap-[2.5vh] 2xl:gap-[3vh] content-start pb-[10vh] lg:pb-0">
+          <div className="flex-1 min-h-0 grid grid-cols-1 sm:grid-cols-2 gap-[1.6vh] sm:gap-[2vh] 2xl:gap-[2.4vh] content-stretch pb-[8vh] lg:pb-0">
             {MONETIZATION_SCENARIOS.map((scenario, index) => {
               const Icon = scenario.icon;
               return (
@@ -128,7 +128,7 @@ export function AuthorSlideTen() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                   transition={{ duration: 0.9, delay: 0.4 + index * 0.15, ease: [0.16, 1, 0.3, 1] }}
-                  className="relative p-4 sm:p-5 2xl:p-8 rounded-xl sm:rounded-2xl 2xl:rounded-3xl bg-[#0D0B09]/70 backdrop-blur-sm border border-white/[0.05] hover:border-white/[0.1] transition-colors duration-500 group overflow-hidden"
+                  className="relative p-5 sm:p-6 2xl:p-9 rounded-xl sm:rounded-2xl 2xl:rounded-3xl bg-[#0D0B09]/70 backdrop-blur-sm border border-white/[0.05] hover:border-white/[0.1] transition-colors duration-500 group overflow-hidden"
                 >
                   {/* Subtle hover glow */}
                   <div
@@ -136,9 +136,10 @@ export function AuthorSlideTen() {
                     style={{ background: `radial-gradient(circle, ${scenario.color}15 0%, transparent 70%)` }}
                   />
 
-                  <div className="flex items-start gap-3 2xl:gap-5 relative z-10">
+                  <div className="relative z-10">
+                    <div className="flex items-center gap-3 2xl:gap-5">
                     <div
-                      className="flex-shrink-0 p-2 2xl:p-3 rounded-lg border mt-0.5"
+                      className="flex-shrink-0 p-2 2xl:p-3 rounded-lg border"
                       style={{
                         color: scenario.color,
                         borderColor: `${scenario.color}30`,
@@ -147,19 +148,20 @@ export function AuthorSlideTen() {
                     >
                       <Icon className="w-3.5 h-3.5 sm:w-4 sm:h-4 2xl:w-6 2xl:h-6" strokeWidth={1.5} />
                     </div>
-                    <div className="min-w-0">
-                      <div className="flex items-center gap-2 mb-[1vh]">
+                    <div className="min-w-0 flex items-center">
+                      <div className="flex items-center gap-2">
                         <span className="text-fluid-caption text-fluid-label font-mono" style={{ color: `${scenario.color}60` }}>
                           {scenario.id}
                         </span>
-                        <h3 className="text-fluid-label text-fluid-label 2xl:text-base text-[#D5CCC3] uppercase tracking-[0.15em] font-light">
+                        <h3 className="text-xs sm:text-sm lg:text-[0.92rem] 2xl:text-[1.1rem] text-[#D5CCC3] uppercase tracking-[0.1em] font-light leading-tight whitespace-nowrap">
                           {scenario.title}
                         </h3>
                       </div>
-                      <p className="text-fluid-label text-fluid-label 2xl:text-sm text-[#6B645D] font-light leading-relaxed">
-                        {scenario.desc}
-                      </p>
                     </div>
+                    </div>
+                    <p className="mt-3 text-sm sm:text-[0.95rem] lg:text-[1rem] 2xl:text-[1.25rem] text-[#8A837A] font-light leading-relaxed">
+                      {scenario.desc}
+                    </p>
                   </div>
                 </motion.div>
               );
@@ -175,7 +177,7 @@ export function AuthorSlideTen() {
           className="flex-shrink-0 mt-auto pt-[2vh] flex items-center gap-3 2xl:gap-5 hidden sm:flex"
         >
           <div className="w-[1px] h-4 2xl:h-6 bg-[#D5A86B]/30" />
-          <p className="text-fluid-label text-fluid-label 2xl:text-sm text-[#6B645D] font-light tracking-wide">
+          <p className="text-sm sm:text-base lg:text-[1.05rem] 2xl:text-[1.3rem] text-[#6B645D] font-light tracking-wide">
             Каждый из сценариев опирается на верифицированный профиль и историю работ внутри платформы
           </p>
         </motion.div>

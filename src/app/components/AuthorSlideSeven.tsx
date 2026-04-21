@@ -44,18 +44,18 @@ const FEEDBACK_TYPES = [
 const MARKERS = [
   {
     id: 1,
-    x: '28%',
-    y: '32%',
+    x: '16%',
+    y: '46%',
     severity: 'high',
-    comment: 'Детализация фактуры ткани не соответствует стилю эпохи — слишком гладко.',
+    comment: 'Яхты выглядят слишком современными.',
     commentPos: 'right',
   },
   {
     id: 2,
-    x: '62%',
-    y: '58%',
+    x: '52%',
+    y: '14%',
     severity: 'medium',
-    comment: 'Источник света не согласован с остальными элементами композиции.',
+    comment: 'Дорисована лишняя береговая линия.',
     commentPos: 'left',
   },
 ];
@@ -102,7 +102,7 @@ export function AuthorSlideSeven() {
 
       <SlideEyebrow toneClassName="border-[#905E26]/30 text-[#A39B92] bg-[#905E26]/5">Инструмент роста</SlideEyebrow>
 
-      <div className="relative z-20 mx-auto flex h-full min-h-0 w-full max-w-[1500px] flex-col pt-[6vh] pb-[11vh] sm:pt-[5vh] sm:pb-[12vh] 2xl:max-w-[2300px]">
+      <div className="relative z-20 mx-auto flex h-full min-h-0 w-full max-w-[1400px] 2xl:max-w-[2000px] flex-col pt-[6vh] pb-[11vh] sm:pt-[5vh] sm:pb-[12vh]">
 
         {/* ── Top: Label + Title ── */}
         <motion.div

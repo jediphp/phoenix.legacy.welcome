@@ -56,7 +56,7 @@ export function AuthorSlideTwelve() {
 
       <div
         ref={sceneRef}
-        className="relative z-20 w-full max-w-[1500px] 2xl:max-w-[2400px] mx-auto flex flex-col h-full min-h-0 pt-[2vh] lg:pt-[4vh]"
+        className="relative z-20 w-full max-w-[1400px] 2xl:max-w-[2000px] mx-auto flex flex-col h-full min-h-0 pt-[2vh] lg:pt-[4vh]"
       >
 
         {/* Header */}
@@ -96,7 +96,7 @@ export function AuthorSlideTwelve() {
 
                   {/* ID + icon row */}
                   <div className="flex items-center justify-between mb-[2vh] relative z-10">
-                    <span className="text-fluid-caption text-fluid-caption text-fluid-label font-mono text-[#A39B92]/40">
+                    <span className="text-sm sm:text-base 2xl:text-[1.15rem] font-mono text-[#A39B92]/65">
                       {criterion.id}
                     </span>
                     <div className="p-2 2xl:p-3 rounded-lg border border-white/[0.06] bg-white/[0.02]">
@@ -106,10 +106,10 @@ export function AuthorSlideTwelve() {
 
                   {/* Text */}
                   <div className="relative z-10">
-                    <h3 className="text-sm sm:text-base 2xl:text-xl text-[#D5CCC3] font-light tracking-wide mb-[1.5vh] 2xl:mb-[2vh]">
+                    <h3 className="text-base sm:text-lg 2xl:text-[1.5rem] text-[#D5CCC3] font-light tracking-wide mb-[1.5vh] 2xl:mb-[2vh]">
                       {criterion.title}
                     </h3>
-                    <p className="text-fluid-label text-fluid-label 2xl:text-sm text-[#6B645D] font-light leading-relaxed">
+                    <p className="text-sm sm:text-base 2xl:text-[1.12rem] text-[#8A837A] font-light leading-relaxed">
                       {criterion.desc}
                     </p>
                   </div>
@@ -131,18 +131,13 @@ export function AuthorSlideTwelve() {
             <ImageWithFallback
               src="/images/author-flow/slide-12/editorial-portrait-workspace.jpg"
               alt="Editorial artist portrait"
-              className="absolute inset-0 w-full h-full object-cover opacity-50"
+              className="absolute inset-0 w-full h-full object-cover opacity-95"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#090807]/90 via-[#090807]/20 to-transparent pointer-events-none" />
-            <div className="absolute inset-0 bg-gradient-to-l from-transparent to-[#090807]/60 pointer-events-none" />
-
-            {/* Top label */}
-            <div className="absolute top-5 left-5 2xl:top-8 2xl:left-8 z-10 flex items-center gap-2">
-              <div className="w-1 h-4 2xl:h-6 bg-[#A39B92]/30 rounded-full" />
-              <span className="text-fluid-caption text-fluid-label uppercase tracking-widest text-[#A39B92]/40 font-mono">
-                Автор
-              </span>
-            </div>
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{ background: 'radial-gradient(ellipse at center, rgba(9,8,7,0) 38%, rgba(9,8,7,0.18) 68%, rgba(9,8,7,0.42) 100%)' }}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#090807]/45 via-transparent to-transparent pointer-events-none" />
 
             {/* Animated selection frame */}
             <motion.div
@@ -174,7 +169,7 @@ export function AuthorSlideTwelve() {
                 initial={{ opacity: 0, y: 8 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 8 }}
                 transition={{ duration: 1, delay: 1.8, ease: [0.16, 1, 0.3, 1] }}
-                className="text-fluid-label sm:text-sm 2xl:text-base text-[#8A837A] font-light leading-relaxed"
+                className="text-sm sm:text-base 2xl:text-[1.12rem] text-[#D5CCC3] font-light leading-relaxed px-3 py-2 rounded-md bg-[#090807]/40 backdrop-blur-sm border border-white/[0.06]"
               >
                 Каждый участник — выбор,{' '}
                 <span className="text-[#D5CCC3]">не просто регистрация</span>
