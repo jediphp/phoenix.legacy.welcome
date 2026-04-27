@@ -83,7 +83,7 @@ export function PresentationFlow({ type }: { type: 'author' | 'org' }) {
   if (isAuthor) {
     return (
       <div
-        className="author-flow relative w-full h-[100svh] bg-[#070605] overflow-y-auto overflow-x-hidden snap-y snap-mandatory font-sans scroll-smooth"
+        className="flow-shell author-flow relative w-full h-[100svh] bg-[#070605] overflow-y-auto overflow-x-hidden snap-y snap-mandatory font-sans scroll-smooth"
         onMouseMove={handleMouseMove}
       >
         {sharedWrapper}
@@ -108,7 +108,7 @@ export function PresentationFlow({ type }: { type: 'author' | 'org' }) {
   // ── Organisation flow ──
   return (
     <div
-      className="relative w-full h-[100svh] bg-[#080705] overflow-y-auto overflow-x-hidden snap-y snap-mandatory font-sans scroll-smooth"
+      className="flow-shell org-flow relative w-full h-[100svh] bg-[#080705] overflow-y-auto overflow-x-hidden snap-y snap-mandatory font-sans scroll-smooth"
       onMouseMove={handleMouseMove}
     >
       {sharedWrapper}

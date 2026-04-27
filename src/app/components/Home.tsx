@@ -27,7 +27,7 @@ function Zone({
 
   return (
     <div 
-      className="flex-1 relative flex flex-col justify-center items-center px-4 sm:px-8 lg:px-16 cursor-pointer group z-20"
+      className="flex-1 min-w-0 relative flex flex-col justify-center items-center px-4 sm:px-8 lg:px-16 xl:px-20 cursor-pointer group z-20"
       onMouseEnter={() => setHoveredZone(type)}
       onMouseLeave={() => setHoveredZone(null)}
       onClick={() => router.push(`/${type}`)}
@@ -50,9 +50,9 @@ function Zone({
           y: isHovered ? -5 : 0
         }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="relative z-10 flex flex-col items-center text-center pt-8 sm:pt-4 w-full max-w-md"
+        className="relative z-10 flex flex-col items-center text-center pt-8 sm:pt-4 w-full max-w-[38rem]"
       >
-        <h2 className={`text-4xl sm:text-5xl lg:text-6xl font-light mb-6 transition-colors duration-700 ${titleClassName ?? ''}
+        <h2 className={`text-4xl sm:text-5xl lg:text-6xl font-light mb-6 transition-colors duration-700 text-balance break-words ${titleClassName ?? ''}
           ${isHovered 
             ? (type === 'author' ? 'text-[#F5EC9B]' : 'text-white') 
             : 'text-[#EAEADF]'
@@ -61,7 +61,7 @@ function Zone({
           {title}
         </h2>
         
-        <p className={`text-sm sm:text-base lg:text-lg font-light tracking-wide leading-relaxed transition-colors duration-700
+        <p className={`text-sm sm:text-base lg:text-lg font-light tracking-wide leading-relaxed transition-colors duration-700 text-balance
           ${isHovered ? 'text-[#D5CCC3]' : 'text-[#8A837A]'}
         `}>
           {subtitle}
@@ -163,7 +163,7 @@ export function Home() {
       </header>
 
       {/* Контейнер интерактивных зон */}
-      <main className="flex-1 flex flex-col lg:flex-row relative w-full z-20 pb-16 sm:pb-24 lg:pb-32">
+      <main className="flex-1 flex flex-col lg:flex-row lg:items-stretch relative w-full z-20 pb-16 sm:pb-24 lg:pb-32 lg:gap-6 xl:gap-10 2xl:gap-14">
         {/* Центральные разделители (теперь привязаны только к main, не пересекают header) */}
         <div className="hidden lg:block absolute inset-y-0 left-1/2 w-[1px] -translate-x-1/2 bg-gradient-to-b from-transparent via-[#8F6D1F]/20 to-transparent z-10 pointer-events-none" />
         <div className="block lg:hidden absolute inset-x-0 top-1/2 h-[1px] -translate-y-1/2 bg-gradient-to-r from-transparent via-[#8F6D1F]/20 to-transparent z-10 pointer-events-none" />
@@ -178,7 +178,6 @@ export function Home() {
         <Zone
           type="org"
           title="Я организация"
-          titleClassName="whitespace-nowrap"
           subtitle="Хочу понять, как платформа работает с качеством, форматами и сотрудничеством"
           hoveredZone={hoveredZone}
           setHoveredZone={setHoveredZone}
