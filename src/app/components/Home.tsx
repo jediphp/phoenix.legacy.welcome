@@ -141,6 +141,10 @@ export function Home() {
         className="absolute bottom-0 right-0 w-full lg:w-1/2 h-1/2 lg:h-full bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-stone-500/20 via-transparent to-transparent z-0 pointer-events-none"
       />
 
+      <h1 className="sr-only">
+        Феникс.Наследие — платформа исторической реконструкции изображений и сохранения культурного наследия
+      </h1>
+
       {/* Header: Отдельный блок во всю ширину экрана */}
       <header className="relative w-full z-40 pt-12 sm:pt-16 lg:pt-20 pb-6 flex flex-col items-center justify-center pointer-events-none shrink-0">
         <motion.div 

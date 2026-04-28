@@ -28,7 +28,8 @@
 
 Используются публичные переменные:
 
-- `NEXT_PUBLIC_APP_NAME` — название приложения
-- `NEXT_PUBLIC_APP_DESCRIPTION` — описание приложения
+- `NEXT_PUBLIC_SITE_URL` — канонический базовый URL сайта (без завершающего `/`), нужен для `metadataBase`, Open Graph, `sitemap.xml` и `robots.txt`. На проде укажите реальный домен welcome-сайта.
+- `NEXT_PUBLIC_APP_NAME` — название по умолчанию для `<title>` и превью
+- `NEXT_PUBLIC_APP_DESCRIPTION` — основное описание проекта для SEO и соцсетей
 
 См. файл `.env.example`.
