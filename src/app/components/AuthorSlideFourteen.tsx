@@ -22,7 +22,7 @@ const ACTIONS = [
     id: '03',
     icon: Send,
     label: 'Прислать работы',
-    desc: 'Войти в оценочный контур',
+    desc: 'Письмом на jedi.business@yandex.ru',
   },
 ];
 
@@ -153,8 +153,11 @@ export function AuthorSlideFourteen() {
                 transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.8 }}
                 className="flex flex-col sm:flex-row lg:flex-col gap-3 2xl:gap-4"
               >
-                {/* Primary CTA */}
-                <motion.button
+                {/* Primary CTA — основной сайт */}
+                <motion.a
+                  href="https://phoenixlegacy.ru"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   className="group relative overflow-hidden flex items-center gap-3 2xl:gap-4 px-6 py-4 sm:px-7 sm:py-4.5 2xl:px-10 2xl:py-6 rounded-xl 2xl:rounded-2xl cursor-pointer transition-all duration-500"
@@ -175,10 +178,11 @@ export function AuthorSlideFourteen() {
                     className="relative z-10 w-4 h-4 2xl:w-5 2xl:h-5 text-[#D5A86B] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300 flex-shrink-0"
                     strokeWidth={1.5}
                   />
-                </motion.button>
+                </motion.a>
 
-                {/* Secondary CTA */}
-                <motion.button
+                {/* Secondary CTA — отправка работы по почте */}
+                <motion.a
+                  href="mailto:jedi.business@yandex.ru"
                   whileHover={{ scale: 1.01 }}
                   whileTap={{ scale: 0.98 }}
                   className="group flex items-center gap-3 2xl:gap-4 px-6 py-4 sm:px-7 sm:py-4.5 2xl:px-10 2xl:py-6 rounded-xl 2xl:rounded-2xl cursor-pointer transition-all duration-500 border border-white/[0.06] hover:border-white/[0.12]"
@@ -191,7 +195,7 @@ export function AuthorSlideFourteen() {
                     className="w-4 h-4 2xl:w-5 2xl:h-5 text-[#3A3530] group-hover:text-[#6B645D] transition-colors duration-300 flex-shrink-0"
                     strokeWidth={1.5}
                   />
-                </motion.button>
+                </motion.a>
               </motion.div>
 
             </div>
