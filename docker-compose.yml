@@ -1,0 +1,16 @@
+services:
+  welcome:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: phoenix-legacy-welcome:latest
+    container_name: phoenix_welcome_next
+    restart: unless-stopped
+    env_file:
+      - .env.production
+    networks:
+      - phoenix_production_shared
+
+networks:
+  phoenix_production_shared:
+    external: true
