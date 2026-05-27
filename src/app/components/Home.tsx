@@ -5,14 +5,16 @@ import { useState, type MouseEvent } from 'react';
 import { useRouter } from 'next/navigation';
 import { ArrowRight } from 'lucide-react';
 import LogoVertical from '../../imports/LogoVertical';
+import { StartHomeCard } from './StartHomeCard';
 
 function Zone({ 
   type, 
   title, 
   subtitle, 
   titleClassName,
-  hoveredZone, 
-  setHoveredZone 
+  hoveredZone,
+  setHoveredZone,
+  dimmed,
 }: { 
   type: 'author' | 'org';
   title: string;
@@ -20,15 +22,18 @@ function Zone({
   titleClassName?: string;
   hoveredZone: 'author' | 'org' | null;
   setHoveredZone: (val: 'author' | 'org' | null) => void;
+  dimmed?: boolean;
 }) {
   const isHovered = hoveredZone === type;
-  const isOtherHovered = hoveredZone !== null && hoveredZone !== type;
+  const isOtherHovered = (hoveredZone !== null && hoveredZone !== type) || Boolean(dimmed);
   const router = useRouter();
 
   return (
     <div 
       className="flex-1 min-w-0 relative flex flex-col justify-center items-center px-4 sm:px-8 lg:px-16 xl:px-20 cursor-pointer group z-20"
-      onMouseEnter={() => setHoveredZone(type)}
+      onMouseEnter={() => {
+        setHoveredZone(type);
+      }}
       onMouseLeave={() => setHoveredZone(null)}
       onClick={() => router.push(`/${type}`)}
     >
@@ -91,6 +96,7 @@ function Zone({
 
 export function Home() {
   const [hoveredZone, setHoveredZone] = useState<'author' | 'org' | null>(null);
+  const [startHovered, setStartHovered] = useState(false);
 
   // Логика параллакса
   const mouseX = useMotionValue(0.5);
@@ -162,12 +168,13 @@ export function Home() {
           transition={{ delay: 0.6, duration: 1.5 }}
           className="mt-4 sm:mt-6 text-sm sm:text-base lg:text-lg tracking-[0.18em] text-[#F5EC9B] text-center"
         >
-          Одна платформа — два сценария входа
+          Одна платформа — три сценария входа
         </motion.p>
       </header>
 
       {/* Контейнер интерактивных зон */}
-      <main className="flex-1 flex flex-col lg:flex-row lg:items-stretch relative w-full z-20 pb-16 sm:pb-24 lg:pb-32 lg:gap-6 xl:gap-10 2xl:gap-14">
+      <main className="flex-1 flex flex-col relative w-full z-20 pb-8 sm:pb-12">
+        <div className="flex flex-col lg:flex-row lg:items-stretch flex-1 lg:gap-6 xl:gap-10 2xl:gap-14 min-h-0">
         {/* Центральные разделители (теперь привязаны только к main, не пересекают header) */}
         <div className="hidden lg:block absolute inset-y-0 left-1/2 w-[1px] -translate-x-1/2 bg-gradient-to-b from-transparent via-[#8F6D1F]/20 to-transparent z-10 pointer-events-none" />
         <div className="block lg:hidden absolute inset-x-0 top-1/2 h-[1px] -translate-y-1/2 bg-gradient-to-r from-transparent via-[#8F6D1F]/20 to-transparent z-10 pointer-events-none" />
@@ -178,6 +185,7 @@ export function Home() {
           subtitle="Хочу публиковать работы, получать оценку и расти внутри новой ниши"
           hoveredZone={hoveredZone}
           setHoveredZone={setHoveredZone}
+          dimmed={startHovered}
         />
         <Zone
           type="org"
@@ -185,7 +193,22 @@ export function Home() {
           subtitle="Хочу понять, как платформа работает с качеством, форматами и сотрудничеством"
           hoveredZone={hoveredZone}
           setHoveredZone={setHoveredZone}
+          dimmed={startHovered}
         />
+        </div>
+
+        <section className="w-full flex flex-col items-center justify-center px-4 sm:px-8 lg:px-12 pt-6 sm:pt-10 pb-14 sm:pb-20 lg:pb-24 shrink-0">
+          <div className="w-full max-w-xl lg:max-w-2xl h-px bg-gradient-to-r from-transparent via-[#5A8F7A]/25 to-transparent mb-8 sm:mb-10" />
+          <div className="w-full flex justify-center">
+            <StartHomeCard
+              isDimmed={hoveredZone !== null && !startHovered}
+              onHover={(active) => {
+                setStartHovered(active);
+                if (active) setHoveredZone(null);
+              }}
+            />
+          </div>
+        </section>
       </main>
 
     </div>

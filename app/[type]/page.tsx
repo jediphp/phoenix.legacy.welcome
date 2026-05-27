@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { PresentationFlow } from '@/src/app/components/PresentationFlow';
+import { GettingStartedFlow } from '@/src/app/components/getting-started/GettingStartedFlow';
 import { getSiteUrl } from '@/src/lib/site';
 
 type PageProps = {
@@ -16,11 +17,33 @@ export async function generateMetadata({
 }: PageProps): Promise<Metadata> {
   const { type } = await params;
 
-  if (type !== 'author' && type !== 'org') {
+  if (type !== 'author' && type !== 'org' && type !== 'start') {
     return {};
   }
 
   const base = getSiteUrl();
+
+  if (type === 'start') {
+    const title = 'С чего начать';
+    const description =
+      'Пошаговая инструкция: выберите исторический оригинал в разделе «Исследовать», сделайте реконструкцию в ИИ-сервисе и загрузите результат на платформу. ' +
+      baseDescription;
+
+    return {
+      title,
+      description,
+      alternates: { canonical: '/start' },
+      openGraph: {
+        url: new URL('/start', base).href,
+        title: `${title} · Феникс.Наследие`,
+        description,
+      },
+      twitter: {
+        title: `${title} · Феникс.Наследие`,
+        description,
+      },
+    };
+  }
 
   if (type === 'author') {
     const title = 'Авторский сценарий';
@@ -72,8 +95,12 @@ export async function generateMetadata({
 export default async function TypePage({ params }: PageProps) {
   const { type } = await params;
 
-  if (type !== 'author' && type !== 'org') {
+  if (type !== 'author' && type !== 'org' && type !== 'start') {
     notFound();
+  }
+
+  if (type === 'start') {
+    return <GettingStartedFlow />;
   }
 
   return <PresentationFlow type={type} />;

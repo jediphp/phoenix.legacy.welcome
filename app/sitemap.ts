@@ -25,5 +25,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.9,
     },
+    {
+      url: `${base}/start`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
   ];
 }
