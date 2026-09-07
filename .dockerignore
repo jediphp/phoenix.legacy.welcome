@@ -3,3 +3,9 @@
 node_modules
 .next
 *.md
+
+.env
+.env.*
+!.env.example
+out
+*.log

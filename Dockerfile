@@ -1,27 +1,23 @@
-FROM node:22-alpine AS deps
+FROM node:22-alpine AS builder
 WORKDIR /app
 RUN apk add --no-cache libc6-compat
 COPY package.json package-lock.json ./
 RUN npm ci
-
-FROM node:22-alpine AS builder
-WORKDIR /app
-RUN apk add --no-cache libc6-compat
-COPY --from=deps /app/node_modules ./node_modules
 COPY . .
+ARG NEXT_PUBLIC_SITE_URL=https://welcome.phoenixlegacy.ru
+ARG NEXT_PUBLIC_PLATFORM_URL=https://phoenixlegacy.ru
+ENV NEXT_PUBLIC_SITE_URL=$NEXT_PUBLIC_SITE_URL
+ENV NEXT_PUBLIC_PLATFORM_URL=$NEXT_PUBLIC_PLATFORM_URL
 ENV NEXT_TELEMETRY_DISABLED=1
 RUN npm run build
 
-FROM node:22-alpine AS runner
-WORKDIR /app
-ENV NODE_ENV=production
-ENV NEXT_TELEMETRY_DISABLED=1
-RUN addgroup --system --gid 1001 nodejs && adduser --system --uid 1001 nextjs
-COPY --from=builder /app/public ./public
-COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
-COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
-USER nextjs
+# Runtime serves static files only: no Node.js, server actions or application secrets.
+FROM nginx:stable-alpine AS runner
+COPY docker/nginx.conf /etc/nginx/nginx.conf
+COPY --from=builder /app/out /usr/share/nginx/html
+USER 101:101
 EXPOSE 3000
-ENV PORT=3000
-ENV HOSTNAME=0.0.0.0
-CMD ["node", "server.js"]
+HEALTHCHECK --interval=15s --timeout=3s --start-period=10s --retries=3 \
+    CMD wget -q -O /dev/null http://127.0.0.1:3000/ || exit 1
+ENTRYPOINT ["nginx"]
+CMD ["-g", "daemon off;"]

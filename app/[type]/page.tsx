@@ -4,6 +4,10 @@ import { PresentationFlow } from '@/src/app/components/PresentationFlow';
 import { GettingStartedFlow } from '@/src/app/components/getting-started/GettingStartedFlow';
 import { getSiteUrl } from '@/src/lib/site';
 
+export function generateStaticParams() {
+  return ['author', 'org', 'start'].map((type) => ({ type }));
+}
+
 type PageProps = {
   params: Promise<{ type: string }>;
 };

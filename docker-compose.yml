@@ -3,14 +3,22 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: phoenix-legacy-welcome:latest
+    image: phoenix-legacy-welcome:static-20260907
     container_name: phoenix_welcome_next
     restart: unless-stopped
-    env_file:
-      - .env.production
+    read_only: true
+    tmpfs:
+      - /tmp:size=16m,mode=1777
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    mem_limit: 128m
+    cpus: 0.25
+    pids_limit: 64
     networks:
-      - phoenix_production_shared
+      - phoenix_welcome_edge
 
 networks:
-  phoenix_production_shared:
+  phoenix_welcome_edge:
     external: true
