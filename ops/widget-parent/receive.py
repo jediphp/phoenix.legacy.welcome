@@ -83,7 +83,7 @@ def deploy(sha, payload):
             'COPY default.conf /etc/nginx/conf.d/default.conf\n'
             'LABEL org.gotov.widget-parent=true org.opencontainers.image.revision=' + sha + '\n')
         run('docker', 'build', '--network=none', '-t', image, str(context))
-        run('docker', 'run', '--rm', '--network=none', '--read-only', '--tmpfs', '/tmp', image, 'nginx', '-t')
+        run('docker', 'run', '--rm', '--network=none', '--read-only', '--tmpfs', '/tmp', '--entrypoint', 'nginx', image, '-t')
     try:
         compose(image)
         # Ingress may cache container DNS briefly after replacement.
