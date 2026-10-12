@@ -64,8 +64,9 @@ def deploy(sha, payload):
                 seen.add(member.name)
             assert seen == FILES
         # Preserve the restored static runtime and all existing site assets.
-        run('docker', 'cp', 'phoenix_welcome_next:/etc/nginx/conf.d/default.conf', str(context / 'default.conf'))
-        config = (context / 'default.conf').read_text()
+        run('docker', 'cp', 'phoenix_welcome_next:/etc/nginx/nginx.conf', str(context / 'nginx.conf'))
+        config = (context / 'nginx.conf').read_text()
+        assert 'listen 3000;' in config and 'root /usr/share/nginx/html;' in config
         assert '/gotov-widget-prototype/' not in config or label == 'true'
         if '/gotov-widget-prototype/' not in config:
             assert config.count('location / {') == 1
@@ -76,11 +77,11 @@ def deploy(sha, payload):
         try_files $uri $uri/ =404;
     }
     location / {''')
-        (context / 'default.conf').write_text(config)
+        (context / 'nginx.conf').write_text(config)
         (context / 'Dockerfile').write_text(
             'FROM ' + BASE_TAG + '\n'
             'COPY page/ /usr/share/nginx/html/gotov-widget-prototype/\n'
-            'COPY default.conf /etc/nginx/conf.d/default.conf\n'
+            'COPY nginx.conf /etc/nginx/nginx.conf\n'
             'LABEL org.gotov.widget-parent=true org.opencontainers.image.revision=' + sha + '\n')
         run('docker', 'build', '--network=none', '-t', image, str(context))
         run('docker', 'run', '--rm', '--network=none', '--read-only', '--tmpfs', '/tmp', '--entrypoint', 'nginx', image, '-t')
