@@ -1,0 +1,35 @@
+name: Publish GOTOV test parent
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: widget-parent-production
+  cancel-in-progress: false
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Check static payload
+        run: |
+          node --check public/gotov-widget-prototype/partner.js
+          python3 -m py_compile ops/widget-parent/receive.py
+          python3 -m unittest discover -s ops/widget-parent -p test_receive.py
+          tar -C public/gotov-widget-prototype -czf /tmp/parent.tar.gz index.html partner.js parent.css
+      - name: Publish through restricted SSH command
+        env:
+          DEPLOY_KEY: ${{ secrets.WIDGET_PARENT_SSH_KEY }}
+          KNOWN_HOSTS: ${{ secrets.WIDGET_PARENT_KNOWN_HOSTS }}
+          DEPLOY_HOST: ${{ vars.WIDGET_PARENT_HOST }}
+        run: |
+          umask 077
+          mkdir -p ~/.ssh
+          printf '%s\n' "$DEPLOY_KEY" > ~/.ssh/widget-parent
+          printf '%s\n' "$KNOWN_HOSTS" > ~/.ssh/known_hosts
+          trap 'rm -f ~/.ssh/widget-parent /tmp/parent.tar.gz' EXIT
+          ssh -o BatchMode=yes -o IdentitiesOnly=yes -i ~/.ssh/widget-parent "root@$DEPLOY_HOST" "deploy $GITHUB_SHA" < /tmp/parent.tar.gz

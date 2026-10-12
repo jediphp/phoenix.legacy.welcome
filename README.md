@@ -1,5 +1,28 @@
 # Phoenix Legacy Welcome (Next.js)
 
+## Тестовая страница виджетов ГОТОВ
+
+`public/gotov-widget-prototype/` — отдельная статическая fixture для QA-00, без
+платежей и связи с аккаунтами Phoenix. Parent расположен на welcome, iframe/API
+на testgotov. Временные sslip.io адреса не требуют настройки DNS, но зависят от
+внешнего DNS-сервиса; это тестовый, не production контракт ГОТОВ.
+
+Workflow `Publish GOTOV test parent` запускается вручную только из main. SSH key
+ограничен forced command `ops/widget-parent/receive.py`: принимает только три
+небольших статических файла, не даёт shell/forwarding и не обновляет checkout.
+Handler установлен в `/opt/phoenix/widget-parent/receive.py`, root-owned.
+Настройки: secrets `WIDGET_PARENT_SSH_KEY`, `WIDGET_PARENT_KNOWN_HOSTS`, variable
+`WIDGET_PARENT_HOST`. Ни ключи, ни содержимое серверного env в Git не помещаются.
+
+Выкладка накладывает страницу на точный восстановленный статический Nginx image,
+не пересобирая Next.js и не затрагивая локальные изменения серверного checkout.
+Сохраняет read-only/сеть/лимиты Compose. До переключения проверяется Nginx,
+после — SHA-256 шести существующих страниц; при ошибке возвращается предыдущий
+image. Возможен короткий перерыв welcome при замене контейнера. Другие контейнеры
+и общий ingress не меняются. `previous-image` хранит образ для отката оператором
+через тот же Compose с `/opt/phoenix/widget-parent/image.json`; не запускать старый
+контейнер инцидента. Ревизия overlay: `/opt/phoenix/widget-parent/REVISION`.
+
 Next.js (App Router) используется для разработки и статической сборки. Production обслуживает Nginx без Node.js.
 
 ## Быстрый старт

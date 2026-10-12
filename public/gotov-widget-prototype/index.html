@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; frame-src https://widgetqa.176.98.176.245.sslip.io; base-uri 'none'; form-action 'none'">
+  <title>ГОТОВ — тест встраивания виджетов</title>
+  <link rel="stylesheet" href="parent.css">
+  <script defer src="partner.js"></script>
+</head>
+<body>
+  <main>
+    <h1>Тест встраивания виджетов ГОТОВ</h1>
+    <p>Экспериментальный стенд. Здесь проверяется вход и регистрация внутри виджета. Пожертвования и платежи не выполняются.</p>
+    <p>Два виджета работают независимо. После обновления страницы вход нужно подтвердить заново.</p>
+    <div class="widgets">
+      <section><h2>Пожертвование: проверка входа</h2>
+        <iframe title="Пожертвование: тест входа" width="380" height="720" data-widget-origin="https://widgetqa.176.98.176.245.sslip.io" data-installation="fixture" data-operation="donation-demo" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin allow-forms"></iframe>
+      </section>
+      <section><h2>Регистрация: проверка входа</h2>
+        <iframe title="Регистрация: тест входа" width="380" height="720" data-widget-origin="https://widgetqa.176.98.176.245.sslip.io" data-installation="fixture" data-operation="registration-demo" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin allow-forms"></iframe>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
