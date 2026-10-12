@@ -20,7 +20,7 @@ class PayloadTests(unittest.TestCase):
             archive.addfile(member, io.BytesIO(b'x'))
         with tempfile.TemporaryDirectory() as d:
             with patch.object(receiver, 'STATE', Path(d)), patch.object(receiver, 'page_hashes', return_value={}), \
-                    patch.object(receiver, 'run', side_effect=[receiver.BASE, '']), patch.object(receiver, 'compose') as compose:
+                    patch.object(receiver, 'run', side_effect=[receiver.BASE, '', receiver.BASE]), patch.object(receiver, 'compose') as compose:
                 with self.assertRaises(AssertionError):
                     receiver.deploy('a' * 40, payload.getvalue())
                 compose.assert_not_called()
