@@ -12,6 +12,7 @@ import tempfile
 import urllib.request
 
 BASE = 'sha256:0f9db1a3c6f822b1e2a7e11541aa50dfe424632a63383579ee9be8d303761677'
+BASE_TAG = 'phoenix-legacy-welcome:static-20260907'
 SITE = Path('/opt/phoenix/phoenix.legacy.welcome')
 STATE = Path('/opt/phoenix/widget-parent')
 FILES = {'index.html', 'partner.js', 'parent.css'}
@@ -45,6 +46,7 @@ def deploy(sha, payload):
     # Reject unrelated runtime replacements; do not resurrect the incident image.
     label = run('docker', 'inspect', 'phoenix_welcome_next', '--format', '{{index .Config.Labels "org.gotov.widget-parent"}}')
     assert previous == BASE or label == 'true', 'Unreviewed welcome runtime'
+    assert run('docker', 'image', 'inspect', BASE_TAG, '--format', '{{.Id}}') == BASE, 'Restored base tag changed'
     STATE.mkdir(mode=0o700, parents=True, exist_ok=True)
     image = 'phoenix-widget-parent:' + sha
     with tempfile.TemporaryDirectory(dir=STATE) as directory:
@@ -76,7 +78,7 @@ def deploy(sha, payload):
     location / {''')
         (context / 'default.conf').write_text(config)
         (context / 'Dockerfile').write_text(
-            'FROM ' + BASE + '\n'
+            'FROM ' + BASE_TAG + '\n'
             'COPY page/ /usr/share/nginx/html/gotov-widget-prototype/\n'
             'COPY default.conf /etc/nginx/conf.d/default.conf\n'
             'LABEL org.gotov.widget-parent=true org.opencontainers.image.revision=' + sha + '\n')
