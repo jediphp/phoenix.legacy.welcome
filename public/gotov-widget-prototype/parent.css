@@ -6,3 +6,11 @@ p { max-width: 800px; line-height: 1.6; }
 .widgets { display: flex; flex-wrap: wrap; gap: 24px; }
 section { min-width: 0; max-width: 100%; }
 iframe { display: block; box-sizing: border-box; max-width: 100%; border: 1px solid #ddd; border-radius: 12px; background: white; }
+
+.v1-area { margin-block: 24px 40px; padding-block: 8px 24px; border-block-end: 1px solid #d7dae0; }
+.v1-widgets { display: flex; flex-wrap: wrap; gap: 24px; align-items: start; }
+.v1-example { width: 375px; max-width: 100%; }
+.v1-example h3 { font-size: 18px; }
+.v1-example > [data-installation-id] { display: block; max-width: 100%; }
+.v1-example a { overflow-wrap: anywhere; }
+a:focus-visible, button:focus-visible { outline: 3px solid #008855; outline-offset: 3px; }
