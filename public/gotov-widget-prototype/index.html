@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; frame-src https://widgetqa.176.98.176.245.sslip.io; base-uri 'none'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' https://widgetqa.176.98.176.245.sslip.io; style-src 'self'; frame-src https://widgetqa.176.98.176.245.sslip.io; base-uri 'none'; form-action 'none'">
   <title>ГОТОВ — тест встраивания виджетов</title>
   <link rel="stylesheet" href="parent.css">
   <script defer src="partner.js"></script>
@@ -12,7 +12,49 @@
 <body>
   <main>
     <h1>Тест встраивания виджетов ГОТОВ</h1>
-    <p>Экспериментальный стенд. Здесь проверяется вход и регистрация внутри виджета. Пожертвования и платежи не выполняются.</p>
+    <p>Тестовая страница ГОТОВ на внешнем сайте. Данные вымышленные; платежи и рассылки не выполняются.</p>
+    <section class="v1-area" aria-labelledby="v1-title">
+      <h2 id="v1-title">Виджеты v1: каталог и оформление</h2>
+      <p>Код установки выдан админкой ГОТОВ. Каталог и карточка используют общий testapi. Формы регистрации и пожертвования подключаются следующим этапом; пока показывается состояние разработки.</p>
+      <div class="v1-widgets">
+        <section class="v1-example"><h3>Каталог мероприятий</h3>
+<gotov-events data-installation-id="4afc2995e6ddf5a01b79586c91c4ad9d">
+  <a href="https://widgetqa.176.98.176.245.sslip.io/widgets/v1/installations/4afc2995e6ddf5a01b79586c91c4ad9d?component=gotov-events" target="_blank" rel="noopener noreferrer">Открыть в ГОТОВ</a>
+</gotov-events>
+<script defer src="https://widgetqa.176.98.176.245.sslip.io/widgets/v1/loader.js"></script>
+</section>
+<section class="v1-example"><h3>Карточка мероприятия</h3>
+<gotov-event data-installation-id="3122fac426e1a7fbf8d91e5170058394">
+  <a href="https://widgetqa.176.98.176.245.sslip.io/widgets/v1/installations/3122fac426e1a7fbf8d91e5170058394?component=gotov-event" target="_blank" rel="noopener noreferrer">Открыть в ГОТОВ</a>
+</gotov-event>
+<script defer src="https://widgetqa.176.98.176.245.sslip.io/widgets/v1/loader.js"></script>
+</section>
+<section class="v1-example"><h3>Регистрация на мероприятие — следующий этап</h3>
+<gotov-register data-installation-id="3122fac426e1a7fbf8d91e5170058394">
+  <a href="https://widgetqa.176.98.176.245.sslip.io/widgets/v1/installations/3122fac426e1a7fbf8d91e5170058394?component=gotov-register" target="_blank" rel="noopener noreferrer">Открыть в ГОТОВ</a>
+</gotov-register>
+<script defer src="https://widgetqa.176.98.176.245.sslip.io/widgets/v1/loader.js"></script>
+</section>
+<section class="v1-example"><h3>Регистрация в общину — следующий этап</h3>
+<gotov-community-register data-installation-id="d04983892ac5b142b94e2427d1cfcdba">
+  <a href="https://widgetqa.176.98.176.245.sslip.io/widgets/v1/installations/d04983892ac5b142b94e2427d1cfcdba?component=gotov-community-register" target="_blank" rel="noopener noreferrer">Открыть в ГОТОВ</a>
+</gotov-community-register>
+<script defer src="https://widgetqa.176.98.176.245.sslip.io/widgets/v1/loader.js"></script>
+</section>
+<section class="v1-example"><h3>Пожертвование — следующий этап</h3>
+<gotov-donate data-installation-id="5bbb737efad08c1c0743b1f4b61e506c">
+  <a href="https://widgetqa.176.98.176.245.sslip.io/widgets/v1/installations/5bbb737efad08c1c0743b1f4b61e506c?component=gotov-donate" target="_blank" rel="noopener noreferrer">Открыть в ГОТОВ</a>
+</gotov-donate>
+<script defer src="https://widgetqa.176.98.176.245.sslip.io/widgets/v1/loader.js"></script>
+</section>
+<section class="v1-example"><h3>Повторное добавление каталога</h3><p>Кнопка добавляет и убирает ещё один экземпляр на этой же странице.</p><button id="toggle-v1-example" type="button" aria-expanded="false" aria-controls="dynamic-v1-example">Добавить каталог</button><div id="dynamic-v1-example"></div><template id="v1-example-template"><gotov-events data-installation-id="4afc2995e6ddf5a01b79586c91c4ad9d">
+  <a href="https://widgetqa.176.98.176.245.sslip.io/widgets/v1/installations/4afc2995e6ddf5a01b79586c91c4ad9d?component=gotov-events" target="_blank" rel="noopener noreferrer">Открыть в ГОТОВ</a>
+</gotov-events>
+</template></section>
+      </div>
+    </section>
+    <h2>Сохранённый прототип входа</h2>
+    <p>Ниже — предыдущий эксперимент входа с отдельным набором тестовых данных. Это самостоятельная проверка авторизации; готовых пожертвований здесь нет.</p>
     <p>Два виджета работают независимо. После обновления страницы вход нужно подтвердить заново.</p>
     <div class="widgets">
       <section><h2>Пожертвование: проверка входа</h2>
