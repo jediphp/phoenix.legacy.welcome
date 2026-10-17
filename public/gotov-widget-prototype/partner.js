@@ -25,6 +25,20 @@ for (const frame of document.querySelectorAll('iframe[data-widget-origin]')) {
     frame.src = `${origin}/widget-prototype`;
 }
 
+// Diagnostic signal only; this counter never grants access or records identity.
+const communityWidget = document.querySelector(
+    'gotov-community-register[data-installation-id="d04983892ac5b142b94e2427d1cfcdba"]',
+);
+const communityRegistrationCount = document.getElementById('community-registration-count');
+if (communityWidget && communityRegistrationCount) {
+    let registrationCount = 0;
+    communityWidget.addEventListener('gotov:registered', () => {
+        registrationCount += 1;
+        communityRegistrationCount.textContent =
+            `Сайт получил подтверждение новой регистрации: ${registrationCount}`;
+    });
+}
+
 // A visible mount/unmount control for the separately installed v1 loader.
 const toggleV1 = document.getElementById('toggle-v1-example');
 const dynamicV1 = document.getElementById('dynamic-v1-example');
