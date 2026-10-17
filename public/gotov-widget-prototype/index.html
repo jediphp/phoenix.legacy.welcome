@@ -12,11 +12,11 @@
 <body>
   <main>
     <h1>Тест встраивания виджетов ГОТОВ</h1>
-    <p>Тестовая страница ГОТОВ на внешнем сайте. Данные вымышленные; платежи и рассылки не выполняются.</p>
+    <p>Тестовая страница ГОТОВ на внешнем сайте. Данные вымышленные. Допускаются только тестовые платежи ЮKassa без списания реальных денег; рассылки не выполняются.</p>
     <section class="v1-area" aria-labelledby="v1-title">
       <h2 id="v1-title">Виджеты v1: каталог и встроенный вход</h2>
       <p>Код установки выдан админкой ГОТОВ. Эти виджеты работают с обычным тестовым API: входите тестовым аккаунтом ГОТОВ. Вход и создание аккаунта выполняются внутри виджета. После обновления страницы нужен новый вход для восстановления своего действия.</p>
-      <p>В виджете мероприятия можно войти, отправить заявку на тестовую встречу и проверить её состояние. Заявка, подтверждение организатором и оплата показываются отдельно; платежи здесь не выполняются. Пожертвования и подписка пока проверяют только вход. Регистрация нового аккаунта в общину завершается внутри виджета; существующий аккаунт в другую общину не переносится.</p>
+      <p>В виджете мероприятия можно войти, отправить заявку на тестовую встречу и проверить её состояние. Заявка, подтверждение организатором и оплата показываются отдельно; банковские примеры ниже используют только тестовый магазин ЮKassa. Пожертвования и подписка пока проверяют только вход. Регистрация нового аккаунта в общину завершается внутри виджета; существующий аккаунт в другую общину не переносится.</p>
       <div class="v1-widgets">
         <section class="v1-example"><h3>Каталог мероприятий</h3>
 <gotov-events data-installation-id="4afc2995e6ddf5a01b79586c91c4ad9d">
@@ -33,6 +33,20 @@
 <section class="v1-example"><h3>Мероприятие: запись и состояние заявки</h3>
 <gotov-register data-installation-id="3122fac426e1a7fbf8d91e5170058394">
   <a href="https://widgetqa.176.98.176.245.sslip.io/widgets/v1/installations/3122fac426e1a7fbf8d91e5170058394?component=gotov-register" target="_blank" rel="noopener noreferrer">Открыть в ГОТОВ</a>
+</gotov-register>
+<script defer src="https://widgetqa.176.98.176.245.sslip.io/widgets/v1/loader.js"></script>
+</section>
+<section class="v1-example" id="bank-success"><h3>Тестовая оплата: после одобрения</h3>
+<p>Заявка на 10 ₽ сначала ожидает решения организатора. После одобрения доступна тестовая оплата; реального списания нет.</p>
+<gotov-register data-installation-id="e6d6fe4f85215c2b54e9b3f473b952b1">
+  <a href="https://widgetqa.176.98.176.245.sslip.io/widgets/v1/installations/e6d6fe4f85215c2b54e9b3f473b952b1?component=gotov-register" target="_blank" rel="noopener noreferrer">Открыть в ГОТОВ</a>
+</gotov-register>
+<script defer src="https://widgetqa.176.98.176.245.sslip.io/widgets/v1/loader.js"></script>
+</section>
+<section class="v1-example" id="bank-decline"><h3>Тестовая оплата: отказ банка</h3>
+<p>Отдельная тестовая заявка на 10 ₽ для проверки отказа и восстановления результата. Вводите только официальные тестовые карты ЮKassa.</p>
+<gotov-register data-installation-id="4825058ab872298c86f05319ff26b208">
+  <a href="https://widgetqa.176.98.176.245.sslip.io/widgets/v1/installations/4825058ab872298c86f05319ff26b208?component=gotov-register" target="_blank" rel="noopener noreferrer">Открыть в ГОТОВ</a>
 </gotov-register>
 <script defer src="https://widgetqa.176.98.176.245.sslip.io/widgets/v1/loader.js"></script>
 </section>
