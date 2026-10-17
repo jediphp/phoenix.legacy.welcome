@@ -14,8 +14,9 @@
     <h1>Тест встраивания виджетов ГОТОВ</h1>
     <p>Тестовая страница ГОТОВ на внешнем сайте. Данные вымышленные; платежи и рассылки не выполняются.</p>
     <section class="v1-area" aria-labelledby="v1-title">
-      <h2 id="v1-title">Виджеты v1: каталог и оформление</h2>
-      <p>Код установки выдан админкой ГОТОВ. Каталог и карточка используют общий testapi. Формы регистрации и пожертвования подключаются следующим этапом; пока показывается состояние разработки.</p>
+      <h2 id="v1-title">Виджеты v1: каталог и встроенный вход</h2>
+      <p>Код установки выдан админкой ГОТОВ. Эти виджеты работают с обычным тестовым API: входите тестовым аккаунтом ГОТОВ. Вход и создание аккаунта выполняются внутри виджета. После обновления страницы нужен новый вход для восстановления своего действия.</p>
+      <p>Запись на мероприятие, пожертвование и подписка ещё не выполняются: после входа сохраняется выбранная цель. В проверке регистрации в общину показывается результат подтверждения аккаунта; существующий аккаунт в другую общину не переносится.</p>
       <div class="v1-widgets">
         <section class="v1-example"><h3>Каталог мероприятий</h3>
 <gotov-events data-installation-id="4afc2995e6ddf5a01b79586c91c4ad9d">
@@ -29,19 +30,19 @@
 </gotov-event>
 <script defer src="https://widgetqa.176.98.176.245.sslip.io/widgets/v1/loader.js"></script>
 </section>
-<section class="v1-example"><h3>Регистрация на мероприятие — следующий этап</h3>
+<section class="v1-example"><h3>Мероприятие: вход и сохранение выбранной цели</h3>
 <gotov-register data-installation-id="3122fac426e1a7fbf8d91e5170058394">
   <a href="https://widgetqa.176.98.176.245.sslip.io/widgets/v1/installations/3122fac426e1a7fbf8d91e5170058394?component=gotov-register" target="_blank" rel="noopener noreferrer">Открыть в ГОТОВ</a>
 </gotov-register>
 <script defer src="https://widgetqa.176.98.176.245.sslip.io/widgets/v1/loader.js"></script>
 </section>
-<section class="v1-example"><h3>Регистрация в общину — следующий этап</h3>
+<section class="v1-example"><h3>Община: вход и регистрация аккаунта</h3>
 <gotov-community-register data-installation-id="d04983892ac5b142b94e2427d1cfcdba">
   <a href="https://widgetqa.176.98.176.245.sslip.io/widgets/v1/installations/d04983892ac5b142b94e2427d1cfcdba?component=gotov-community-register" target="_blank" rel="noopener noreferrer">Открыть в ГОТОВ</a>
 </gotov-community-register>
 <script defer src="https://widgetqa.176.98.176.245.sslip.io/widgets/v1/loader.js"></script>
 </section>
-<section class="v1-example"><h3>Пожертвование — следующий этап</h3>
+<section class="v1-example"><h3>Пожертвование: проверка входа без оплаты</h3>
 <gotov-donate data-installation-id="5bbb737efad08c1c0743b1f4b61e506c">
   <a href="https://widgetqa.176.98.176.245.sslip.io/widgets/v1/installations/5bbb737efad08c1c0743b1f4b61e506c?component=gotov-donate" target="_blank" rel="noopener noreferrer">Открыть в ГОТОВ</a>
 </gotov-donate>
