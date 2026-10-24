@@ -23,6 +23,17 @@ image. Возможен короткий перерыв welcome при заме�
 через тот же Compose с `/opt/phoenix/widget-parent/image.json`; не запускать старый
 контейнер инцидента. Ревизия overlay: `/opt/phoenix/widget-parent/REVISION`.
 
+С24.10 обработчик закрепляет security runtime22.10 (Nginx1.30.6):
+`sha256:026f3ba38dee7c8e004a1db31b957a3db73cd537908a1c17f57fa0b911ed0166`,
+локальный тег `phoenix-legacy-welcome:static-secure-20261022`. Основание —
+Phoenix `ai/audit/releases/2026-10-22-security/report.md` и live image inspect.
+Тег обязан указывать на этот точный ID. Старый сентябрьский base не принимается;
+неизвестный runtime требует отдельной проверки. Security-образ уже содержит
+QA location: повторное добавление location не требуется. Установка root-owned
+обработчика и создание тега выполняются оператором после проверки; CI-ключ
+сохраняет прежний forced command и не может менять обработчик.
+
+
 Next.js (App Router) используется для разработки и статической сборки. Production обслуживает Nginx без Node.js.
 
 ## Быстрый старт
