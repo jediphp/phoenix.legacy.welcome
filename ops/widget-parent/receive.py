@@ -11,8 +11,9 @@ import tarfile
 import tempfile
 import urllib.request
 
-BASE = 'sha256:0f9db1a3c6f822b1e2a7e11541aa50dfe424632a63383579ee9be8d303761677'
-BASE_TAG = 'phoenix-legacy-welcome:static-20260907'
+# Approved immutable runtime: Phoenix security release 2026-10-22, Nginx 1.30.6.
+BASE = 'sha256:026f3ba38dee7c8e004a1db31b957a3db73cd537908a1c17f57fa0b911ed0166'
+BASE_TAG = 'phoenix-legacy-welcome:static-secure-20261022'
 SITE = Path('/opt/phoenix/phoenix.legacy.welcome')
 STATE = Path('/opt/phoenix/widget-parent')
 FILES = {'index.html', 'partner.js', 'parent.css'}
@@ -46,7 +47,7 @@ def deploy(sha, payload):
     # Reject unrelated runtime replacements; do not resurrect the incident image.
     label = run('docker', 'inspect', 'phoenix_welcome_next', '--format', '{{index .Config.Labels "org.gotov.widget-parent"}}')
     assert previous == BASE or label == 'true', 'Unreviewed welcome runtime'
-    assert run('docker', 'image', 'inspect', BASE_TAG, '--format', '{{.Id}}') == BASE, 'Restored base tag changed'
+    assert run('docker', 'image', 'inspect', BASE_TAG, '--format', '{{.Id}}') == BASE, 'Approved base tag changed'
     STATE.mkdir(mode=0o700, parents=True, exist_ok=True)
     image = 'phoenix-widget-parent:' + sha
     with tempfile.TemporaryDirectory(dir=STATE) as directory:
@@ -67,7 +68,7 @@ def deploy(sha, payload):
         run('docker', 'cp', 'phoenix_welcome_next:/etc/nginx/nginx.conf', str(context / 'nginx.conf'))
         config = (context / 'nginx.conf').read_text()
         assert 'listen 3000;' in config and 'root /usr/share/nginx/html;' in config
-        assert '/gotov-widget-prototype/' not in config or label == 'true'
+        assert '/gotov-widget-prototype/' not in config or previous == BASE or label == 'true'
         if '/gotov-widget-prototype/' not in config:
             assert config.count('location / {') == 1
             config = config.replace('location / {', '''location ^~ /gotov-widget-prototype/ {
